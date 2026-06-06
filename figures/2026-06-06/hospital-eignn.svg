@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Epidemiology-informed graph neural network</title>
+  <desc id="desc">A dynamic hospital contact network is processed by a graph neural network with epidemic-model constraints.</desc>
+  <rect width="1200" height="600" fill="#f8fafc"/>
+  <text x="600" y="55" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#172554">Dynamic contacts plus mechanistic constraints</text>
+  <g stroke="#94a3b8" stroke-width="5">
+    <line x1="140" y1="220" x2="260" y2="150"/><line x1="140" y1="220" x2="270" y2="300"/>
+    <line x1="260" y1="150" x2="350" y2="230"/><line x1="270" y1="300" x2="350" y2="230"/>
+    <line x1="260" y1="150" x2="270" y2="300"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="5">
+    <circle cx="140" cy="220" r="35" fill="#2563eb"/><circle cx="260" cy="150" r="35" fill="#16a34a"/>
+    <circle cx="270" cy="300" r="35" fill="#dc2626"/><circle cx="350" cy="230" r="35" fill="#f59e0b"/>
+  </g>
+  <text x="245" y="390" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#334155">Hospital contact graph over time</text>
+  <path d="M420 235h100" stroke="#475569" stroke-width="7"/><path d="M520 235l-22-14v28z" fill="#475569"/>
+  <rect x="540" y="135" width="260" height="200" rx="25" fill="#e0e7ff" stroke="#4f46e5" stroke-width="5"/>
+  <text x="670" y="205" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#312e81">Graph neural network</text>
+  <text x="670" y="250" text-anchor="middle" font-family="Arial" font-size="19" fill="#4338ca">Patient states</text>
+  <text x="670" y="282" text-anchor="middle" font-family="Arial" font-size="19" fill="#4338ca">Transition risk</text>
+  <path d="M670 430v-80" stroke="#7c3aed" stroke-width="7"/><path d="M670 350l-14 22h28z" fill="#7c3aed"/>
+  <rect x="510" y="430" width="320" height="85" rx="20" fill="#f3e8ff" stroke="#7c3aed" stroke-width="5"/>
+  <text x="670" y="466" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#581c87">Epidemic-model consistency</text>
+  <text x="670" y="496" text-anchor="middle" font-family="Arial" font-size="17" fill="#6b21a8">Transmission and recovery dynamics</text>
+  <path d="M820 235h105" stroke="#475569" stroke-width="7"/><path d="M925 235l-22-14v28z" fill="#475569"/>
+  <g font-family="Arial" text-anchor="middle">
+    <rect x="945" y="140" width="205" height="70" rx="15" fill="#dbeafe"/><text x="1048" y="184" font-size="20" font-weight="700" fill="#1e40af">Risk prediction</text>
+    <rect x="945" y="230" width="205" height="70" rx="15" fill="#dcfce7"/><text x="1048" y="274" font-size="20" font-weight="700" fill="#166534">State transitions</text>
+    <rect x="945" y="320" width="205" height="70" rx="15" fill="#fef3c7"/><text x="1048" y="364" font-size="20" font-weight="700" fill="#92400e">Parameters</text>
+  </g>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial" font-size="17" fill="#475569">Illustrative schematic, not a figure from the paper</text>
+</svg>

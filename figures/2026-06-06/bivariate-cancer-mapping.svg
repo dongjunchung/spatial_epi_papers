@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Bivariate stage-specific cancer mapping</title>
+  <desc id="desc">Early-stage and late-stage small-area maps are modeled jointly to identify screening-priority areas.</desc>
+  <rect width="1200" height="600" fill="#f8fafc"/>
+  <text x="600" y="55" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#172554">Joint spatial signals refine screening priorities</text>
+  <g font-family="Arial" text-anchor="middle">
+    <text x="230" y="115" font-size="22" font-weight="700" fill="#1e3a8a">Early-stage incidence</text>
+    <text x="600" y="115" font-size="22" font-weight="700" fill="#7f1d1d">Late-stage incidence</text>
+    <text x="970" y="115" font-size="22" font-weight="700" fill="#14532d">Priority estimate</text>
+  </g>
+  <g stroke="#ffffff" stroke-width="7">
+    <g transform="translate(90 150)">
+      <path d="M20 20h120l35 65-35 80H20L0 85z" fill="#bfdbfe"/>
+      <path d="M150 10h115l30 75-40 70H145l30-70z" fill="#60a5fa"/>
+      <path d="M45 175h105l30 80-55 65H10l10-90z" fill="#dbeafe"/>
+      <path d="M165 165h115l25 85-45 75H135l45-70z" fill="#93c5fd"/>
+    </g>
+    <g transform="translate(460 150)">
+      <path d="M20 20h120l35 65-35 80H20L0 85z" fill="#fecaca"/>
+      <path d="M150 10h115l30 75-40 70H145l30-70z" fill="#f87171"/>
+      <path d="M45 175h105l30 80-55 65H10l10-90z" fill="#fee2e2"/>
+      <path d="M165 165h115l25 85-45 75H135l45-70z" fill="#b91c1c"/>
+    </g>
+    <g transform="translate(830 150)">
+      <path d="M20 20h120l35 65-35 80H20L0 85z" fill="#dcfce7"/>
+      <path d="M150 10h115l30 75-40 70H145l30-70z" fill="#86efac"/>
+      <path d="M45 175h105l30 80-55 65H10l10-90z" fill="#bbf7d0"/>
+      <path d="M165 165h115l25 85-45 75H135l45-70z" fill="#15803d"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#475569" stroke-width="6">
+    <path d="M390 300h45"/>
+    <path d="M760 300h45"/>
+  </g>
+  <g fill="#475569">
+    <path d="M435 300l-18-12v24z"/>
+    <path d="M805 300l-18-12v24z"/>
+  </g>
+  <rect x="845" y="485" width="250" height="55" rx="12" fill="#166534"/>
+  <text x="970" y="520" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">Target early detection</text>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial" font-size="17" fill="#475569">Illustrative schematic, not a figure from the paper</text>
+</svg>
