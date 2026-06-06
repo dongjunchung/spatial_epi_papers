@@ -1,42 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
-  <title id="title">Bivariate stage-specific cancer mapping</title>
-  <desc id="desc">Early-stage and late-stage small-area maps are modeled jointly to identify screening-priority areas.</desc>
-  <rect width="1200" height="600" fill="#f8fafc"/>
-  <text x="600" y="55" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#172554">Joint spatial signals refine screening priorities</text>
-  <g font-family="Arial" text-anchor="middle">
-    <text x="230" y="115" font-size="22" font-weight="700" fill="#1e3a8a">Early-stage incidence</text>
-    <text x="600" y="115" font-size="22" font-weight="700" fill="#7f1d1d">Late-stage incidence</text>
-    <text x="970" y="115" font-size="22" font-weight="700" fill="#14532d">Priority estimate</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Technical schematic of Bayesian bivariate stage-specific cancer mapping</title>
+  <desc id="desc">Observed early- and late-stage counts enter linked Poisson spatial models with expected counts, covariates, shared and outcome-specific BYM2 effects, INLA inference, posterior contrasts, exceedance probabilities, and screening-priority classification.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker>
+    <style>
+      .h{font:700 30px Arial;fill:#172554}.sh{font:700 20px Arial;fill:#1e293b}.tx{font:16px Arial;fill:#334155}
+      .sm{font:14px Arial;fill:#475569}.eq{font:16px 'Courier New';fill:#312e81}.box{stroke-width:2.5}.arr{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="980" fill="#f8fafc"/>
+  <text x="800" y="48" text-anchor="middle" class="h">Bayesian bivariate small-area model for screening priority</text>
+
+  <rect x="35" y="82" width="300" height="300" rx="18" fill="#eff6ff" stroke="#2563eb" class="box"/>
+  <text x="185" y="118" text-anchor="middle" class="sh">1. Area-level inputs</text>
+  <text x="62" y="154" class="tx">For area i and stage k:</text>
+  <text x="62" y="184" class="eq">Yᵢₖ = observed cases</text>
+  <text x="62" y="214" class="eq">Eᵢₖ = expected cases</text>
+  <text x="62" y="244" class="eq">xᵢ = area covariates</text>
+  <text x="62" y="274" class="eq">W = adjacency matrix</text>
+  <g transform="translate(72 300)" stroke="#fff" stroke-width="4">
+    <path d="M0 0h63l19 38-20 44H0L-10 38z" fill="#bfdbfe"/><path d="M70 -5h65l22 41-23 43H62l20-41z" fill="#60a5fa"/>
+    <path d="M8 85h64l17 42-25 39H-5l5-45z" fill="#dbeafe"/><path d="M79 82h66l17 45-23 40H64l25-40z" fill="#93c5fd"/>
   </g>
-  <g stroke="#ffffff" stroke-width="7">
-    <g transform="translate(90 150)">
-      <path d="M20 20h120l35 65-35 80H20L0 85z" fill="#bfdbfe"/>
-      <path d="M150 10h115l30 75-40 70H145l30-70z" fill="#60a5fa"/>
-      <path d="M45 175h105l30 80-55 65H10l10-90z" fill="#dbeafe"/>
-      <path d="M165 165h115l25 85-45 75H135l45-70z" fill="#93c5fd"/>
-    </g>
-    <g transform="translate(460 150)">
-      <path d="M20 20h120l35 65-35 80H20L0 85z" fill="#fecaca"/>
-      <path d="M150 10h115l30 75-40 70H145l30-70z" fill="#f87171"/>
-      <path d="M45 175h105l30 80-55 65H10l10-90z" fill="#fee2e2"/>
-      <path d="M165 165h115l25 85-45 75H135l45-70z" fill="#b91c1c"/>
-    </g>
-    <g transform="translate(830 150)">
-      <path d="M20 20h120l35 65-35 80H20L0 85z" fill="#dcfce7"/>
-      <path d="M150 10h115l30 75-40 70H145l30-70z" fill="#86efac"/>
-      <path d="M45 175h105l30 80-55 65H10l10-90z" fill="#bbf7d0"/>
-      <path d="M165 165h115l25 85-45 75H135l45-70z" fill="#15803d"/>
-    </g>
+  <text x="250" y="322" class="sm">Registry counts</text><text x="250" y="345" class="sm">Population offsets</text><text x="250" y="368" class="sm">Shared geography</text>
+
+  <rect x="385" y="82" width="790" height="300" rx="18" fill="#eef2ff" stroke="#4f46e5" class="box"/>
+  <text x="780" y="118" text-anchor="middle" class="sh">2. Joint likelihood and linked latent spatial structure</text>
+  <rect x="415" y="145" width="340" height="190" rx="14" fill="#fff" stroke="#2563eb" class="box"/>
+  <text x="585" y="177" text-anchor="middle" class="sh" fill="#1e40af">Early stage (k = E)</text>
+  <text x="440" y="211" class="eq">YᵢE ~ Poisson(EᵢE θᵢE)</text>
+  <text x="440" y="245" class="eq">log θᵢE = αE + xᵢβE</text>
+  <text x="440" y="278" class="eq">          + λE sᵢ + uᵢE</text>
+  <text x="440" y="315" class="sm">stage-specific + shared spatial signal</text>
+  <rect x="805" y="145" width="340" height="190" rx="14" fill="#fff" stroke="#dc2626" class="box"/>
+  <text x="975" y="177" text-anchor="middle" class="sh" fill="#991b1b">Late stage (k = L)</text>
+  <text x="830" y="211" class="eq">YᵢL ~ Poisson(EᵢL θᵢL)</text>
+  <text x="830" y="245" class="eq">log θᵢL = αL + xᵢβL</text>
+  <text x="830" y="278" class="eq">          + λL sᵢ + uᵢL</text>
+  <text x="830" y="315" class="sm">correlated through shared component sᵢ</text>
+  <path d="M755 238h50" class="arr"/>
+  <text x="780" y="216" text-anchor="middle" class="sm">shared</text>
+
+  <rect x="1225" y="82" width="340" height="300" rx="18" fill="#faf5ff" stroke="#7c3aed" class="box"/>
+  <text x="1395" y="118" text-anchor="middle" class="sh">3. BYM2 priors</text>
+  <text x="1252" y="162" class="eq">sᵢ = (1/√τ) [</text>
+  <text x="1252" y="193" class="eq"> √(1-φ) vᵢ + √φ qᵢ* ]</text>
+  <text x="1252" y="232" class="tx">vᵢ: unstructured heterogeneity</text>
+  <text x="1252" y="263" class="tx">qᵢ*: scaled ICAR component</text>
+  <text x="1252" y="294" class="tx">τ: marginal precision</text>
+  <text x="1252" y="325" class="tx">φ: spatial variance fraction</text>
+  <text x="1252" y="356" class="sm">Penalized-complexity priors stabilize fit</text>
+
+  <path d="M335 230h50" class="arr"/><path d="M1175 230h50" class="arr"/>
+  <path d="M780 382v62" class="arr"/>
+
+  <rect x="270" y="445" width="1060" height="190" rx="18" fill="#fff7ed" stroke="#ea580c" class="box"/>
+  <text x="800" y="481" text-anchor="middle" class="sh">4. INLA posterior inference</text>
+  <text x="305" y="521" class="eq">p(α, β, τ, φ, λ, s, u | Y) ∝ likelihood × spatial priors × hyperpriors</text>
+  <rect x="310" y="548" width="225" height="55" rx="10" fill="#ffedd5"/><text x="423" y="582" text-anchor="middle" class="tx">Nested Laplace approximations</text>
+  <path d="M540 575h80" class="arr"/>
+  <rect x="625" y="548" width="225" height="55" rx="10" fill="#ffedd5"/><text x="738" y="582" text-anchor="middle" class="tx">Marginal posteriors p(θᵢₖ|Y)</text>
+  <path d="M855 575h80" class="arr"/>
+  <rect x="940" y="548" width="345" height="55" rx="10" fill="#ffedd5"/><text x="1113" y="582" text-anchor="middle" class="tx">Means, CrIs, exceedance probabilities</text>
+  <path d="M800 635v55" class="arr"/>
+
+  <rect x="35" y="690" width="460" height="230" rx="18" fill="#eff6ff" stroke="#2563eb" class="box"/>
+  <text x="265" y="728" text-anchor="middle" class="sh">Posterior relative risks</text>
+  <text x="67" y="766" class="eq">RRᵢE = exp(ηᵢE)</text><text x="275" y="766" class="eq">RRᵢL = exp(ηᵢL)</text>
+  <g transform="translate(95 790)" stroke="#fff" stroke-width="4">
+    <path d="M0 0h62l18 35-19 40H0L-8 35z" fill="#bfdbfe"/><path d="M68 -4h62l20 38-21 39H60l20-38z" fill="#2563eb"/>
+    <path d="M8 78h61l16 39-23 36H-4l5-41z" fill="#dbeafe"/><path d="M76 76h62l16 41-21 37H62l23-37z" fill="#60a5fa"/>
   </g>
-  <g fill="none" stroke="#475569" stroke-width="6">
-    <path d="M390 300h45"/>
-    <path d="M760 300h45"/>
+  <g transform="translate(290 790)" stroke="#fff" stroke-width="4">
+    <path d="M0 0h62l18 35-19 40H0L-8 35z" fill="#fecaca"/><path d="M68 -4h62l20 38-21 39H60l20-38z" fill="#ef4444"/>
+    <path d="M8 78h61l16 39-23 36H-4l5-41z" fill="#fee2e2"/><path d="M76 76h62l16 41-21 37H62l23-37z" fill="#991b1b"/>
   </g>
-  <g fill="#475569">
-    <path d="M435 300l-18-12v24z"/>
-    <path d="M805 300l-18-12v24z"/>
-  </g>
-  <rect x="845" y="485" width="250" height="55" rx="12" fill="#166534"/>
-  <text x="970" y="520" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">Target early detection</text>
-  <text x="600" y="575" text-anchor="middle" font-family="Arial" font-size="17" fill="#475569">Illustrative schematic, not a figure from the paper</text>
+
+  <rect x="570" y="690" width="460" height="230" rx="18" fill="#fefce8" stroke="#ca8a04" class="box"/>
+  <text x="800" y="728" text-anchor="middle" class="sh">Stage contrast and uncertainty</text>
+  <text x="610" y="772" class="eq">Δᵢ = log(RRᵢL) - log(RRᵢE)</text>
+  <text x="610" y="811" class="eq">Pᵢ = Pr(Δᵢ &gt; δ | Y)</text>
+  <text x="610" y="850" class="tx">δ = policy-relevant contrast threshold</text>
+  <text x="610" y="884" class="tx">Map posterior probability, not point estimate alone</text>
+
+  <rect x="1105" y="690" width="460" height="230" rx="18" fill="#f0fdf4" stroke="#16a34a" class="box"/>
+  <text x="1335" y="728" text-anchor="middle" class="sh">Screening-priority rule</text>
+  <text x="1140" y="770" class="eq">High burden: RRᵢL &gt; 1</text>
+  <text x="1140" y="807" class="eq">Detection gap: Pᵢ &gt; 0.8</text>
+  <rect x="1140" y="835" width="390" height="55" rx="10" fill="#166534"/>
+  <text x="1335" y="870" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#fff">Prioritize areas meeting both criteria</text>
+  <path d="M495 805h75" class="arr"/><path d="M1030 805h75" class="arr"/>
+  <text x="800" y="958" text-anchor="middle" class="sm">Illustrative technical schematic based on the reported model class; not a figure from the paper</text>
 </svg>
