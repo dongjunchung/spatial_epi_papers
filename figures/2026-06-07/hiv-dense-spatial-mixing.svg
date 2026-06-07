@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Genomic, network, phylogenetic, and mobility workflow for HIV spatial mixing</title>
+  <desc id="desc">HIV sequences and metadata are filtered, linked using TN93 genetic distance in HIV-TRACE, analyzed for clusters and growth, modeled with hierarchical BDSKY, integrated with mobility in phylogeography, and evaluated for isolation by distance and metropolitan mixing.</desc>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#475569"/></marker>
+    <style>.h{font:700 30px Arial;fill:#172554}.sh{font:700 20px Arial;fill:#1e293b}.tx{font:16px Arial;fill:#334155}.sm{font:14px Arial;fill:#475569}.eq{font:15px 'Courier New';fill:#312e81}.b{stroke-width:2.5}.ar{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#a)}</style>
+  </defs>
+  <rect width="1600" height="980" fill="#f8fafc"/>
+  <text x="800" y="48" text-anchor="middle" class="h">Resolving urban HIV transmission with genomes, networks, and mobility</text>
+
+  <rect x="30" y="82" width="355" height="350" rx="18" fill="#eff6ff" stroke="#2563eb" class="b"/>
+  <text x="207" y="118" text-anchor="middle" class="sh">1. Surveillance cohort</text>
+  <text x="60" y="165" class="eq">9,338 initial pol sequences</text>
+  <text x="60" y="199" class="tx">Filter:</text>
+  <text x="82" y="230" class="sm">Greater Mexico City residence</text>
+  <text x="82" y="258" class="sm">length &gt; 2,820 nucleotides</text>
+  <text x="82" y="286" class="sm">HIV-1 subtype B</text>
+  <text x="82" y="314" class="sm">residential postcode available</text>
+  <rect x="65" y="345" width="285" height="55" rx="10" fill="#dbeafe"/>
+  <text x="207" y="380" text-anchor="middle" class="tx">7,078 analyzed sequences</text>
+  <path d="M385 255h48" class="ar"/>
+
+  <rect x="433" y="82" width="420" height="350" rx="18" fill="#fefce8" stroke="#ca8a04" class="b"/>
+  <text x="643" y="118" text-anchor="middle" class="sh">2. HIV-TRACE network</text>
+  <text x="465" y="162" class="eq">d[i,j] = TN93 genetic distance</text>
+  <text x="465" y="196" class="eq">A[i,j] = 1{d[i,j] &lt; threshold}</text>
+  <g transform="translate(500 230)" stroke="#94a3b8" stroke-width="4">
+    <path d="M20 50L110 10L180 65L255 25L315 95M20 50L95 145L180 65M95 145L210 150L315 95"/>
+  </g>
+  <g transform="translate(500 230)" stroke="#fff" stroke-width="3">
+    <circle cx="20" cy="50" r="17" fill="#2563eb"/><circle cx="110" cy="10" r="17" fill="#2563eb"/><circle cx="180" cy="65" r="17" fill="#dc2626"/>
+    <circle cx="255" cy="25" r="17" fill="#dc2626"/><circle cx="315" cy="95" r="17" fill="#dc2626"/><circle cx="95" cy="145" r="17" fill="#16a34a"/><circle cx="210" cy="150" r="17" fill="#16a34a"/>
+  </g>
+  <text x="465" y="405" class="sm">Nodes: diagnoses; edges: genetically close pairs</text>
+  <path d="M853 255h48" class="ar"/>
+
+  <rect x="901" y="82" width="669" height="350" rx="18" fill="#eef2ff" stroke="#4f46e5" class="b"/>
+  <text x="1235" y="118" text-anchor="middle" class="sh">3. Network structure and growth</text>
+  <text x="935" y="163" class="tx">Cluster descriptors</text>
+  <text x="935" y="195" class="eq">degree, component size, diagnosis-time growth</text>
+  <text x="935" y="236" class="tx">Normalized recent growth</text>
+  <text x="935" y="269" class="eq">Sr&gt;2 = new diagnoses in window / sqrt(cluster size)</text>
+  <text x="935" y="310" class="tx">Degree-weighted homophily + label permutation</text>
+  <text x="935" y="343" class="eq">sexual risk, methamphetamine, nationality, residence</text>
+  <text x="935" y="384" class="tx">Logistic regression: membership and growing-cluster status</text>
+  <path d="M800 432v52" class="ar"/>
+
+  <rect x="75" y="487" width="680" height="265" rx="18" fill="#faf5ff" stroke="#7c3aed" class="b"/>
+  <text x="415" y="524" text-anchor="middle" class="sh">4. Hierarchical BDSKY phylodynamics</text>
+  <text x="110" y="570" class="tx">Ten largest clusters jointly modeled in BEAST 2.7.5</text>
+  <text x="110" y="607" class="eq">Re(epoch), delta = rate of becoming uninfectious</text>
+  <text x="110" y="641" class="eq">Re ~ LogNormal(0,1), constrained 0..7</text>
+  <text x="110" y="675" class="eq">delta ~ Uniform(0.1,4) per year</text>
+  <text x="110" y="709" class="sm">Three epochs; two 200M-generation MCMC chains; 95% HPD</text>
+
+  <rect x="845" y="487" width="680" height="265" rx="18" fill="#fff7ed" stroke="#ea580c" class="b"/>
+  <text x="1185" y="524" text-anchor="middle" class="sh">5. Mobility-informed phylogeography</text>
+  <text x="880" y="570" class="tx">Inputs</text>
+  <text x="880" y="603" class="eq">genetic tree + postcode locations + mobility flows M[i,j]</text>
+  <text x="880" y="644" class="tx">Spatial questions</text>
+  <text x="905" y="677" class="sm">Where do lineage transitions occur?</text>
+  <text x="905" y="707" class="sm">Does mobility explain cross-region viral movement?</text>
+  <path d="M755 620h90" class="ar"/>
+  <path d="M800 752v47" class="ar"/>
+
+  <rect x="85" y="802" width="1430" height="125" rx="18" fill="#f0fdf4" stroke="#16a34a" class="b"/>
+  <text x="800" y="839" text-anchor="middle" class="sh">6. Spatial mixing estimands</text>
+  <text x="125" y="879" class="eq">Isolation by distance: association(genetic distance, geographic distance)</text>
+  <text x="820" y="879" class="eq">Mixing: observed transitions vs mobility-supported expectation</text>
+  <text x="125" y="908" class="sm">Reported interpretation: weak geographic constraint and extensive metropolitan mixing across administrative boundaries</text>
+  <text x="800" y="958" text-anchor="middle" class="sm">Original technical schematic of reported workflow; generic threshold notation where unspecified; not a figure from the paper</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Spatial Bayesian renewal model using wastewater, EHR, and mobility data</title>
+  <desc id="desc">County wastewater and hospital signals enter observation models, wastewater is reliability weighted, mobility couples latent infections across counties, a renewal equation propagates infections, missing counties borrow spatial information, and posterior forecasts are allocated to facilities.</desc>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#475569"/></marker>
+    <style>.h{font:700 30px Arial;fill:#172554}.sh{font:700 20px Arial;fill:#1e293b}.tx{font:16px Arial;fill:#334155}.sm{font:14px Arial;fill:#475569}.eq{font:15px 'Courier New';fill:#312e81}.b{stroke-width:2.5}.ar{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#a)}</style>
+  </defs>
+  <rect width="1600" height="980" fill="#f8fafc"/>
+  <text x="800" y="48" text-anchor="middle" class="h">Spatial Bayesian renewal forecasting with heterogeneous surveillance</text>
+
+  <rect x="30" y="82" width="390" height="365" rx="18" fill="#eff6ff" stroke="#2563eb" class="b"/>
+  <text x="225" y="118" text-anchor="middle" class="sh">1. County-time observations</text>
+  <rect x="60" y="150" width="330" height="90" rx="12" fill="#dbeafe"/>
+  <text x="225" y="181" text-anchor="middle" class="tx">Wastewater concentration W[i,t]</text>
+  <text x="80" y="214" class="eq">log W[i,t] ~ Normal(muW[i,t], sW[i,t])</text>
+  <rect x="60" y="260" width="330" height="90" rx="12" fill="#fee2e2"/>
+  <text x="225" y="291" text-anchor="middle" class="tx">Hospital admissions H[i,t]</text>
+  <text x="80" y="324" class="eq">H[i,t] ~ Count(mean = muH[i,t])</text>
+  <text x="60" y="385" class="tx">Pathogens: SARS-CoV-2, influenza, RSV</text>
+  <text x="60" y="416" class="sm">Some county-time cells are unobserved</text>
+
+  <rect x="470" y="82" width="400" height="365" rx="18" fill="#fefce8" stroke="#ca8a04" class="b"/>
+  <text x="670" y="118" text-anchor="middle" class="sh">2. Reliability and spatial coupling</text>
+  <text x="500" y="163" class="tx">Wastewater reliability score</text>
+  <text x="500" y="195" class="eq">r[i,t] in [0,1]</text>
+  <text x="500" y="225" class="eq">precision[i,t] proportional to r[i,t]</text>
+  <rect x="500" y="250" width="340" height="145" rx="12" fill="#fff" stroke="#eab308" class="b"/>
+  <text x="670" y="281" text-anchor="middle" class="tx">Mobility matrix M</text>
+  <text x="525" y="318" class="eq">M[i,j] = movement i -&gt; j</text>
+  <text x="525" y="351" class="eq">Isp[i,t] = sum_j M[j,i] I[j,t]</text>
+  <text x="525" y="380" class="sm">links neighboring and connected counties</text>
+
+  <rect x="920" y="82" width="650" height="365" rx="18" fill="#eef2ff" stroke="#4f46e5" class="b"/>
+  <text x="1245" y="118" text-anchor="middle" class="sh">3. Latent renewal process</text>
+  <text x="955" y="162" class="eq">I[i,t] = R[i,t] * sum_s g[s] I[i,t-s]</text>
+  <text x="955" y="197" class="eq">log R[i,t] = alpha[i] + betaW f(W[i,t-lag])</text>
+  <text x="955" y="232" class="eq">             + betaM Isp[i,t] + epsilon[i,t]</text>
+  <text x="955" y="267" class="tx">g[s]: generation-interval distribution</text>
+  <text x="955" y="298" class="tx">epsilon[i,t]: temporal or spatial latent effect</text>
+  <path d="M1000 350h110" class="ar"/>
+  <rect x="1115" y="320" width="180" height="60" rx="10" fill="#ddd6fe"/>
+  <text x="1205" y="357" text-anchor="middle" class="tx">Latent infections</text>
+  <path d="M1295 350h90" class="ar"/>
+  <rect x="1390" y="320" width="145" height="60" rx="10" fill="#dcfce7"/>
+  <text x="1462" y="357" text-anchor="middle" class="tx">Admissions</text>
+  <path d="M420 260h50" class="ar"/><path d="M870 260h50" class="ar"/>
+  <path d="M800 447v55" class="ar"/>
+
+  <rect x="65" y="505" width="650" height="245" rx="18" fill="#faf5ff" stroke="#7c3aed" class="b"/>
+  <text x="390" y="542" text-anchor="middle" class="sh">4. Missing-data borrowing</text>
+  <g transform="translate(110 585)">
+    <rect x="0" y="0" width="90" height="60" fill="#dbeafe" stroke="#fff" stroke-width="4"/><rect x="90" y="0" width="90" height="60" fill="#fff" stroke="#94a3b8" stroke-width="4" stroke-dasharray="7 5"/>
+    <rect x="180" y="0" width="90" height="60" fill="#fee2e2" stroke="#fff" stroke-width="4"/><rect x="0" y="60" width="90" height="60" fill="#fff" stroke="#94a3b8" stroke-width="4" stroke-dasharray="7 5"/>
+    <rect x="90" y="60" width="90" height="60" fill="#dcfce7" stroke="#fff" stroke-width="4"/><rect x="180" y="60" width="90" height="60" fill="#fef3c7" stroke="#fff" stroke-width="4"/>
+  </g>
+  <text x="430" y="594" class="eq">p(I[i,t] | observed counties, M, history)</text>
+  <text x="430" y="633" class="tx">Spatial connectivity supplies prior information</text>
+  <text x="430" y="667" class="tx">Temporal renewal supplies within-county continuity</text>
+  <text x="430" y="701" class="tx">Posterior uncertainty expands when signals are absent</text>
+
+  <rect x="765" y="505" width="770" height="245" rx="18" fill="#f0fdf4" stroke="#16a34a" class="b"/>
+  <text x="1150" y="542" text-anchor="middle" class="sh">5. Rolling posterior forecast</text>
+  <text x="800" y="585" class="eq">p(H[i,t+1:t+28] | W, H, M)</text>
+  <text x="800" y="620" class="tx">Four-week county predictive distributions</text>
+  <line x1="815" y1="704" x2="1190" y2="704" stroke="#475569" stroke-width="3"/>
+  <line x1="815" y1="704" x2="815" y2="650" stroke="#475569" stroke-width="3"/>
+  <path d="M815 696C870 690 900 650 950 660C1000 670 1040 620 1090 635C1140 650 1160 660 1190 670" fill="none" stroke="#16a34a" stroke-width="6"/>
+  <path d="M815 710C870 700 900 668 950 678C1000 690 1040 640 1090 650C1140 670 1160 680 1190 690L1190 650C1140 640 1100 615 1090 620C1040 600 1000 650 950 640C900 630 870 675 815 682Z" fill="#86efac" opacity=".35"/>
+  <text x="1250" y="585" class="tx">Evaluation</text>
+  <text x="1250" y="620" class="sm">spatial vs non-spatial</text>
+  <text x="1250" y="650" class="sm">observed vs held-out counties</text>
+  <text x="1250" y="680" class="sm">calibration and forecast error</text>
+  <path d="M800 750v55" class="ar"/>
+
+  <rect x="250" y="808" width="1100" height="115" rx="18" fill="#fff7ed" stroke="#ea580c" class="b"/>
+  <text x="800" y="842" text-anchor="middle" class="sh">6. County-to-facility translation</text>
+  <text x="300" y="883" class="eq">H[f,t] = allocation[f,i,t] * H[i,t]</text>
+  <text x="735" y="883" class="tx">Hospital catchment / utilization weights</text>
+  <text x="1115" y="883" class="tx">Beds, staffing, and surge planning</text>
+  <text x="800" y="958" text-anchor="middle" class="sm">Original technical schematic; reported components with explanatory notation; not a figure from the paper</text>
+</svg>

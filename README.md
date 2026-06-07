@@ -5,6 +5,7 @@ illustrative schematics for each highlighted paper.
 
 ## Updates
 
+- [June 7, 2026](updates/2026-06-07.md)
 - [June 6, 2026](updates/2026-06-06.md)
 
 Figures in this repository are explanatory schematics created for these
