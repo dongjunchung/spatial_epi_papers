@@ -1,10 +1,14 @@
 # Spatial Epidemiology Papers
 
 Daily research updates on spatial epidemiology modeling, including original
-illustrative schematics for each highlighted paper.
+technical schematics for each highlighted paper.
 
 ## Updates
 
+- [June 11, 2026](updates/2026-06-11.md)
+- [June 10, 2026](updates/2026-06-10.md)
+- [June 9, 2026](updates/2026-06-09.md)
+- [June 8, 2026](updates/2026-06-08.md)
 - [June 7, 2026](updates/2026-06-07.md)
 - [June 6, 2026](updates/2026-06-06.md)
 

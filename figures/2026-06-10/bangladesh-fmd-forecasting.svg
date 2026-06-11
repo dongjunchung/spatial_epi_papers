@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Spatiotemporal foot-and-mouth disease mapping and forecasting in Bangladesh</title>
+  <desc id="desc">FMD surveillance and meteorological data feed seasonal analysis, Moran, LISA, Getis-Ord and inverse-distance weighted spatial analyses, climate regression, and ARIMA, random forest and XGBoost forecasts compared by error.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#475569"/></marker>
+  <style>.h{font:700 30px Arial;fill:#172554}.sh{font:700 20px Arial;fill:#1e293b}.tx{font:16px Arial;fill:#334155}.sm{font:14px Arial;fill:#475569}.eq{font:15px 'Courier New';fill:#312e81}.b{stroke-width:2.5}.ar{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#a)}</style></defs>
+  <rect width="1600" height="980" fill="#f8fafc"/><text x="800" y="48" text-anchor="middle" class="h">Bangladesh FMD: spatial risk, climate associations, and forecasting</text>
+  <rect x="30" y="82" width="420" height="330" rx="18" fill="#eff6ff" stroke="#2563eb" class="b"/>
+  <text x="240" y="118" text-anchor="middle" class="sh">1. Inputs, 2017-2023</text>
+  <rect x="65" y="160" width="350" height="75" rx="12" fill="#dbeafe"/><text x="240" y="191" text-anchor="middle" class="tx">District FMD cases from DLS</text><text x="240" y="218" text-anchor="middle" class="eq">Y[i,t]</text>
+  <rect x="65" y="255" width="350" height="105" rx="12" fill="#dcfce7"/><text x="240" y="286" text-anchor="middle" class="tx">Meteorology from BMD</text><text x="90" y="320" class="eq">temperature, humidity, wind, rainfall</text><text x="90" y="348" class="sm">matched by place and time</text>
+  <path d="M450 245h50" class="ar"/>
+  <rect x="500" y="82" width="560" height="330" rx="18" fill="#faf5ff" stroke="#7c3aed" class="b"/>
+  <text x="780" y="118" text-anchor="middle" class="sh">2. Spatial risk characterization</text>
+  <text x="535" y="160" class="eq">Global Moran I: overall clustering</text><text x="535" y="198" class="eq">LISA I[i]: local high-high / low-low clusters</text>
+  <text x="535" y="236" class="eq">Getis-Ord Gi*: statistically hot and cold spots</text><text x="535" y="274" class="eq">IDW(s0) = sum_i w[i]Y[i] / sum_i w[i]</text>
+  <text x="535" y="320" class="tx">Reported persistent southeastern hotspots</text><text x="535" y="354" class="tx">Emerging northern clusters and southern pre-monsoon risk</text>
+  <path d="M1060 245h50" class="ar"/>
+  <rect x="1110" y="82" width="460" height="330" rx="18" fill="#fefce8" stroke="#ca8a04" class="b"/>
+  <text x="1340" y="118" text-anchor="middle" class="sh">3. Season and climate</text>
+  <text x="1145" y="165" class="eq">Y[t] = alpha + sum_k beta[k] X[k,t] + e[t]</text>
+  <text x="1145" y="210" class="tx">Correlation screening + regression</text>
+  <text x="1145" y="255" class="tx">Positive correlation:</text><text x="1170" y="286" class="sm">temperature, relative humidity</text>
+  <text x="1145" y="326" class="tx">Significant regression effects:</text><text x="1170" y="357" class="sm">relative humidity, wind speed</text>
+  <text x="1145" y="392" class="tx">Reported seasonal peak: March</text>
+  <path d="M800 412v50" class="ar"/>
+  <rect x="80" y="465" width="1440" height="270" rx="18" fill="#eef2ff" stroke="#4f46e5" class="b"/>
+  <text x="800" y="502" text-anchor="middle" class="sh">4. Competing forecast models</text>
+  <rect x="125" y="550" width="360" height="125" rx="14" fill="#fff" stroke="#6366f1" class="b"/><text x="305" y="584" text-anchor="middle" class="tx">ARIMA</text><text x="155" y="620" class="eq">phi(B)(1-B)^d Y[t] = theta(B)e[t]</text><text x="155" y="651" class="sm">linear temporal baseline</text>
+  <rect x="620" y="550" width="360" height="125" rx="14" fill="#fff" stroke="#16a34a" class="b"/><text x="800" y="584" text-anchor="middle" class="tx">Random forest</text><text x="650" y="620" class="eq">Yhat = average_b tree_b(X)</text><text x="650" y="651" class="sm">nonlinear ensemble</text>
+  <rect x="1115" y="550" width="360" height="125" rx="14" fill="#fff" stroke="#ea580c" class="b"/><text x="1295" y="584" text-anchor="middle" class="tx">XGBoost</text><text x="1145" y="620" class="eq">Yhat = sum_m eta f_m(X)</text><text x="1145" y="651" class="sm">regularized sequential trees</text>
+  <path d="M800 735v45" class="ar"/>
+  <rect x="120" y="783" width="1360" height="145" rx="18" fill="#f0fdf4" stroke="#16a34a" class="b"/>
+  <text x="800" y="820" text-anchor="middle" class="sh">5. Validation and operational output</text>
+  <text x="165" y="862" class="eq">RMSE = sqrt(mean((Y-Yhat)^2))</text><text x="540" y="862" class="tx">Reported best: XGBoost, RMSE 153.64</text>
+  <text x="1000" y="862" class="tx">Rank: XGBoost, random forest, ARIMA</text><text x="165" y="899" class="tx">Target surveillance by hotspot, season, and forecasted burden</text>
+  <text x="800" y="958" text-anchor="middle" class="sm">Original technical schematic with reported methods and performance; not a paper figure</text>
+</svg>

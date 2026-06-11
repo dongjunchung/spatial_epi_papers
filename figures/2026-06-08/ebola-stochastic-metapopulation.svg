@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Stochastic Ebola metapopulation transmission and intervention model</title>
+  <desc id="desc">Ecological spillover seeds location-specific compartments, mobility connects populations, direct, funeral, and convalescent sexual transmission have separate hazards, and vaccination, contact reduction, and safe burial interventions alter simulated hotspot and response outcomes.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#475569"/></marker>
+  <style>.h{font:700 30px Arial;fill:#172554}.sh{font:700 20px Arial;fill:#1e293b}.tx{font:16px Arial;fill:#334155}.sm{font:14px Arial;fill:#475569}.eq{font:15px 'Courier New';fill:#312e81}.b{stroke-width:2.5}.ar{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#a)}</style></defs>
+  <rect width="1600" height="980" fill="#f8fafc"/><text x="800" y="48" text-anchor="middle" class="h">Stochastic Ebola transmission from spillover to spatial response</text>
+  <rect x="30" y="82" width="350" height="330" rx="18" fill="#f0fdf4" stroke="#16a34a" class="b"/>
+  <text x="205" y="118" text-anchor="middle" class="sh">1. Ecological introduction</text>
+  <text x="60" y="165" class="tx">Location-specific spillover hazard</text><text x="60" y="202" class="eq">Z[i,t] ~ Poisson(lambdaZoo[i,t])</text>
+  <text x="60" y="240" class="eq">log lambdaZoo = habitat + season + risk</text>
+  <circle cx="125" cy="315" r="45" fill="#86efac"/><text x="125" y="321" text-anchor="middle" class="tx">reservoir</text>
+  <path d="M175 315h80" class="ar"/><circle cx="300" cy="315" r="45" fill="#fecaca"/><text x="300" y="321" text-anchor="middle" class="tx">index case</text>
+  <text x="60" y="390" class="sm">Stochastic zoonotic introductions seed outbreaks</text>
+  <path d="M380 245h55" class="ar"/>
+  <rect x="435" y="82" width="730" height="330" rx="18" fill="#eff6ff" stroke="#2563eb" class="b"/>
+  <text x="800" y="118" text-anchor="middle" class="sh">2. Disease states and transmission modes within location i</text>
+  <g font-family="Arial" text-anchor="middle" font-size="20" font-weight="700">
+    <rect x="475" y="165" width="90" height="60" rx="10" fill="#dbeafe"/><text x="520" y="202" fill="#1e40af">S</text>
+    <rect x="610" y="165" width="90" height="60" rx="10" fill="#fef3c7"/><text x="655" y="202" fill="#92400e">E</text>
+    <rect x="745" y="165" width="90" height="60" rx="10" fill="#fee2e2"/><text x="790" y="202" fill="#991b1b">I</text>
+    <rect x="880" y="165" width="90" height="60" rx="10" fill="#ede9fe"/><text x="925" y="202" fill="#6b21a8">C</text>
+    <rect x="1015" y="165" width="90" height="60" rx="10" fill="#dcfce7"/><text x="1060" y="202" fill="#166534">R</text>
+  </g>
+  <path d="M565 195h45M700 195h45M835 195h45M970 195h45" class="ar"/>
+  <text x="475" y="270" class="eq">lambda[i,t] = betaD I/N + betaF F/N + betaS C/N</text>
+  <text x="475" y="306" class="tx">Direct case contact | funeral exposure | convalescent sexual transmission</text>
+  <text x="475" y="345" class="eq">events ~ competing stochastic hazards</text>
+  <text x="475" y="380" class="sm">C denotes a convalescent infectious state; F represents unsafe funeral exposure</text>
+  <path d="M1165 245h55" class="ar"/>
+  <rect x="1220" y="82" width="350" height="330" rx="18" fill="#fefce8" stroke="#ca8a04" class="b"/>
+  <text x="1395" y="118" text-anchor="middle" class="sh">3. Spatial coupling</text>
+  <circle cx="1295" cy="230" r="55" fill="#bfdbfe" stroke="#2563eb" stroke-width="4"/><circle cx="1495" cy="230" r="70" fill="#fecaca" stroke="#dc2626" stroke-width="4"/>
+  <path d="M1350 210C1400 165 1440 170 1470 190" class="ar"/><path d="M1455 275C1400 315 1360 300 1325 275" class="ar"/>
+  <text x="1250" y="345" class="eq">move[i,j,t] ~ Binomial(N[i,t], p[i,j])</text>
+  <text x="1250" y="380" class="sm">Movement propagates infection among patches</text>
+  <path d="M800 412v55" class="ar"/>
+  <rect x="55" y="470" width="700" height="275" rx="18" fill="#fff7ed" stroke="#ea580c" class="b"/>
+  <text x="405" y="507" text-anchor="middle" class="sh">4. Intervention operators</text>
+  <rect x="90" y="555" width="190" height="75" rx="12" fill="#ffedd5"/><text x="185" y="585" text-anchor="middle" class="tx">Contact reduction</text><text x="185" y="612" text-anchor="middle" class="eq">betaD*(1-c)</text>
+  <rect x="310" y="555" width="190" height="75" rx="12" fill="#ffedd5"/><text x="405" y="585" text-anchor="middle" class="tx">Safe burials</text><text x="405" y="612" text-anchor="middle" class="eq">betaF*(1-b)</text>
+  <rect x="530" y="555" width="190" height="75" rx="12" fill="#ffedd5"/><text x="625" y="585" text-anchor="middle" class="tx">Vaccination</text><text x="625" y="612" text-anchor="middle" class="eq">S -&gt; protected</text>
+  <text x="90" y="680" class="eq">scenario = start time x coverage x geographic targeting</text>
+  <text x="90" y="715" class="sm">Interventions can be combined and scaled across locations</text>
+  <rect x="845" y="470" width="700" height="275" rx="18" fill="#faf5ff" stroke="#7c3aed" class="b"/>
+  <text x="1195" y="507" text-anchor="middle" class="sh">5. Monte Carlo simulation</text>
+  <text x="885" y="555" class="eq">for replicate r = 1..R:</text><text x="915" y="590" class="eq">draw spillovers, transitions, movement</text>
+  <text x="915" y="625" class="eq">apply intervention scenario</text><text x="915" y="660" class="eq">record cases[i,t], deaths[i,t], peak[i]</text>
+  <text x="885" y="705" class="tx">Summarize medians, intervals, exceedance probabilities</text>
+  <path d="M800 745v48" class="ar"/>
+  <rect x="170" y="796" width="1260" height="130" rx="18" fill="#eef2ff" stroke="#4f46e5" class="b"/>
+  <text x="800" y="832" text-anchor="middle" class="sh">6. Public-health outputs</text>
+  <text x="220" y="876" class="tx">Future transmission hotspot probabilities</text><text x="650" y="876" class="tx">Response scale and timing comparisons</text><text x="1070" y="876" class="tx">Cases averted by intervention mode</text>
+  <text x="800" y="958" text-anchor="middle" class="sm">Original technical schematic of reported components; explanatory notation; not a paper figure</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">District dengue trend and spatial cluster analysis across Indian climate zones</title>
+  <desc id="desc">District dengue incidence from 2010 to 2022 is joined to Koppen-Geiger climate zones, analyzed with Prais-Winsten trends and climate-zone comparisons, then evaluated with global and local Moran statistics to identify high-high clusters.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#475569"/></marker>
+  <style>.h{font:700 30px Arial;fill:#172554}.sh{font:700 20px Arial;fill:#1e293b}.tx{font:16px Arial;fill:#334155}.sm{font:14px Arial;fill:#475569}.eq{font:15px 'Courier New';fill:#312e81}.b{stroke-width:2.5}.ar{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#a)}</style></defs>
+  <rect width="1600" height="980" fill="#f8fafc"/><text x="800" y="48" text-anchor="middle" class="h">Climate-stratified district dengue trends and hotspot detection</text>
+  <rect x="30" y="82" width="390" height="350" rx="18" fill="#eff6ff" stroke="#2563eb" class="b"/>
+  <text x="225" y="118" text-anchor="middle" class="sh">1. District panel, 2010-2022</text>
+  <text x="60" y="165" class="eq">incidence[i,t] = cases[i,t] / population[i,t]</text><text x="60" y="202" class="tx">National vector-borne disease surveillance</text>
+  <g transform="translate(85 245)" stroke="#fff" stroke-width="4"><path d="M0 0h85l25 50-25 55H0L-15 48z" fill="#bfdbfe"/><path d="M92 -5h90l25 53-27 57H82l28-55z" fill="#60a5fa"/><path d="M10 110h85l22 57-30 50H-8l8-60z" fill="#dbeafe"/><path d="M104 108h86l20 60-28 50H87l30-52z" fill="#93c5fd"/></g>
+  <text x="305" y="285" class="tx">District polygons</text><text x="305" y="320" class="tx">Annual incidence</text><text x="305" y="355" class="tx">Spatial weights W</text>
+  <path d="M420 255h55" class="ar"/>
+  <rect x="475" y="82" width="420" height="350" rx="18" fill="#fefce8" stroke="#ca8a04" class="b"/>
+  <text x="685" y="118" text-anchor="middle" class="sh">2. Climate classification</text>
+  <text x="510" y="165" class="tx">Koppen-Geiger: 11 detailed zones</text>
+  <rect x="515" y="205" width="100" height="70" rx="10" fill="#86efac"/><text x="565" y="247" text-anchor="middle" class="tx">Tropical</text>
+  <rect x="635" y="205" width="110" height="70" rx="10" fill="#bfdbfe"/><text x="690" y="247" text-anchor="middle" class="tx">Temperate</text>
+  <rect x="765" y="205" width="90" height="70" rx="10" fill="#fed7aa"/><text x="810" y="247" text-anchor="middle" class="tx">Arid</text>
+  <text x="510" y="320" class="eq">zone[i] = overlay(district[i], climate raster)</text>
+  <text x="510" y="365" class="sm">Detailed classes retained for trend estimates</text>
+  <path d="M895 255h55" class="ar"/>
+  <rect x="950" y="82" width="620" height="350" rx="18" fill="#eef2ff" stroke="#4f46e5" class="b"/>
+  <text x="1260" y="118" text-anchor="middle" class="sh">3. Temporal and zonal inference</text>
+  <text x="985" y="165" class="tx">Prais-Winsten regression</text><text x="985" y="198" class="eq">y[z,t] = alpha[z] + beta[z] t + e[z,t]</text>
+  <text x="985" y="230" class="eq">e[z,t] = rho e[z,t-1] + u[z,t]</text>
+  <text x="985" y="270" class="tx">Annual incidence rate change from beta[z]</text>
+  <text x="985" y="315" class="tx">Kruskal-Wallis + pairwise zone comparisons</text>
+  <text x="985" y="355" class="eq">H test: tropical vs temperate vs arid</text>
+  <text x="985" y="395" class="sm">Reported strongest increases include ET, Cfa and Dfb</text>
+  <path d="M800 432v50" class="ar"/>
+  <rect x="70" y="485" width="700" height="270" rx="18" fill="#faf5ff" stroke="#7c3aed" class="b"/>
+  <text x="420" y="522" text-anchor="middle" class="sh">4. Global spatial autocorrelation</text>
+  <text x="105" y="570" class="eq">I = (n/S0) * sum_i sum_j w[i,j](x[i]-xbar)(x[j]-xbar)</text>
+  <text x="105" y="605" class="eq">                 / sum_i (x[i]-xbar)^2</text>
+  <rect x="145" y="650" width="550" height="65" rx="12" fill="#ede9fe"/><text x="420" y="691" text-anchor="middle" class="tx">Reported Global Moran's I = 0.06, p &lt; 0.001</text>
+  <rect x="830" y="485" width="700" height="270" rx="18" fill="#fff7ed" stroke="#ea580c" class="b"/>
+  <text x="1180" y="522" text-anchor="middle" class="sh">5. Local Moran cluster map</text>
+  <text x="865" y="570" class="eq">I[i] = z[i] * sum_j w[i,j] z[j]</text>
+  <g font-family="Arial" text-anchor="middle"><rect x="875" y="620" width="135" height="60" rx="10" fill="#dc2626"/><text x="942" y="657" fill="#fff" class="tx">High-High</text><rect x="1030" y="620" width="135" height="60" rx="10" fill="#2563eb"/><text x="1097" y="657" fill="#fff" class="tx">Low-Low</text><rect x="1185" y="620" width="135" height="60" rx="10" fill="#fecaca"/><text x="1252" y="657" class="tx">High-Low</text><rect x="1340" y="620" width="135" height="60" rx="10" fill="#bfdbfe"/><text x="1407" y="657" class="tx">Low-High</text></g>
+  <text x="865" y="720" class="tx">Reported: 31 high-incidence district clusters</text>
+  <path d="M800 755v45" class="ar"/>
+  <rect x="120" y="803" width="1360" height="125" rx="18" fill="#f0fdf4" stroke="#16a34a" class="b"/>
+  <text x="800" y="840" text-anchor="middle" class="sh">6. Climate-sensitive targeting</text>
+  <text x="170" y="882" class="tx">Semi-arid Punjab and Haryana clusters</text><text x="620" y="882" class="tx">Humid Tamil Nadu and Kerala clusters</text><text x="1090" y="882" class="tx">Early warning and vector-control priorities</text>
+  <text x="800" y="958" text-anchor="middle" class="sm">Original technical schematic with reported statistics and explanatory formulas; not a paper figure</text>
+</svg>
