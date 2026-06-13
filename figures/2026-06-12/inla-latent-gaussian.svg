@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Integrated nested Laplace approximation for latent Gaussian models</title>
+  <desc id="desc">Observations depend conditionally on a sparse Gaussian latent field and low-dimensional hyperparameters. INLA locates the conditional mode, approximates the hyperparameter posterior with a Laplace ratio, approximates latent marginals conditionally, and numerically integrates over hyperparameters to return posterior marginals and predictions.</desc>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#475569"/></marker>
+    <style>.h{font:700 30px Arial;fill:#172554}.sh{font:700 20px Arial;fill:#1e293b}.tx{font:16px Arial;fill:#334155}.sm{font:14px Arial;fill:#475569}.eq{font:15px 'Courier New';fill:#312e81}.b{stroke-width:2.5}.ar{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#a)}</style>
+  </defs>
+  <rect width="1600" height="980" fill="#f8fafc"/>
+  <text x="800" y="48" text-anchor="middle" class="h">INLA: deterministic Bayesian inference for latent Gaussian models</text>
+
+  <rect x="30" y="82" width="440" height="350" rx="18" fill="#eff6ff" stroke="#2563eb" class="b"/>
+  <text x="250" y="118" text-anchor="middle" class="sh">1. Latent Gaussian model</text>
+  <text x="65" y="165" class="eq">y[i] | x,theta ~ pi(y[i] | eta[i],theta)</text>
+  <text x="65" y="205" class="eq">eta = A x</text>
+  <text x="65" y="245" class="eq">x | theta ~ Normal(mu(theta), Q(theta)^-1)</text>
+  <text x="65" y="285" class="eq">theta ~ pi(theta)</text>
+  <rect x="70" y="325" width="355" height="65" rx="12" fill="#dbeafe"/>
+  <text x="247" y="351" text-anchor="middle" class="tx">Sparse precision Q</text>
+  <text x="247" y="378" text-anchor="middle" class="sm">CAR, BYM, SPDE, temporal random effects</text>
+  <path d="M470 255h50" class="ar"/>
+
+  <rect x="520" y="82" width="520" height="350" rx="18" fill="#fefce8" stroke="#ca8a04" class="b"/>
+  <text x="780" y="118" text-anchor="middle" class="sh">2. Conditional mode and Gaussian approximation</text>
+  <text x="555" y="165" class="eq">x*(theta) = argmax_x pi(x | theta,y)</text>
+  <text x="555" y="210" class="tx">Use Newton-type optimization and sparse matrix algebra</text>
+  <text x="555" y="255" class="eq">pi_G(x | theta,y) approx Normal(x*, H^-1)</text>
+  <text x="555" y="300" class="eq">H = - second derivative log pi(x | theta,y)</text>
+  <text x="555" y="350" class="tx">Computational leverage:</text>
+  <text x="580" y="383" class="sm">factorize sparse Q + likelihood curvature</text>
+  <path d="M1040 255h50" class="ar"/>
+
+  <rect x="1090" y="82" width="480" height="350" rx="18" fill="#faf5ff" stroke="#7c3aed" class="b"/>
+  <text x="1330" y="118" text-anchor="middle" class="sh">3. Hyperparameter posterior</text>
+  <text x="1125" y="168" class="eq">pi(theta | y) proportional to</text>
+  <text x="1125" y="207" class="eq">  pi(x,theta,y) / pi_G(x|theta,y)</text>
+  <text x="1125" y="245" class="eq">  evaluated at x = x*(theta)</text>
+  <text x="1125" y="295" class="tx">Laplace approximation removes the high-</text>
+  <text x="1125" y="326" class="tx">dimensional latent field from integration</text>
+  <text x="1125" y="375" class="sm">theta should remain low dimensional</text>
+  <path d="M800 432v48" class="ar"/>
+
+  <rect x="65" y="483" width="700" height="270" rx="18" fill="#eef2ff" stroke="#4f46e5" class="b"/>
+  <text x="415" y="520" text-anchor="middle" class="sh">4. Conditional latent marginals</text>
+  <text x="100" y="570" class="eq">pi(x[i] | theta,y)</text>
+  <text x="100" y="610" class="tx">Approximation choices:</text>
+  <rect x="125" y="645" width="170" height="60" rx="10" fill="#dbeafe"/><text x="210" y="682" text-anchor="middle" class="tx">Gaussian</text>
+  <rect x="325" y="645" width="190" height="60" rx="10" fill="#ddd6fe"/><text x="420" y="682" text-anchor="middle" class="tx">Simplified Laplace</text>
+  <rect x="545" y="645" width="170" height="60" rx="10" fill="#fecaca"/><text x="630" y="682" text-anchor="middle" class="tx">Full Laplace</text>
+
+  <rect x="835" y="483" width="700" height="270" rx="18" fill="#fff7ed" stroke="#ea580c" class="b"/>
+  <text x="1185" y="520" text-anchor="middle" class="sh">5. Numerical integration over theta</text>
+  <text x="870" y="570" class="eq">pi(x[i] | y) = integral pi(x[i]|theta,y)</text>
+  <text x="870" y="602" class="eq">                         pi(theta|y) dtheta</text>
+  <text x="870" y="650" class="eq">approx sum_k pi_tilde(x[i]|theta[k],y)</text>
+  <text x="870" y="682" class="eq">             * pi_tilde(theta[k]|y) * Delta[k]</text>
+  <text x="870" y="722" class="sm">Adaptive integration points cover posterior mass</text>
+  <path d="M800 753v45" class="ar"/>
+
+  <rect x="90" y="801" width="940" height="127" rx="18" fill="#f0fdf4" stroke="#16a34a" class="b"/>
+  <text x="560" y="838" text-anchor="middle" class="sh">6. Spatial epidemiology outputs</text>
+  <text x="130" y="880" class="tx">Posterior risk marginals</text><text x="390" y="880" class="tx">Exceedance probabilities</text><text x="690" y="880" class="tx">Predictions and criteria</text>
+  <text x="130" y="910" class="sm">BYM/ICAR maps, geostatistical fields, spatiotemporal smoothing</text>
+
+  <rect x="1080" y="801" width="430" height="127" rx="18" fill="#fee2e2" stroke="#dc2626" class="b"/>
+  <text x="1295" y="838" text-anchor="middle" class="sh">7. Limits to check</text>
+  <text x="1115" y="877" class="sm">Approximation error; multimodality</text>
+  <text x="1115" y="906" class="sm">Many hyperparameters; weak information</text>
+  <text x="800" y="958" text-anchor="middle" class="sm">Original technical schematic of the published INLA construction; not a paper figure</text>
+</svg>

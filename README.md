@@ -5,6 +5,7 @@ technical schematics for each highlighted paper.
 
 ## Updates
 
+- [June 12, 2026](updates/2026-06-12.md)
 - [June 11, 2026](updates/2026-06-11.md)
 - [June 10, 2026](updates/2026-06-10.md)
 - [June 9, 2026](updates/2026-06-09.md)
