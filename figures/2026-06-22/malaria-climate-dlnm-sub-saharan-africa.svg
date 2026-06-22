@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="940" viewBox="0 0 1500 940" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for climate drivers of malaria risk using mixed-effects distributed lag non-linear models</title>
+  <desc id="desc">A four-panel schematic of the medRxiv malaria climate-exposure modeling preprint: DHS malaria tests for about 350,000 children across 26 Sub-Saharan African countries are linked to high-resolution climate exposures, modeled with mixed-effect logistic regression and distributed lag non-linear terms over 1 to 6 months, adjusted for seasonality and long-term trends, checked for effect modifiers such as insecticide-treated net use, and summarized as non-linear exposure-risk curves and early-warning intervention outputs. Equations are explanatory notation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0 0 L0 8 L11 4 Z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 28px Arial;fill:#0f172a}
+      .subtitle{font:13px Arial;fill:#64748b}
+      .panel{font:700 22px Arial;fill:#1e293b}
+      .label{font:700 16px Arial;fill:#1e293b}
+      .text{font:14px Arial;fill:#334155}
+      .small{font:12.5px Arial;fill:#475569}
+      .eq{font:14px 'Courier New',monospace;fill:#312e81}
+      .box{stroke-width:2.2}
+      .arrow{fill:none;stroke:#334155;stroke-width:2.8;marker-end:url(#arrow)}
+      .axis{stroke:#334155;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1500" height="940" fill="#f8fafc"/>
+  <text x="750" y="42" text-anchor="middle" class="title">Climate exposure lags and malaria risk in children under five</text>
+  <text x="750" y="68" text-anchor="middle" class="subtitle">Original technical schematic for Martellini O Nocentini et al., medRxiv, 2026; not a reproduced publication figure. Notation is explanatory.</text>
+
+  <rect x="40" y="95" width="685" height="350" rx="8" fill="#eff6ff" stroke="#2563eb" class="box"/>
+  <text x="68" y="132" class="panel">A. Individual outcomes and gridded exposure linkage</text>
+  <text x="70" y="163" class="text">The preprint reports DHS malaria-test records for children aged 5-59 months in 26 Sub-Saharan African countries.</text>
+  <rect x="80" y="197" width="235" height="145" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="198" y="226" text-anchor="middle" class="label">Child-level records</text>
+  <text x="105" y="260" class="small">about 350,000 children</text>
+  <text x="105" y="284" class="small">surveys from 2006-2023</text>
+  <text x="105" y="308" class="small">malaria test result M_i</text>
+  <text x="105" y="332" class="small">age, sex, ITN use, SES covariates</text>
+  <rect x="375" y="197" width="300" height="145" rx="8" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="525" y="226" text-anchor="middle" class="label">High-resolution climate histories</text>
+  <text x="402" y="260" class="small">temperature, precipitation</text>
+  <text x="402" y="284" class="small">soil moisture, evapotranspiration</text>
+  <text x="402" y="308" class="small">specific humidity</text>
+  <text x="402" y="332" class="eq">X_i,k,l for lag l = 1,...,6 months</text>
+  <path d="M315 270 H375" class="arrow"/>
+  <rect x="82" y="374" width="593" height="43" rx="7" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+  <text x="108" y="401" class="small">Spatial link: survey cluster or residence location joined to exposure surfaces; exact geocoding details require full text.</text>
+
+  <rect x="775" y="95" width="685" height="350" rx="8" fill="#fefce8" stroke="#ca8a04" class="box"/>
+  <text x="803" y="132" class="panel">B. Mixed-effects DLNM risk model</text>
+  <text x="805" y="163" class="text">Reported approach: mixed-effect logistic regression with distributed lag non-linear models over 1-6 months.</text>
+  <rect x="815" y="198" width="595" height="132" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="842" y="231" class="label">Generic model skeleton</text>
+  <text x="842" y="265" class="eq">logit Pr(M_i = 1) = alpha_country/survey + sum_k f_k(X_i,k, lags 1:6)</text>
+  <text x="842" y="293" class="eq">                    + covariates + seasonality + long_term_trend</text>
+  <text x="842" y="318" class="small">The exact random-effects hierarchy and spline basis are not stated in the abstract.</text>
+  <rect x="815" y="360" width="595" height="54" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="842" y="383" class="small">Effect modification tested by maternal education, wealth, residence, water, sanitation, child age/sex, ITN use, and household-head age.</text>
+  <text x="842" y="405" class="small">Outcome prevalence reported in the abstract: malaria positive = 19.5%.</text>
+
+  <rect x="40" y="485" width="685" height="350" rx="8" fill="#f5f3ff" stroke="#7c3aed" class="box"/>
+  <text x="68" y="522" class="panel">C. Non-linear exposure-response summaries</text>
+  <text x="70" y="553" class="text">The abstract reports non-monotone and lag-specific associations for multiple climate variables.</text>
+  <g transform="translate(95 585)">
+    <line x1="0" y1="130" x2="240" y2="130" class="axis"/>
+    <line x1="0" y1="130" x2="0" y2="10" class="axis"/>
+    <path d="M10 115 C70 35,120 35,165 88 C190 116,215 125,235 126" fill="none" stroke="#ef4444" stroke-width="4"/>
+    <text x="120" y="158" text-anchor="middle" class="small">temperature</text>
+    <text x="65" y="26" class="small">peak near 24 C</text>
+    <text x="65" y="48" class="small">OR 1.45</text>
+  </g>
+  <g transform="translate(385 585)">
+    <line x1="0" y1="130" x2="240" y2="130" class="axis"/>
+    <line x1="0" y1="130" x2="0" y2="10" class="axis"/>
+    <path d="M10 116 C55 90,100 72,135 68 C180 85,215 110,235 120" fill="none" stroke="#3b82f6" stroke-width="4"/>
+    <text x="120" y="158" text-anchor="middle" class="small">precipitation</text>
+    <text x="88" y="44" class="small">risk rises to 59-120 mm</text>
+    <text x="88" y="66" class="small">OR 1.10</text>
+  </g>
+  <rect x="95" y="770" width="530" height="43" rx="7" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="120" y="795" class="small">Other reported curves: soil moisture risk up to about 80 mm; evapotranspiration near-linear positive; humidity above 14 g/kg lowers risk.</text>
+
+  <rect x="775" y="485" width="685" height="350" rx="8" fill="#ecfdf5" stroke="#16a34a" class="box"/>
+  <text x="803" y="522" class="panel">D. Validation targets and intervention outputs</text>
+  <text x="805" y="553" class="text">The model outputs are risk surfaces over exposure histories, with subgroup-specific vulnerability signals.</text>
+  <rect x="825" y="590" width="250" height="145" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="950" y="620" text-anchor="middle" class="label">Lag-attribution outputs</text>
+  <text x="850" y="654" class="small">short-term temperature effects</text>
+  <text x="850" y="680" class="small">1-4 month rainfall windows</text>
+  <text x="850" y="706" class="small">humidity protection at high levels</text>
+  <rect x="1125" y="590" width="285" height="145" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="1268" y="620" text-anchor="middle" class="label">Public-health use</text>
+  <text x="1150" y="654" class="small">early warning from climate anomalies</text>
+  <text x="1150" y="680" class="small">ITN-targeted risk communication</text>
+  <text x="1150" y="706" class="small">resource allocation for vulnerable children</text>
+  <path d="M1075 662 H1125" class="arrow"/>
+  <rect x="825" y="770" width="585" height="43" rx="7" fill="#f7fee7" stroke="#65a30d" stroke-width="2"/>
+  <text x="850" y="795" class="small">Reported modifier: elevated risk at low and moderate average temperatures was especially evident among children not sleeping under an ITN.</text>
+</svg>

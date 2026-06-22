@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="940" viewBox="0 0 1500 940" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for spatio-temporal brucellosis clustering in North Khorasan, Iran</title>
+  <desc id="desc">A four-panel schematic showing reported inputs from confirmed brucellosis cases in North Khorasan from 2015 to 2023, county-year incidence mapping in ArcGIS, logistic regression for exposure odds by residence and family history, global and local Moran's I spatial clustering, LISA high-high hotspot classification, and policy outputs for persistent hotspots in Bojnord, Shirvan, and Faruj. The equations are explanatory notation and may differ from the paper.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0 0 L0 8 L11 4 Z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 28px Arial;fill:#0f172a}
+      .subtitle{font:13px Arial;fill:#64748b}
+      .panel{font:700 22px Arial;fill:#1e293b}
+      .label{font:700 16px Arial;fill:#1e293b}
+      .text{font:14px Arial;fill:#334155}
+      .small{font:12.5px Arial;fill:#475569}
+      .eq{font:14px 'Courier New',monospace;fill:#312e81}
+      .box{stroke-width:2.2}
+      .arrow{fill:none;stroke:#334155;stroke-width:2.8;marker-end:url(#arrow)}
+      .thin{fill:none;stroke:#64748b;stroke-width:1.8}
+    </style>
+  </defs>
+  <rect width="1500" height="940" fill="#f8fafc"/>
+  <text x="750" y="42" text-anchor="middle" class="title">Spatio-temporal brucellosis clustering and risk-factor analysis</text>
+  <text x="750" y="68" text-anchor="middle" class="subtitle">Original technical schematic for Sadooghi et al., One Health, 2026; not a reproduced publication figure. Equations are cautious explanatory notation.</text>
+
+  <rect x="40" y="95" width="685" height="350" rx="8" fill="#eff6ff" stroke="#2563eb" class="box"/>
+  <text x="68" y="132" class="panel">A. Reported surveillance data and indices</text>
+  <text x="70" y="163" class="text">Confirmed human brucellosis cases in North Khorasan, Iran, 2015-2023.</text>
+  <rect x="78" y="195" width="225" height="155" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="190" y="225" text-anchor="middle" class="label">Case line list</text>
+  <text x="102" y="258" class="small">n = 2,855 confirmed cases</text>
+  <text x="102" y="282" class="small">sex, age, residence</text>
+  <text x="102" y="306" class="small">occupation / household role</text>
+  <text x="102" y="330" class="small">livestock and dairy exposures</text>
+
+  <rect x="342" y="195" width="335" height="155" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="510" y="225" text-anchor="middle" class="label">County-year spatial table</text>
+  <text x="372" y="258" class="eq">i = county, t = 2015,...,2023</text>
+  <text x="372" y="286" class="eq">Y_it = cases, Pop_it = population</text>
+  <text x="372" y="314" class="eq">rate_it = Y_it / Pop_it</text>
+  <text x="372" y="338" class="small">ArcGIS 10.8.2 reported for spatial analyses.</text>
+  <path d="M303 272 H342" class="arrow"/>
+
+  <rect x="82" y="374" width="595" height="43" rx="7" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+  <text x="106" y="401" class="small">Reported descriptive signals: 56.39% male, 71.14% rural, 86.67% unpasteurized dairy consumption, 82.25% livestock contact.</text>
+
+  <rect x="775" y="95" width="685" height="350" rx="8" fill="#fefce8" stroke="#ca8a04" class="box"/>
+  <text x="803" y="132" class="panel">B. Exposure odds model</text>
+  <text x="805" y="163" class="text">The abstract reports logistic regression for exposure differences and family-history associations.</text>
+  <rect x="815" y="197" width="300" height="145" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="965" y="227" text-anchor="middle" class="label">Generic logistic notation</text>
+  <text x="842" y="260" class="eq">logit Pr(E_k = 1)</text>
+  <text x="842" y="285" class="eq">  = a + b1 rural + b2 age + ...</text>
+  <text x="842" y="318" class="small">Exact covariate specification not stated in the abstract.</text>
+  <rect x="1160" y="197" width="250" height="145" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="1285" y="226" text-anchor="middle" class="label">Reported odds ratios</text>
+  <text x="1185" y="260" class="small">Rural vs urban:</text>
+  <text x="1185" y="284" class="small">dairy consumption OR 2.54</text>
+  <text x="1185" y="308" class="small">livestock interaction OR 8.93</text>
+  <text x="1185" y="332" class="small">family history to cattle exposure OR 2.13</text>
+  <path d="M1115 270 H1160" class="arrow"/>
+  <rect x="815" y="374" width="595" height="43" rx="7" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="840" y="401" class="small">Policy estimand: which exposure pathways differ by residence and household history in hotspot settings?</text>
+
+  <rect x="40" y="485" width="685" height="350" rx="8" fill="#f5f3ff" stroke="#7c3aed" class="box"/>
+  <text x="68" y="522" class="panel">C. Spatial autocorrelation and LISA workflow</text>
+  <text x="70" y="553" class="text">The paper reports Global Moran's I, Local Moran's I, and LISA cluster maps.</text>
+  <rect x="78" y="585" width="190" height="135" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="173" y="615" text-anchor="middle" class="label">Neighbor weights</text>
+  <text x="103" y="650" class="eq">W = [w_ij]</text>
+  <text x="103" y="675" class="small">county adjacency or spatial</text>
+  <text x="103" y="697" class="small">weights as implemented in GIS</text>
+  <rect x="310" y="585" width="180" height="135" rx="8" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="400" y="615" text-anchor="middle" class="label">Global Moran's I</text>
+  <text x="333" y="650" class="eq">I = spatial</text>
+  <text x="333" y="675" class="eq">autocorrelation</text>
+  <text x="333" y="697" class="small">province-wide clustering test</text>
+  <rect x="535" y="585" width="150" height="135" rx="8" fill="#fae8ff" stroke="#c026d3" stroke-width="2"/>
+  <text x="610" y="615" text-anchor="middle" class="label">Local Moran</text>
+  <text x="560" y="650" class="eq">I_i,t</text>
+  <text x="560" y="675" class="small">county-year</text>
+  <text x="560" y="697" class="small">local clusters</text>
+  <path d="M268 652 H310" class="arrow"/>
+  <path d="M490 652 H535" class="arrow"/>
+  <rect x="93" y="755" width="560" height="42" rx="7" fill="#fdf4ff" stroke="#d946ef" stroke-width="2"/>
+  <text x="117" y="782" class="small">LISA labels: high-high hotspots, intermittent patterns, and absence of statistically significant low-low clusters.</text>
+
+  <rect x="775" y="485" width="685" height="350" rx="8" fill="#ecfdf5" stroke="#16a34a" class="box"/>
+  <text x="803" y="522" class="panel">D. Reported hotspot persistence and action outputs</text>
+  <text x="805" y="553" class="text">Persistent high-incidence clusters were reported from 2016-2023.</text>
+  <g transform="translate(835 590)">
+    <rect x="0" y="0" width="225" height="165" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="112" y="31" text-anchor="middle" class="label">Stable hotspots</text>
+    <circle cx="55" cy="72" r="18" fill="#ef4444"/><text x="88" y="78" class="small">Bojnord</text>
+    <circle cx="55" cy="108" r="18" fill="#ef4444"/><text x="88" y="114" class="small">Shirvan</text>
+    <circle cx="55" cy="144" r="18" fill="#ef4444"/><text x="88" y="150" class="small">Faruj</text>
+  </g>
+  <g transform="translate(1105 590)">
+    <rect x="0" y="0" width="290" height="165" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <text x="145" y="31" text-anchor="middle" class="label">Surveillance and intervention estimands</text>
+    <text x="24" y="68" class="small">county-specific incidence ranking</text>
+    <text x="24" y="96" class="small">persistent vs intermittent clusters</text>
+    <text x="24" y="124" class="small">targeted vaccination campaigns</text>
+    <text x="24" y="152" class="small">community education on dairy/livestock risk</text>
+  </g>
+  <path d="M1060 672 H1105" class="arrow"/>
+  <rect x="835" y="780" width="560" height="38" rx="7" fill="#f7fee7" stroke="#65a30d" stroke-width="2"/>
+  <text x="861" y="804" class="small">Uncertainty note: the figure summarizes reported tests and abstract findings; it does not reproduce the paper's maps.</text>
+</svg>
