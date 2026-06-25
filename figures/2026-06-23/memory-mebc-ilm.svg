@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for memory-enhanced behavioural change individual-level spatial epidemic models</title>
+  <desc id="desc">Multi-panel schematic showing individual locations, SIR states, spatial infection pressure, four reported memory mechanisms for perceived prevalence risk, Bayesian likelihood and posterior inference, simulation and UK foot-and-mouth disease application outputs.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f8fb}.panel{fill:#ffffff;stroke:#2f3a4a;stroke-width:1.3;rx:8}.h{font:700 18px Arial, sans-serif;fill:#16202f}.t{font:14px Arial, sans-serif;fill:#253044}.s{font:12px Arial, sans-serif;fill:#536073}.eq{font:15px Georgia, serif;fill:#111827}.small{font:11px Arial, sans-serif;fill:#536073}.arrow{stroke:#3b6ea8;stroke-width:2;fill:none;marker-end:url(#arrow)}.red{fill:#d95f5f}.blue{fill:#4f87c4}.green{fill:#5aa469}.gray{fill:#a7afbd}.orange{fill:#e9a03b}.line{stroke:#8a94a6;stroke-width:1.2;fill:none}.dash{stroke:#8a94a6;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.note{fill:#fff6df;stroke:#d5a944;stroke-width:1}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea8"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="h" x="36" y="34">Mao, Deardon, and Deeth 2026: MEBC-ILMs</text>
+  <text class="s" x="36" y="55">Original technical schematic; not a reproduced publication figure. Equations use reported structure where available, with simplified notation for readability.</text>
+
+  <rect class="panel" x="30" y="78" width="360" height="270"/>
+  <text class="h" x="50" y="108">A. Spatial individual-level epidemic</text>
+  <text class="t" x="50" y="134">Individuals i at locations x_i with SIR states</text>
+  <line class="line" x1="70" y1="168" x2="350" y2="168"/>
+  <line class="line" x1="70" y1="300" x2="350" y2="300"/>
+  <line class="line" x1="70" y1="168" x2="70" y2="300"/>
+  <line class="line" x1="350" y1="168" x2="350" y2="300"/>
+  <circle class="blue" cx="118" cy="214" r="10"/><text class="small" x="102" y="195">S</text>
+  <circle class="red" cx="214" cy="224" r="11"/><text class="small" x="203" y="205">I</text>
+  <circle class="green" cx="302" cy="192" r="10"/><text class="small" x="288" y="174">R</text>
+  <circle class="blue" cx="160" cy="278" r="9"/><circle class="red" cx="278" cy="265" r="10"/><circle class="blue" cx="318" cy="238" r="8"/>
+  <path class="dash" d="M214 224 C185 231,155 246,118 214"/>
+  <path class="dash" d="M278 265 C250 250,237 238,214 224"/>
+  <text class="eq" x="50" y="330">P(i,t) = 1 - exp[- spatial force_i(t) x behaviour_t]</text>
+
+  <rect class="panel" x="420" y="78" width="350" height="270"/>
+  <text class="h" x="440" y="108">B. Reported memory mechanisms</text>
+  <text class="t" x="440" y="134">Perceived risk signal psi_t from prevalence h</text>
+  <text class="eq" x="450" y="166">Memoryless: psi_t = h_{t-1}</text>
+  <text class="eq" x="450" y="200">Sliding window: psi_t = mean(h_{t-k}), k=1..kmax</text>
+  <text class="eq" x="450" y="234">Power-law: psi_t = sum k^{-lambda_P} h_{t-k}</text>
+  <text class="eq" x="450" y="268">Exponential: psi_t = sum exp[-lambda_E(k-1)] h_{t-k}</text>
+  <text class="small" x="450" y="303">Reported: kmax, lambda_P, and lambda_E can be inferred from epidemic data.</text>
+  <rect class="note" x="448" y="318" width="290" height="20"/><text class="small" x="458" y="332">D_l compares retained contribution at lag l.</text>
+
+  <rect class="panel" x="800" y="78" width="370" height="270"/>
+  <text class="h" x="820" y="108">C. Bayesian inference</text>
+  <text class="t" x="820" y="134">Conditional likelihood over infection transitions</text>
+  <text class="eq" x="830" y="168">L_t = prod new I P(i,t) x prod still S [1-P(i,t)]</text>
+  <text class="eq" x="830" y="204">posterior pi(Theta|D) proportional to L(D|Theta)p(Theta)</text>
+  <text class="t" x="830" y="238">Reported sampler:</text>
+  <rect x="830" y="252" width="285" height="46" fill="#edf4fb" stroke="#83a6c9"/>
+  <text class="t" x="850" y="280">Adaptive random-walk Metropolis-Hastings</text>
+  <text class="small" x="830" y="323">Implementation reported in Julia v1.11.5.</text>
+
+  <rect class="panel" x="30" y="386" width="360" height="300"/>
+  <text class="h" x="50" y="416">D. Simulation design</text>
+  <text class="t" x="50" y="444">Reported experiments vary memory length</text>
+  <rect x="62" y="470" width="95" height="70" fill="#edf4fb" stroke="#83a6c9"/><text class="t" x="82" y="500">1,000</text><text class="small" x="75" y="522">individuals</text>
+  <rect x="185" y="470" width="95" height="70" fill="#f1f7ed" stroke="#8fb980"/><text class="t" x="216" y="500">20</text><text class="small" x="204" y="522">populations</text>
+  <rect x="62" y="562" width="250" height="62" fill="#fff6df" stroke="#d5a944"/>
+  <text class="t" x="78" y="588">Short vs long memory scenarios</text>
+  <text class="small" x="78" y="610">Sliding window, power-law, exponential</text>
+  <text class="t" x="50" y="656">Outputs: parameter recovery and predictive performance</text>
+
+  <rect class="panel" x="420" y="386" width="350" height="300"/>
+  <text class="h" x="440" y="416">E. Empirical application</text>
+  <text class="t" x="440" y="444">2001 U.K. foot-and-mouth disease epidemic</text>
+  <path class="line" d="M464 560 C490 506,522 520,548 474 C582 525,620 490,650 548 C680 520,702 540,730 500"/>
+  <circle class="red" cx="548" cy="474" r="5"/><circle class="red" cx="650" cy="548" r="5"/>
+  <text class="small" x="465" y="585">Observed prevalence history feeds psi_t</text>
+  <text class="eq" x="450" y="626">behaviour_t = f(psi_t; memory parameters)</text>
+  <text class="small" x="450" y="656">Purpose: explore plausible memory structures in real data.</text>
+
+  <rect class="panel" x="800" y="386" width="370" height="300"/>
+  <text class="h" x="820" y="416">F. Policy and model-check outputs</text>
+  <rect x="830" y="452" width="300" height="42" fill="#edf4fb" stroke="#83a6c9"/><text class="t" x="852" y="478">Behaviour-aware epidemic forecasts</text>
+  <rect x="830" y="514" width="300" height="42" fill="#f1f7ed" stroke="#8fb980"/><text class="t" x="852" y="540">Posterior uncertainty for transmission and memory</text>
+  <rect x="830" y="576" width="300" height="42" fill="#fff6df" stroke="#d5a944"/><text class="t" x="852" y="602">Sensitivity to misspecified memory structure</text>
+  <text class="small" x="830" y="650">Reported conclusion: MEBC-ILMs recover key parameters and can outperform a basic BC-ILM when memory affects behaviour.</text>
+
+  <path class="arrow" d="M390 210 L420 210"/><path class="arrow" d="M770 210 L800 210"/><path class="arrow" d="M965 348 L965 386"/><path class="arrow" d="M390 536 L420 536"/><path class="arrow" d="M770 536 L800 536"/>
+</svg>

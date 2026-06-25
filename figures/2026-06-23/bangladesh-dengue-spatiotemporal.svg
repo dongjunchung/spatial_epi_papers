@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for spatiotemporal dengue trends in Bangladesh</title>
+  <desc id="desc">Multi-panel schematic showing national dengue surveillance from 2000 to 2025, environmental inputs, pre-2019 and post-2019 comparisons, rural-to-urban incidence ratios, standardized incidence ratios, shifted seasonal peaks, climate correlations, and surveillance outputs.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8faf7}.panel{fill:#fff;stroke:#344036;stroke-width:1.3;rx:8}.h{font:700 18px Arial,sans-serif;fill:#17251b}.t{font:14px Arial,sans-serif;fill:#263629}.s{font:12px Arial,sans-serif;fill:#5c695e}.small{font:11px Arial,sans-serif;fill:#5c695e}.eq{font:15px Georgia,serif;fill:#111827}.arrow{stroke:#4d7c59;stroke-width:2;fill:none;marker-end:url(#arrow)}.line{stroke:#859487;stroke-width:1.2;fill:none}.dash{stroke:#859487;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.blue{fill:#5b8cc0}.red{fill:#cf5e59}.orange{fill:#e3a33b}.green{fill:#67a35b}.note{fill:#fff7df;stroke:#d8af48}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4d7c59"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="h" x="36" y="34">Khan, Sharif, Sharif, and Dey 2026: Bangladesh dengue trends</text>
+  <text class="s" x="36" y="55">Original technical schematic; not a reproduced publication figure. Notation below is explanatory because the abstract reports comparisons rather than full equations.</text>
+
+  <rect class="panel" x="30" y="78" width="360" height="278"/>
+  <text class="h" x="50" y="108">A. Data streams</text>
+  <rect x="58" y="136" width="285" height="48" fill="#edf6ed" stroke="#8fb980"/><text class="t" x="76" y="166">National dengue surveillance, 2000-2025</text>
+  <rect x="58" y="204" width="285" height="48" fill="#eef4fb" stroke="#8aa9c9"/><text class="t" x="76" y="234">World Bank Climate Portal + meteorology</text>
+  <rect x="58" y="272" width="285" height="48" fill="#fff7df" stroke="#d8af48"/><text class="t" x="76" y="302">Clinical prognosis and fatal-case timing</text>
+  <text class="small" x="58" y="340">Reported outcomes: prevalence, incidence, urban/rural distribution, seasonality, symptoms.</text>
+
+  <rect class="panel" x="420" y="78" width="350" height="278"/>
+  <text class="h" x="440" y="108">B. Time-window comparison</text>
+  <line class="line" x1="470" y1="170" x2="720" y2="170"/>
+  <rect x="470" y="145" width="128" height="50" fill="#dceede" stroke="#6fa66e"/><text class="t" x="490" y="176">2000-2018</text>
+  <rect x="610" y="145" width="110" height="50" fill="#f4d9d7" stroke="#ca6b65"/><text class="t" x="633" y="176">2019-2025</text>
+  <text class="eq" x="450" y="235">Compare: incidence, SIR, rural:urban ratio, months</text>
+  <text class="eq" x="450" y="268">Climate association: r(incidence, temp/humidity/rainfall)</text>
+  <text class="small" x="450" y="318">SIR definition is shown generically; exact denominator details should be checked in the full paper.</text>
+
+  <rect class="panel" x="800" y="78" width="370" height="278"/>
+  <text class="h" x="820" y="108">C. Geographic spread signal</text>
+  <rect x="842" y="145" width="110" height="160" fill="#eef4fb" stroke="#8aa9c9"/><text class="small" x="860" y="325">Major cities</text>
+  <rect x="980" y="145" width="110" height="160" fill="#fff7df" stroke="#d8af48"/><text class="small" x="990" y="325">Rural/semi-urban</text>
+  <circle class="red" cx="878" cy="184" r="15"/><circle class="red" cx="908" cy="222" r="11"/><circle class="orange" cx="876" cy="266" r="8"/>
+  <circle class="red" cx="1016" cy="188" r="9"/><circle class="red" cx="1055" cy="232" r="18"/><circle class="red" cx="1018" cy="276" r="20"/>
+  <text class="t" x="825" y="354">Reported rural:urban ratio rose from 0.11-0.41 to 0.86-2.12.</text>
+
+  <rect class="panel" x="30" y="394" width="360" height="292"/>
+  <text class="h" x="50" y="424">D. Seasonality shift</text>
+  <line class="line" x1="70" y1="620" x2="350" y2="620"/><line class="line" x1="70" y1="470" x2="70" y2="620"/>
+  <path class="blue" opacity="0.35" d="M80 610 C120 600,160 585,196 540 C226 500,250 485,288 560 C315 595,340 608,350 610 L350 620 L80 620 Z"/>
+  <path class="red" opacity="0.35" d="M80 606 C125 596,170 582,220 555 C270 525,305 485,342 500 L350 620 L80 620 Z"/>
+  <text class="small" x="92" y="648">Jan-Jun incidence higher after 2019; seasonal peak shifted to Oct-Nov.</text>
+  <text class="small" x="190" y="462">pre-2019</text><rect class="blue" x="165" y="452" width="18" height="10"/>
+  <text class="small" x="284" y="462">post-2019</text><rect class="red" x="258" y="452" width="18" height="10"/>
+
+  <rect class="panel" x="420" y="394" width="350" height="292"/>
+  <text class="h" x="440" y="424">E. Climate and prognosis outputs</text>
+  <text class="t" x="450" y="462">Reported strengthened associations after 2019:</text>
+  <rect x="455" y="486" width="260" height="30" fill="#eef4fb" stroke="#8aa9c9"/><text class="t" x="472" y="506">temperature, humidity, rainfall; r &gt; 0.5</text>
+  <text class="t" x="450" y="552">Fatal-case records indicated a subset with rapid deterioration:</text>
+  <rect x="455" y="576" width="260" height="36" fill="#f4d9d7" stroke="#ca6b65"/><text class="t" x="486" y="600">24-72 h after diagnosis</text>
+  <text class="small" x="450" y="654">The abstract does not report a forecasting model; panel shows the reported comparative analysis.</text>
+
+  <rect class="panel" x="800" y="394" width="370" height="292"/>
+  <text class="h" x="820" y="424">F. Intervention-facing estimands</text>
+  <rect x="830" y="460" width="300" height="38" fill="#edf6ed" stroke="#8fb980"/><text class="t" x="848" y="484">Where: changing hotspot and rural risk</text>
+  <rect x="830" y="518" width="300" height="38" fill="#fff7df" stroke="#d8af48"/><text class="t" x="848" y="542">When: longer season and later peak</text>
+  <rect x="830" y="576" width="300" height="38" fill="#eef4fb" stroke="#8aa9c9"/><text class="t" x="848" y="600">What to measure: vector, virologic, serologic surveillance</text>
+  <text class="small" x="830" y="650">Key finding: post-2019 dengue risk expanded beyond historical urban timing.</text>
+
+  <path class="arrow" d="M390 220 L420 220"/><path class="arrow" d="M770 220 L800 220"/><path class="arrow" d="M210 356 L210 394"/><path class="arrow" d="M595 356 L595 394"/><path class="arrow" d="M985 356 L985 394"/>
+</svg>

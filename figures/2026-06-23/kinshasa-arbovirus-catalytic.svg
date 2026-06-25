@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Bayesian catalytic modeling of dengue and chikungunya transmission in Kinshasa</title>
+  <desc id="desc">Multi-panel schematic showing 2021 dried blood spot sampling from 1,250 participants, antigen-capture ELISA IgG outcomes for dengue and chikungunya, age-stratified seroprevalence, Bayesian catalytic force-of-infection models, spatial variation across city-center, peri-urban, and rural sites, co-occurrence, and surveillance implications.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f6fbfb}.panel{fill:#fff;stroke:#253b3b;stroke-width:1.3;rx:8}.h{font:700 18px Arial,sans-serif;fill:#102727}.t{font:14px Arial,sans-serif;fill:#243838}.s{font:12px Arial,sans-serif;fill:#5b6b6b}.small{font:11px Arial,sans-serif;fill:#5b6b6b}.eq{font:15px Georgia,serif;fill:#111827}.arrow{stroke:#277a83;stroke-width:2;fill:none;marker-end:url(#arrow)}.line{stroke:#869797;stroke-width:1.2;fill:none}.dash{stroke:#869797;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.denv{fill:#d95f5f}.chikv{fill:#5b8cc0}.both{fill:#8b6fb2}.green{fill:#62a66a}.orange{fill:#e0a143}.note{fill:#fff5d8;stroke:#d1a341}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#277a83"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="h" x="36" y="34">Sendor, Edwards, Banek, et al. 2026: DENV and CHIKV transmission in Kinshasa</text>
+  <text class="s" x="36" y="55">Original technical schematic; not a reproduced publication figure. Catalytic notation is generic unless explicitly reported in the abstract.</text>
+
+  <rect class="panel" x="30" y="78" width="360" height="278"/>
+  <text class="h" x="50" y="108">A. Sampling and assays</text>
+  <rect x="60" y="136" width="275" height="42" fill="#eef7f7" stroke="#89b7bc"/><text class="t" x="82" y="163">2021 dried blood spots, n = 1,250</text>
+  <rect x="60" y="198" width="275" height="42" fill="#f7e6e4" stroke="#c98a84"/><text class="t" x="82" y="225">DENV IgG antigen-capture ELISA</text>
+  <rect x="60" y="260" width="275" height="42" fill="#e8eef8" stroke="#8aa9c9"/><text class="t" x="82" y="287">CHIKV IgG antigen-capture ELISA</text>
+  <text class="small" x="60" y="335">Source reports Kinshasa Province sites, including city-center, peri-urban Kimpoko, and rural Bu.</text>
+
+  <rect class="panel" x="420" y="78" width="350" height="278"/>
+  <text class="h" x="440" y="108">B. Age-stratified seroprevalence</text>
+  <line class="line" x1="470" y1="300" x2="720" y2="300"/><line class="line" x1="470" y1="145" x2="470" y2="300"/>
+  <path class="denv" opacity="0.4" d="M475 292 C520 270,555 238,596 200 C640 165,680 150,715 138 L715 300 L475 300 Z"/>
+  <path class="chikv" opacity="0.4" d="M475 294 C520 280,560 258,604 230 C650 200,686 190,715 172 L715 300 L475 300 Z"/>
+  <text class="small" x="520" y="330">IgG increased with age for both viruses</text>
+  <rect class="denv" x="530" y="130" width="14" height="10"/><text class="small" x="550" y="139">DENV</text>
+  <rect class="chikv" x="610" y="130" width="14" height="10"/><text class="small" x="630" y="139">CHIKV</text>
+  <text class="t" x="450" y="238">Reported overall: DENV 38.1%; CHIKV 24.2%</text>
+
+  <rect class="panel" x="800" y="78" width="370" height="278"/>
+  <text class="h" x="820" y="108">C. Bayesian catalytic FOI model</text>
+  <text class="eq" x="830" y="150">P(seropositive at age a) = 1 - exp[- integral lambda(t,s) dt]</text>
+  <text class="t" x="830" y="194">Reported best fit:</text>
+  <rect x="842" y="215" width="270" height="44" fill="#eef7f7" stroke="#89b7bc"/><text class="t" x="862" y="242">time-varying force of infection</text>
+  <text class="small" x="830" y="302">Posterior FOI varies by virus, time, and spatial site in the explanatory schematic.</text>
+
+  <rect class="panel" x="30" y="394" width="360" height="292"/>
+  <text class="h" x="50" y="424">D. Spatial variation</text>
+  <rect x="62" y="466" width="80" height="130" fill="#eef7f7" stroke="#89b7bc"/><text class="small" x="67" y="620">city-center</text>
+  <rect x="162" y="466" width="80" height="130" fill="#fff5d8" stroke="#d1a341"/><text class="small" x="168" y="620">Kimpoko</text>
+  <rect x="262" y="466" width="80" height="130" fill="#eef4e8" stroke="#8fb980"/><text class="small" x="283" y="620">Bu</text>
+  <circle class="denv" cx="202" cy="505" r="27" opacity="0.65"/><text class="small" x="169" y="552">DENV highest</text>
+  <circle class="chikv" cx="202" cy="575" r="20" opacity="0.55"/><circle class="chikv" cx="302" cy="570" r="20" opacity="0.55"/>
+  <text class="small" x="58" y="658">Reported: DENV highest in peri-urban Kimpoko; CHIKV comparable between Kimpoko and rural Bu, few city-center positives.</text>
+
+  <rect class="panel" x="420" y="394" width="350" height="292"/>
+  <text class="h" x="440" y="424">E. Co-occurrence and uncertainty</text>
+  <circle class="denv" cx="545" cy="530" r="70" opacity="0.45"/><circle class="chikv" cx="635" cy="530" r="70" opacity="0.45"/>
+  <text class="t" x="517" y="528">DENV</text><text class="t" x="630" y="528">CHIKV</text>
+  <text class="t" x="575" y="548">12.8%</text>
+  <text class="small" x="470" y="635">DENV-CHIKV IgG co-occurrence reported in 12.8% of participants.</text>
+  <path class="dash" d="M470 655 C535 625,650 625,720 655"/><text class="small" x="506" y="676">Posterior intervals should be read from the paper.</text>
+
+  <rect class="panel" x="800" y="394" width="370" height="292"/>
+  <text class="h" x="820" y="424">F. Surveillance implications</text>
+  <rect x="830" y="462" width="300" height="38" fill="#f7e6e4" stroke="#c98a84"/><text class="t" x="848" y="486">Sustained DENV and CHIKV circulation</text>
+  <rect x="830" y="520" width="300" height="38" fill="#fff5d8" stroke="#d1a341"/><text class="t" x="848" y="544">Spatially targeted arbovirus surveillance</text>
+  <rect x="830" y="578" width="300" height="38" fill="#eef7f7" stroke="#89b7bc"/><text class="t" x="848" y="602">Age-serology designs for FOI estimation</text>
+  <text class="small" x="830" y="650">Why it matters: transmission risk in DRC and surrounding region may be under-recognized.</text>
+
+  <path class="arrow" d="M390 220 L420 220"/><path class="arrow" d="M770 220 L800 220"/><path class="arrow" d="M210 356 L210 394"/><path class="arrow" d="M595 356 L595 394"/><path class="arrow" d="M985 356 L985 394"/>
+</svg>

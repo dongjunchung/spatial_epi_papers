@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for geostatistical Toxoplasma gondii exposure modeling in Salvador, Brazil</title>
+  <desc id="desc">Multi-panel schematic showing archived serosurvey data from 728 children and adolescents, environmental and socioeconomic covariates, Bayesian serocatalytic force of infection by sex, regression associations, latent geostatistical spatial field, posterior prevalence hotspots, and congenital toxoplasmosis risk interpretation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbf8f5}.panel{fill:#fff;stroke:#3e332c;stroke-width:1.3;rx:8}.h{font:700 18px Arial,sans-serif;fill:#241914}.t{font:14px Arial,sans-serif;fill:#372922}.s{font:12px Arial,sans-serif;fill:#68594f}.small{font:11px Arial,sans-serif;fill:#68594f}.eq{font:15px Georgia,serif;fill:#111827}.arrow{stroke:#a05a3b;stroke-width:2;fill:none;marker-end:url(#arrow)}.line{stroke:#9a8e85;stroke-width:1.2;fill:none}.dash{stroke:#9a8e85;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.red{fill:#cf5e59}.blue{fill:#5b8cc0}.green{fill:#6ca56b}.orange{fill:#df9b43}.purple{fill:#7c6bb0}.note{fill:#fff5d8;stroke:#d1a341}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a05a3b"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="h" x="36" y="34">Eyre, Wang, Carneiro, et al. 2026: T. gondii exposure in urban informal settlements</text>
+  <text class="s" x="36" y="55">Original technical schematic; not a reproduced publication figure. Generic notation is used where the abstract does not specify the exact geostatistical equation.</text>
+
+  <rect class="panel" x="30" y="78" width="360" height="278"/>
+  <text class="h" x="50" y="108">A. Serosurvey and covariates</text>
+  <rect x="58" y="136" width="285" height="45" fill="#eef4fb" stroke="#8aa9c9"/><text class="t" x="74" y="164">728 children/adolescents, age 4-18</text>
+  <rect x="58" y="196" width="285" height="45" fill="#f4d9d7" stroke="#ca6b65"/><text class="t" x="74" y="224">T. gondii IgG serostatus</text>
+  <rect x="58" y="256" width="285" height="70" fill="#fff5d8" stroke="#d1a341"/>
+  <text class="t" x="74" y="284">Income, cat ownership, sewer contact,</text>
+  <text class="t" x="74" y="306">elevation, distance to main road, location</text>
+
+  <rect class="panel" x="420" y="78" width="350" height="278"/>
+  <text class="h" x="440" y="108">B. Bayesian serocatalytic model</text>
+  <text class="eq" x="450" y="148">P(seropositive | age a, sex g) = 1 - exp[-lambda_g a]</text>
+  <text class="t" x="450" y="190">Reported FOI estimates:</text>
+  <rect x="460" y="210" width="110" height="55" fill="#eef4fb" stroke="#8aa9c9"/><text class="t" x="480" y="242">male 0.078</text>
+  <rect x="590" y="210" width="110" height="55" fill="#f4d9d7" stroke="#ca6b65"/><text class="t" x="606" y="242">female 0.050</text>
+  <text class="small" x="450" y="306">Interpretation: about half of female participants remained susceptible upon reaching childbearing age.</text>
+
+  <rect class="panel" x="800" y="78" width="370" height="278"/>
+  <text class="h" x="820" y="108">C. Risk-factor regression</text>
+  <text class="eq" x="830" y="146">logit p_i = alpha + X_i beta + optional spatial terms</text>
+  <text class="t" x="830" y="184">Reported associated factors:</text>
+  <circle class="orange" cx="850" cy="220" r="8"/><text class="t" x="870" y="225">lower household income</text>
+  <circle class="orange" cx="850" cy="250" r="8"/><text class="t" x="870" y="255">cat ownership, but 77.3% positives had no cats at home</text>
+  <circle class="orange" cx="850" cy="280" r="8"/><text class="t" x="870" y="285">lower elevation, sewer-water contact</text>
+  <circle class="orange" cx="850" cy="310" r="8"/><text class="t" x="870" y="315">greater distance from main road</text>
+
+  <rect class="panel" x="30" y="394" width="360" height="292"/>
+  <text class="h" x="50" y="424">D. Geostatistical prevalence surface</text>
+  <text class="eq" x="50" y="456">logit p(s_i) = alpha + X_i beta + S(s_i) + epsilon_i</text>
+  <text class="small" x="50" y="482">Generic notation: S(s) denotes a latent spatial process.</text>
+  <rect x="72" y="505" width="250" height="130" fill="#f7efe8" stroke="#b89a86"/>
+  <circle class="red" cx="126" cy="548" r="26" opacity="0.6"/><circle class="red" cx="238" cy="575" r="34" opacity="0.55"/>
+  <circle class="orange" cx="188" cy="602" r="20" opacity="0.55"/><circle class="blue" cx="285" cy="530" r="16" opacity="0.5"/>
+  <text class="small" x="82" y="662">Reported hotspots exceeded 50-60% predicted prevalence.</text>
+
+  <rect class="panel" x="420" y="394" width="350" height="292"/>
+  <text class="h" x="440" y="424">E. Covariate adjustment and residual structure</text>
+  <line class="line" x1="468" y1="530" x2="710" y2="530"/>
+  <circle class="red" cx="500" cy="530" r="26" opacity="0.55"/><text class="small" x="470" y="579">unadjusted</text>
+  <circle class="orange" cx="610" cy="530" r="18" opacity="0.55"/><text class="small" x="580" y="579">adjusted</text>
+  <circle class="purple" cx="700" cy="530" r="10" opacity="0.55"/><text class="small" x="670" y="579">residual</text>
+  <text class="t" x="450" y="628">Reported: measured covariates attenuated but did not eliminate spatial clustering.</text>
+
+  <rect class="panel" x="800" y="394" width="370" height="292"/>
+  <text class="h" x="820" y="424">F. Public-health estimands</text>
+  <rect x="830" y="462" width="300" height="38" fill="#f4d9d7" stroke="#ca6b65"/><text class="t" x="848" y="486">Fine-scale exposure hotspots</text>
+  <rect x="830" y="520" width="300" height="38" fill="#fff5d8" stroke="#d1a341"/><text class="t" x="848" y="544">Environmental pathways beyond domestic cats</text>
+  <rect x="830" y="578" width="300" height="38" fill="#eef4fb" stroke="#8aa9c9"/><text class="t" x="848" y="602">Susceptibility among future mothers</text>
+  <text class="small" x="830" y="650">Key implication: social marginalisation and peridomestic environmental contamination shape risk.</text>
+
+  <path class="arrow" d="M390 220 L420 220"/><path class="arrow" d="M770 220 L800 220"/><path class="arrow" d="M210 356 L210 394"/><path class="arrow" d="M595 356 L595 394"/><path class="arrow" d="M985 356 L985 394"/>
+</svg>

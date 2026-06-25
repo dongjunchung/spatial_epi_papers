@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for mainland China Talaromyces marneffei spatiotemporal detection and geographical detector modeling</title>
+  <desc id="desc">Multi-panel SVG showing hospitalized acute respiratory tract infection tNGS detections, spatial and seasonal indexing, co-detection analysis, geographical detector q-statistics, bivariate factor enhancement, reported dew point temperature and air pressure signals, susceptibility groups, and surveillance outputs. This is an original schematic, not a reproduced publication figure.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.5;rx:8}.head{font:700 18px Arial,sans-serif;fill:#0f172a}.sub{font:600 14px Arial,sans-serif;fill:#334155}.txt{font:13px Arial,sans-serif;fill:#334155}.small{font:12px Arial,sans-serif;fill:#475569}.eq{font:13px Consolas,monospace;fill:#0f172a}.tag{font:700 12px Arial,sans-serif;fill:#fff}.blue{fill:#dbeafe;stroke:#2563eb}.green{fill:#dcfce7;stroke:#16a34a}.amber{fill:#fef3c7;stroke:#d97706}.red{fill:#fee2e2;stroke:#dc2626}.teal{fill:#ccfbf1;stroke:#0f766e}.line{stroke:#334155;stroke-width:1.6;fill:none;marker-end:url(#arrow)}.muted{stroke:#94a3b8;stroke-width:1.2;fill:none}.chip{rx:10;stroke-width:1.2}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="860"/>
+  <text x="40" y="36" class="head">Original technical schematic: T. marneffei detection, spatial heterogeneity, and environmental drivers</text>
+  <text x="40" y="58" class="small">Source-reported model classes and findings are shown; equations are generic geographical-detector notation.</text>
+
+  <rect x="35" y="85" width="350" height="310" class="panel"/>
+  <rect x="55" y="105" width="28" height="28" fill="#2563eb" rx="5"/><text x="64" y="125" class="tag">A</text>
+  <text x="95" y="124" class="sub">Hospitalized ARTI tNGS detections</text>
+  <rect x="70" y="160" width="130" height="66" class="blue chip"/>
+  <text x="92" y="186" class="txt">Patients with</text>
+  <text x="92" y="205" class="txt">acute respiratory</text>
+  <text x="92" y="224" class="txt">tract infection</text>
+  <rect x="235" y="160" width="110" height="66" class="teal chip"/>
+  <text x="255" y="188" class="txt">tNGS</text>
+  <text x="250" y="207" class="small">2022-2024</text>
+  <line x1="200" y1="193" x2="235" y2="193" class="line"/>
+  <rect x="80" y="260" width="250" height="76" fill="#f1f5f9" stroke="#94a3b8" rx="8"/>
+  <text x="99" y="286" class="eq">D_{i,t,a,s}: detection indicator</text>
+  <text x="99" y="309" class="eq">i = spatial unit; t = month/season</text>
+  <text x="99" y="332" class="small">Reported total: 2,316 cases</text>
+
+  <rect x="425" y="85" width="350" height="310" class="panel"/>
+  <rect x="445" y="105" width="28" height="28" fill="#dc2626" rx="5"/><text x="454" y="125" class="tag">B</text>
+  <text x="485" y="124" class="sub">Spatial and seasonal structure</text>
+  <rect x="455" y="160" width="142" height="170" fill="#fef2f2" stroke="#dc2626" rx="8"/>
+  <path d="M505 205 C525 175 570 185 570 230 C596 245 575 300 525 292 C492 304 465 274 478 242 C464 225 480 205 505 205Z" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+  <circle cx="525" cy="242" r="8" fill="#ef4444"/><circle cx="552" cy="265" r="6" fill="#f97316"/><circle cx="505" cy="272" r="5" fill="#f97316"/>
+  <text x="475" y="353" class="small">Significant spatial clustering</text>
+  <rect x="625" y="165" width="120" height="155" fill="#f8fafc" stroke="#94a3b8" rx="8"/>
+  <polyline points="640,282 660,210 685,278 710,220 735,282" fill="none" stroke="#0f766e" stroke-width="3"/>
+  <line x1="640" y1="282" x2="738" y2="282" class="muted"/>
+  <text x="642" y="340" class="small">Bimodal seasonal peaks</text>
+
+  <rect x="815" y="85" width="350" height="310" class="panel"/>
+  <rect x="835" y="105" width="28" height="28" fill="#7c3aed" rx="5"/><text x="844" y="125" class="tag">C</text>
+  <text x="875" y="124" class="sub">Geographical detector model</text>
+  <rect x="850" y="155" width="280" height="92" fill="#ede9fe" stroke="#7c3aed" rx="8"/>
+  <text x="870" y="183" class="eq">q(F) = 1 - [sum_h N_h Var(Y_h)]/[N Var(Y)]</text>
+  <text x="870" y="207" class="small">Proportion of spatial variance explained</text>
+  <text x="870" y="229" class="small">by factor F after spatial stratification</text>
+  <line x1="990" y1="248" x2="990" y2="280" class="line"/>
+  <rect x="862" y="284" width="256" height="62" class="amber chip"/>
+  <text x="884" y="310" class="txt">Bivariate detector: q(F1 intersect F2)</text>
+  <text x="884" y="329" class="small">paired factors can enhance explanatory power</text>
+  <text x="870" y="370" class="small">Reported: dew point temperature q = 48.55%</text>
+
+  <rect x="35" y="430" width="350" height="355" class="panel"/>
+  <rect x="55" y="450" width="28" height="28" fill="#0f766e" rx="5"/><text x="64" y="470" class="tag">D</text>
+  <text x="95" y="469" class="sub">Layer stack used for explanations</text>
+  <rect x="80" y="515" width="115" height="55" class="green chip"/><text x="102" y="548" class="txt">Meteorology</text>
+  <rect x="225" y="515" width="115" height="55" class="blue chip"/><text x="238" y="548" class="txt">Host factors</text>
+  <rect x="80" y="605" width="115" height="55" class="amber chip"/><text x="105" y="638" class="txt">Social</text>
+  <rect x="225" y="605" width="115" height="55" class="red chip"/><text x="235" y="638" class="txt">Co-detections</text>
+  <path d="M195 542 C215 542 207 632 225 632" class="line"/>
+  <path d="M195 632 C215 632 207 542 225 542" class="line"/>
+  <rect x="96" y="700" width="230" height="44" fill="#f1f5f9" stroke="#94a3b8" rx="8"/>
+  <text x="114" y="727" class="small">P. jirovecii reported predominant co-detection</text>
+
+  <rect x="425" y="430" width="350" height="355" class="panel"/>
+  <rect x="445" y="450" width="28" height="28" fill="#d97706" rx="5"/><text x="454" y="470" class="tag">E</text>
+  <text x="485" y="469" class="sub">Reported effect signals</text>
+  <rect x="470" y="515" width="252" height="54" class="green chip"/>
+  <text x="492" y="548" class="txt">Dew point temperature: strongest q</text>
+  <rect x="470" y="600" width="252" height="54" class="amber chip"/>
+  <text x="488" y="625" class="txt">Air pressure: q = 1.4% alone</text>
+  <text x="488" y="644" class="small">larger when paired with other factors</text>
+  <rect x="470" y="690" width="252" height="54" class="blue chip"/>
+  <text x="492" y="715" class="txt">Highest susceptibility reported:</text>
+  <text x="492" y="734" class="small">males and ages 41-50</text>
+
+  <rect x="815" y="430" width="350" height="355" class="panel"/>
+  <rect x="835" y="450" width="28" height="28" fill="#16a34a" rx="5"/><text x="844" y="470" class="tag">F</text>
+  <text x="875" y="469" class="sub">Surveillance estimands</text>
+  <rect x="862" y="515" width="245" height="50" class="red chip"/><text x="890" y="547" class="txt">Detection hotspots and clusters</text>
+  <rect x="862" y="595" width="245" height="50" class="green chip"/><text x="884" y="627" class="txt">Environmental risk stratification</text>
+  <rect x="862" y="675" width="245" height="50" class="blue chip"/><text x="884" y="707" class="txt">High-risk group monitoring</text>
+  <line x1="984" y1="565" x2="984" y2="595" class="line"/>
+  <line x1="984" y1="645" x2="984" y2="675" class="line"/>
+  <text x="40" y="825" class="small">Original technical schematic; not a reproduced publication figure. Abbreviations: ARTI, acute respiratory tract infection; tNGS, targeted next-generation sequencing.</text>
+</svg>
