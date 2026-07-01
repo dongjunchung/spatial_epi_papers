@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for HIV/AIDS spatiotemporal forecasting in Africa</title>
+  <desc id="desc">Original schematic showing UNAIDS country-year indicators, temporal trend estimation, ensemble machine-learning forecasts, PCA-supported clustering, and differentiated program outputs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.h{font-weight:700;font-size:20px}.s{font-size:14px}.xs{font-size:12px}.p{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.4;rx:8}.b{fill:#fff;stroke:#64748b;stroke-width:1.2;rx:6}.arr{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.axis{stroke:#475569;stroke-width:1.2;fill:none}</style>
+  </defs>
+  <rect width="1120" height="720" fill="#fff"/>
+  <text x="32" y="34" class="h">Original technical schematic: HIV/AIDS spatiotemporal evolution in Africa</text>
+  <text x="32" y="58" class="s">Reported: 49 African countries, UNAIDS indicators 2014-2023, ensemble forecasts to 2033, PCA-supported clustering.</text>
+
+  <rect x="34" y="92" width="315" height="242" class="p"/><text x="56" y="122" class="h">A. Country-year inputs</text>
+  <rect x="70" y="152" width="230" height="52" class="b" fill="#dbeafe"/><text x="88" y="176" class="s">Y[c,t,k]</text><text x="88" y="194" class="xs">country c, year t, indicator k</text>
+  <rect x="70" y="224" width="100" height="40" class="b"/><text x="88" y="249" class="xs">prevalence</text>
+  <rect x="190" y="224" width="100" height="40" class="b"/><text x="214" y="249" class="xs">incidence</text>
+  <rect x="70" y="280" width="100" height="36" class="b"/><text x="92" y="303" class="xs">ALHIV</text>
+  <rect x="190" y="280" width="100" height="36" class="b"/><text x="205" y="303" class="xs">AIDS deaths</text>
+
+  <rect x="405" y="92" width="300" height="242" class="p"/><text x="427" y="122" class="h">B. Trends by region</text>
+  <path d="M450 286 L650 286 M450 286 L450 158" class="axis"/>
+  <path d="M462 185 C510 196 560 214 645 244" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <path d="M462 168 C512 173 574 182 645 194" stroke="#dc2626" stroke-width="3" fill="none"/>
+  <text x="470" y="316" class="xs">APC and linear regression by country/region</text>
+  <text x="588" y="185" class="xs" fill="#dc2626">Southern Africa</text><text x="580" y="240" class="xs" fill="#2563eb">declines elsewhere</text>
+
+  <rect x="760" y="92" width="326" height="242" class="p"/><text x="782" y="122" class="h">C. Forecast to 2033</text>
+  <rect x="794" y="152" width="110" height="54" class="b" fill="#fef3c7"/><text x="818" y="176" class="s">ML model 1</text><text x="823" y="194" class="xs">highest burden</text>
+  <rect x="930" y="152" width="110" height="54" class="b" fill="#fef3c7"/><text x="954" y="176" class="s">ML model m</text><text x="961" y="194" class="xs">ensemble</text>
+  <path d="M904 180 L930 180" class="arr"/>
+  <path d="M800 286 L1048 286 M800 286 L800 225" class="axis"/>
+  <path d="M808 238 C860 236 920 240 1038 256" stroke="#16a34a" stroke-width="3" fill="none"/><text x="904" y="310" class="xs">gradual prevalence decline</text>
+
+  <path d="M349 210 L405 210" class="arr"/><path d="M705 210 L760 210" class="arr"/>
+
+  <rect x="120" y="404" width="390" height="218" class="p"/><text x="142" y="434" class="h">D. Epidemic archetypes</text>
+  <path d="M175 574 L430 574 M175 574 L175 470" class="axis"/>
+  <circle cx="246" cy="500" r="9" fill="#dc2626"/><circle cx="264" cy="516" r="9" fill="#dc2626"/><circle cx="238" cy="528" r="9" fill="#dc2626"/><circle cx="278" cy="494" r="9" fill="#dc2626"/>
+  <circle cx="372" cy="540" r="8" fill="#2563eb"/><circle cx="394" cy="556" r="8" fill="#2563eb"/><circle cx="342" cy="562" r="8" fill="#2563eb"/><circle cx="410" cy="522" r="8" fill="#2563eb"/>
+  <text x="202" y="462" class="xs">PCA features from levels and trajectories</text>
+  <text x="198" y="604" class="xs">hierarchical + k-means clusters</text>
+
+  <rect x="590" y="404" width="410" height="218" class="p"/><text x="612" y="434" class="h">E. Program estimands</text>
+  <rect x="636" y="474" width="130" height="64" class="b" fill="#fee2e2"/><text x="661" y="500" class="s">hyperendemic</text><text x="656" y="520" class="xs">intensify services</text>
+  <rect x="816" y="474" width="130" height="64" class="b" fill="#dbeafe"/><text x="842" y="500" class="s">moderate-low</text><text x="846" y="520" class="xs">sustain gains</text>
+  <path d="M510 514 L590 514" class="arr"/>
+  <text x="638" y="580" class="xs">generic notation; exact model equations may differ from the paper</text>
+  <text x="32" y="694" class="xs">Original technical schematic, not a reproduced publication figure.</text>
+</svg>

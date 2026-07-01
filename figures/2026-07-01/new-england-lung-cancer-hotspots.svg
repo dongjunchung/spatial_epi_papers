@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for New England lung cancer hot spot analysis</title>
+  <desc id="desc">Original schematic showing town-level Medicare lung cancer prevalence, contextual environmental and socioeconomic predictors, Moran and Getis-Ord hot-spot statistics, spatial regression, and place-based intervention outputs.</desc>
+  <defs><marker id="arrow" markerWidth="10" height="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.h{font-weight:700;font-size:20px}.s{font-size:14px}.xs{font-size:12px}.p{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.4;rx:8}.b{fill:#fff;stroke:#64748b;stroke-width:1.2;rx:6}.arr{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.axis{stroke:#475569;stroke-width:1.2;fill:none}</style></defs>
+  <rect width="1120" height="720" fill="#fff"/>
+  <text x="32" y="34" class="h">Original technical schematic: community lung cancer hot spots</text>
+  <text x="32" y="58" class="s">Reported: CT, MA, NH, RI town-level Medicare prevalence; Moran's I; Getis-Ord Gi*; spatial regression.</text>
+
+  <rect x="34" y="92" width="305" height="244" class="p"/><text x="56" y="122" class="h">A. Town prevalence</text>
+  <rect x="82" y="150" width="196" height="136" fill="#eff6ff" stroke="#475569"/>
+  <path d="M112 250 L150 178 L198 204 L240 166 L260 264 Z" fill="#dbeafe" stroke="#2563eb"/>
+  <circle cx="214" cy="192" r="9" fill="#ef4444"/><circle cx="238" cy="222" r="8" fill="#ef4444"/><circle cx="168" cy="230" r="6" fill="#f97316"/>
+  <text x="72" y="316" class="xs">traditional Medicare beneficiaries by town</text>
+
+  <rect x="390" y="92" width="305" height="244" class="p"/><text x="412" y="122" class="h">B. Context layers</text>
+  <rect x="430" y="154" width="98" height="48" class="b" fill="#fee2e2"/><text x="454" y="176" class="xs">TRI Cr</text><text x="452" y="194" class="xs">releases</text>
+  <rect x="558" y="154" width="98" height="48" class="b" fill="#fef3c7"/><text x="585" y="176" class="xs">ozone</text><text x="580" y="194" class="xs">emissions</text>
+  <rect x="430" y="226" width="98" height="48" class="b" fill="#dcfce7"/><text x="454" y="248" class="xs">asthma</text><text x="455" y="266" class="xs">COPD</text>
+  <rect x="558" y="226" width="98" height="48" class="b" fill="#e0e7ff"/><text x="570" y="248" class="xs">house value</text><text x="572" y="266" class="xs">SES + demo</text>
+
+  <rect x="746" y="92" width="340" height="244" class="p"/><text x="768" y="122" class="h">C. Hot-spot statistics</text>
+  <rect x="790" y="160" width="112" height="64" class="b"/><text x="814" y="188" class="s">Global</text><text x="812" y="208" class="xs">Moran's I</text>
+  <rect x="940" y="160" width="112" height="64" class="b" fill="#fee2e2"/><text x="964" y="188" class="s">Local</text><text x="958" y="208" class="xs">Getis-Ord Gi*</text>
+  <path d="M902 192 L940 192" class="arr"/>
+  <text x="790" y="280" class="s">49 hot-spot towns at 95th/99th percentiles</text>
+
+  <path d="M339 214 L390 214" class="arr"/><path d="M695 214 L746 214" class="arr"/>
+
+  <rect x="130" y="404" width="390" height="222" class="p"/><text x="152" y="434" class="h">D. Spatial regression</text>
+  <rect x="170" y="478" width="294" height="78" class="b"/><text x="190" y="504" class="s">prevalence_i = alpha + X_i beta + spatial error_i</text><text x="190" y="528" class="xs">generic notation; exact specification not in abstract</text>
+  <text x="172" y="586" class="xs">STATA 18 and ArcMap 10.8 reported for analysis</text>
+
+  <rect x="600" y="404" width="390" height="222" class="p"/><text x="622" y="434" class="h">E. Intervention signal</text>
+  <rect x="644" y="480" width="132" height="58" class="b" fill="#fee2e2"/><text x="674" y="504" class="s">hot spots</text><text x="664" y="523" class="xs">screening focus</text>
+  <rect x="820" y="480" width="132" height="58" class="b" fill="#dcfce7"/><text x="844" y="504" class="s">risk factors</text><text x="846" y="523" class="xs">prevention</text>
+  <text x="648" y="584" class="xs">reported predictors: chromium, ozone, asthma, COPD, house values</text>
+  <text x="32" y="694" class="xs">Original technical schematic, not a reproduced publication figure.</text>
+</svg>

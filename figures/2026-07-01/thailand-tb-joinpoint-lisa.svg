@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Thailand TB Joinpoint and LISA modeling</title>
+  <desc id="desc">Original schematic showing province-year TB notifications, age standardization, Joinpoint regression and GAM validation, Moran and LISA spatial clustering, sensitivity checks, and TB program outputs.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.h{font-weight:700;font-size:20px}.s{font-size:14px}.xs{font-size:12px}.p{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.4;rx:8}.b{fill:#fff;stroke:#64748b;stroke-width:1.2;rx:6}.arr{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.axis{stroke:#475569;stroke-width:1.2;fill:none}</style></defs>
+  <rect width="1120" height="720" fill="#fff"/>
+  <text x="32" y="34" class="h">Original technical schematic: Thailand TB province-level trends and clusters</text>
+  <text x="32" y="58" class="s">Reported: 77 provinces, 2012-2023 notifications, WHO standardization, Joinpoint+BIC, GAM validation, Moran/LISA.</text>
+
+  <rect x="34" y="92" width="292" height="242" class="p"/><text x="56" y="122" class="h">A. Surveillance panel</text>
+  <rect x="70" y="154" width="210" height="46" class="b" fill="#dbeafe"/><text x="88" y="181" class="s">cases y[i,t,a]</text>
+  <rect x="70" y="220" width="210" height="46" class="b"/><text x="88" y="247" class="s">mid-year population N[i,t,a]</text>
+  <text x="78" y="296" class="xs">i = 77 provinces; t = 2012...2023</text>
+
+  <rect x="372" y="92" width="292" height="242" class="p"/><text x="394" y="122" class="h">B. Age standardization</text>
+  <rect x="418" y="160" width="190" height="86" class="b" fill="#ecfeff"/><text x="438" y="186" class="s">ASR[i,t] = sum_a</text><text x="438" y="209" class="s">w[a] y[i,t,a] / N[i,t,a]</text><text x="438" y="230" class="xs">WHO World Standard Population</text>
+  <text x="430" y="286" class="xs">common scale for province comparisons</text>
+
+  <rect x="710" y="92" width="376" height="242" class="p"/><text x="732" y="122" class="h">C. Trend model</text>
+  <path d="M760 282 L1030 282 M760 282 L760 160" class="axis"/>
+  <path d="M770 176 L850 190 L850 190 L920 236 L1030 246" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <line x1="850" y1="160" x2="850" y2="284" stroke="#f97316" stroke-dasharray="5 4"/>
+  <line x1="920" y1="160" x2="920" y2="284" stroke="#f97316" stroke-dasharray="5 4"/>
+  <text x="786" y="314" class="xs">Joinpoint regression; max 2 joinpoints; BIC selection</text>
+  <text x="888" y="178" class="xs">GAM validation</text>
+
+  <path d="M326 214 L372 214" class="arr"/><path d="M664 214 L710 214" class="arr"/>
+
+  <rect x="112" y="404" width="430" height="224" class="p"/><text x="134" y="434" class="h">D. Spatial clustering</text>
+  <circle cx="218" cy="516" r="20" fill="#dbeafe" stroke="#2563eb"/><circle cx="286" cy="490" r="20" fill="#fee2e2" stroke="#dc2626"/><circle cx="352" cy="526" r="20" fill="#fee2e2" stroke="#dc2626"/><circle cx="284" cy="566" r="20" fill="#dbeafe" stroke="#2563eb"/>
+  <line x1="238" y1="510" x2="266" y2="496" stroke="#475569" stroke-width="2"/><line x1="304" y1="502" x2="334" y2="516" stroke="#475569" stroke-width="2"/><line x1="284" y1="510" x2="284" y2="546" stroke="#475569" stroke-width="2"/>
+  <rect x="410" y="478" width="96" height="86" class="b"/><text x="428" y="504" class="s">W queen</text><text x="428" y="526" class="xs">Moran I</text><text x="428" y="546" class="xs">LISA</text>
+  <text x="154" y="604" class="xs">alternative weights + Benjamini-Hochberg FDR sensitivity</text>
+
+  <rect x="612" y="404" width="396" height="224" class="p"/><text x="634" y="434" class="h">E. TB program outputs</text>
+  <rect x="658" y="480" width="130" height="62" class="b" fill="#dcfce7"/><text x="688" y="505" class="s">declining</text><text x="682" y="524" class="xs">sustain control</text>
+  <rect x="824" y="480" width="130" height="62" class="b" fill="#fee2e2"/><text x="854" y="505" class="s">hot spots</text><text x="846" y="524" class="xs">target resources</text>
+  <text x="660" y="584" class="xs">trend categories combine AAPC effect size and significance</text>
+  <text x="32" y="694" class="xs">Original technical schematic, not a reproduced publication figure.</text>
+</svg>

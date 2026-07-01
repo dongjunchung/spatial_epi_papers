@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for New South Wales air pollution deep ensemble exposure modeling</title>
+  <desc id="desc">Original schematic showing monitor observations, 236 land-use population traffic and satellite predictors, base machine-learning models, meta-learning ensemble, validation metrics, and high-resolution exposure surfaces.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.h{font-weight:700;font-size:20px}.s{font-size:14px}.xs{font-size:12px}.p{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.4;rx:8}.b{fill:#fff;stroke:#64748b;stroke-width:1.2;rx:6}.arr{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.grid{stroke:#cbd5e1;stroke-width:1}</style></defs>
+  <rect width="1120" height="720" fill="#fff"/>
+  <text x="32" y="34" class="h">Original technical schematic: high-resolution PM2.5, PM10, and NO2 exposure modeling</text>
+  <text x="32" y="58" class="s">Reported: New South Wales, sparse monitoring, 236 predictors, base ML + supervised linear regression, meta-learner ensemble, holdout and CV.</text>
+
+  <rect x="34" y="92" width="300" height="250" class="p"/><text x="56" y="122" class="h">A. Inputs</text>
+  <rect x="76" y="154" width="210" height="82" class="b" fill="#dbeafe"/><text x="96" y="180" class="s">monitor y[s,p]</text><text x="96" y="202" class="xs">PM2.5, PM10, NO2</text><text x="96" y="220" class="xs">government + project sites</text>
+  <rect x="76" y="260" width="210" height="46" class="b" fill="#dcfce7"/><text x="96" y="288" class="s">236 predictors X[g]</text>
+
+  <rect x="384" y="92" width="300" height="250" class="p"/><text x="406" y="122" class="h">B. Base models</text>
+  <rect x="424" y="154" width="96" height="44" class="b" fill="#fef3c7"/><text x="452" y="181" class="xs">RF</text>
+  <rect x="552" y="154" width="96" height="44" class="b" fill="#fef3c7"/><text x="578" y="181" class="xs">XGBoost</text>
+  <rect x="424" y="222" width="96" height="44" class="b" fill="#fef3c7"/><text x="450" y="249" class="xs">GBM</text>
+  <rect x="552" y="222" width="96" height="44" class="b"/><text x="582" y="249" class="xs">SLR</text>
+  <text x="430" y="306" class="xs">annual average pollutant estimates per grid/location</text>
+
+  <rect x="734" y="92" width="352" height="250" class="p"/><text x="756" y="122" class="h">C. Meta-learning ensemble</text>
+  <rect x="780" y="158" width="116" height="58" class="b" fill="#e0e7ff"/><text x="808" y="183" class="s">meta</text><text x="798" y="202" class="xs">RF/XGB/GBM</text>
+  <rect x="930" y="158" width="116" height="58" class="b" fill="#e0e7ff"/><text x="952" y="183" class="s">GLMNet</text><text x="957" y="202" class="xs">stacking</text>
+  <path d="M896 188 L930 188" class="arr"/>
+  <rect x="854" y="250" width="116" height="46" class="b" fill="#dcfce7"/><text x="880" y="278" class="s">DEML map</text>
+
+  <path d="M334 218 L384 218" class="arr"/><path d="M684 218 L734 218" class="arr"/>
+
+  <rect x="112" y="410" width="410" height="212" class="p"/><text x="134" y="440" class="h">D. Validation design</text>
+  <rect x="160" y="488" width="120" height="58" class="b" fill="#fee2e2"/><text x="188" y="512" class="s">10% holdout</text><text x="196" y="531" class="xs">external check</text>
+  <rect x="330" y="488" width="120" height="58" class="b" fill="#fee2e2"/><text x="350" y="512" class="s">10-fold CV</text><text x="360" y="531" class="xs">R2 + RMSE</text>
+  <text x="166" y="584" class="xs">reported: CV choice materially changed model performance</text>
+
+  <rect x="600" y="410" width="410" height="212" class="p"/><text x="622" y="440" class="h">E. Exposure surfaces</text>
+  <rect x="650" y="486" width="112" height="70" class="b" fill="#e0f2fe"/><path d="M650 510 H762 M650 533 H762 M680 486 V556 M724 486 V556" class="grid"/><circle cx="724" cy="510" r="7" fill="#ef4444"/><text x="674" y="580" class="xs">PM2.5</text>
+  <rect x="806" y="486" width="112" height="70" class="b" fill="#fef3c7"/><path d="M806 510 H918 M806 533 H918 M836 486 V556 M880 486 V556" class="grid"/><circle cx="836" cy="533" r="7" fill="#f97316"/><text x="832" y="580" class="xs">PM10 / NO2</text>
+  <text x="638" y="610" class="xs">DEML best fit; base ML may be lower-cost in sparse low-pollution settings</text>
+  <text x="32" y="694" class="xs">Original technical schematic, not a reproduced publication figure.</text>
+</svg>

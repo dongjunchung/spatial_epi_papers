@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Bayesian climate-driven Wolbachia IIT modeling</title>
+  <desc id="desc">Original schematic showing regional Aedes abundance, climate projections, thermal-stability experiments, Bayesian entomological state model, historical back-inference, future projections, counterfactual IIT releases, and robustness outputs.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.h{font-weight:700;font-size:20px}.s{font-size:14px}.xs{font-size:12px}.p{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.4;rx:8}.b{fill:#fff;stroke:#64748b;stroke-width:1.2;rx:6}.arr{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.axis{stroke:#475569;stroke-width:1.2;fill:none}</style></defs>
+  <rect width="1120" height="720" fill="#fff"/>
+  <text x="32" y="34" class="h">Original technical schematic: climate-robust Wolbachia incompatible-insect technique</text>
+  <text x="32" y="58" class="s">Reported: Aedes abundance in Singapore, China, EU, and US; climate scenarios; thermal CI experiments; Bayesian calibration; IIT simulations.</text>
+
+  <rect x="34" y="92" width="315" height="248" class="p"/><text x="56" y="122" class="h">A. Data streams</text>
+  <rect x="72" y="154" width="230" height="42" class="b" fill="#dbeafe"/><text x="92" y="181" class="s">Aedes abundance by area</text>
+  <rect x="72" y="216" width="230" height="42" class="b" fill="#fef3c7"/><text x="92" y="243" class="s">historical + projected climate</text>
+  <rect x="72" y="278" width="230" height="42" class="b" fill="#fee2e2"/><text x="92" y="305" class="s">thermal stability of CI</text>
+
+  <rect x="400" y="92" width="318" height="248" class="p"/><text x="422" y="122" class="h">B. Bayesian entomology</text>
+  <rect x="438" y="160" width="242" height="108" class="b"/><text x="458" y="186" class="s">N[a,t+1] = f(N[a,t], climate[a,t], theta[a])</text><text x="458" y="212" class="s">theta[a] ~ prior(area, climate)</text><text x="458" y="238" class="s">y[a,t] ~ observation model(N[a,t])</text><text x="458" y="258" class="xs">generic notation; exact equations may differ</text>
+  <text x="450" y="306" class="xs">infer area-specific climate-driven life-history traits</text>
+
+  <rect x="768" y="92" width="318" height="248" class="p"/><text x="790" y="122" class="h">C. Backcast + project</text>
+  <path d="M820 280 L1040 280 M820 280 L820 168" class="axis"/>
+  <path d="M828 250 C880 232 918 226 958 210" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <path d="M958 210 C990 190 1018 172 1036 160" stroke="#dc2626" stroke-width="3" fill="none" stroke-dasharray="5 4"/>
+  <text x="840" y="306" class="xs">historical abundance and 2050-2100 scenarios</text>
+
+  <path d="M349 216 L400 216" class="arr"/><path d="M718 216 L768 216" class="arr"/>
+
+  <rect x="116" y="408" width="430" height="218" class="p"/><text x="138" y="438" class="h">D. Counterfactual IIT releases</text>
+  <rect x="160" y="486" width="120" height="62" class="b" fill="#e0e7ff"/><text x="178" y="510" class="s">male releases</text><text x="184" y="530" class="xs">Wolbachia+</text>
+  <rect x="340" y="486" width="134" height="62" class="b" fill="#dcfce7"/><text x="364" y="510" class="s">suppression</text><text x="358" y="530" class="xs">wild-type Aedes</text>
+  <path d="M280 518 L340 518" class="arr"/>
+  <text x="164" y="588" class="xs">release strategy, interval, and overflooding ratio varied</text>
+
+  <rect x="616" y="408" width="392" height="218" class="p"/><text x="638" y="438" class="h">E. Robustness outputs</text>
+  <rect x="660" y="484" width="120" height="58" class="b" fill="#dcfce7"/><text x="680" y="508" class="s">effective</text><text x="680" y="527" class="xs">future climates</text>
+  <rect x="824" y="484" width="140" height="58" class="b" fill="#fee2e2"/><text x="844" y="508" class="s">sensitive to</text><text x="838" y="527" class="xs">emigration + releases</text>
+  <text x="660" y="584" class="xs">policy estimand: release design that remains robust under heat and movement</text>
+  <text x="32" y="694" class="xs">Original technical schematic, not a reproduced publication figure.</text>
+</svg>
