@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for SIMALI spatial immune model of alveolar lung infection</title>
+  <desc id="desc">Six-panel schematic showing a structured 3D alveolar lattice, air epithelial and tissue compartments, viral and inflammation diffusion, agent-based infection and immune dynamics, validation against CT lesion growth, and sensitivity to initial viral foci.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7fafb}.panel{fill:#fff;stroke:#93a5ad;stroke-width:1.4}.h{font:700 18px Arial,sans-serif;fill:#18313a}.t{font:14px Arial,sans-serif;fill:#203942}.s{font:12px Arial,sans-serif;fill:#53646b}.eq{font:13px Consolas,monospace;fill:#18313a}.arrow{stroke:#4d7482;stroke-width:2;fill:none;marker-end:url(#arrow)}.air{fill:#d9f0f7;stroke:#5b95a6}.epi{fill:#fde0dd;stroke:#b55b56}.tis{fill:#e5e5e5;stroke:#888}.virus{fill:#e85d75;stroke:#9d2640}.imm{fill:#f6bd60;stroke:#9b6726}.out{fill:#d9ead3;stroke:#648b5d}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#4d7482"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="36" y="34" class="h">Original technical schematic - not a reproduced publication figure</text>
+  <text x="36" y="56" class="s">SIMALI details are from the abstract; equations are generic explanatory notation.</text>
+
+  <rect class="panel" x="30" y="82" width="360" height="190" rx="6"/>
+  <text x="50" y="112" class="h">A. 3D alveolar lattice</text>
+  <rect class="air" x="80" y="145" width="80" height="60"/><rect class="epi" x="160" y="145" width="80" height="60"/><rect class="tis" x="240" y="145" width="80" height="60"/>
+  <rect class="air" x="105" y="170" width="80" height="60" opacity=".75"/><rect class="epi" x="185" y="170" width="80" height="60" opacity=".75"/>
+  <text x="85" y="250" class="s">air</text><text x="158" y="250" class="s">epithelial cells</text><text x="260" y="250" class="s">tissue</text>
+
+  <rect class="panel" x="420" y="82" width="350" height="190" rx="6"/>
+  <text x="440" y="112" class="h">B. Diffusion compartments</text>
+  <circle class="virus" cx="500" cy="170" r="13"/><circle class="virus" cx="560" cy="205" r="9"/><circle class="imm" cx="650" cy="175" r="13"/>
+  <path class="arrow" d="M512 174 C535 185,545 194,552 200"/>
+  <path class="arrow" d="M575 202 C610 195,628 185,640 178"/>
+  <text x="448" y="235" class="eq">virus and inflammation diffuse differently in air vs tissue</text>
+
+  <rect class="panel" x="800" y="82" width="370" height="190" rx="6"/>
+  <text x="820" y="112" class="h">C. Agent-based update</text>
+  <text x="828" y="145" class="eq">cell_x(t+1) = F(cell_x(t), V_x, immune_x)</text>
+  <text x="828" y="176" class="eq">V_x(t+1) = diffusion + production - clearance</text>
+  <text x="828" y="212" class="s">Adds physiological infectable-cell percentages and alveolar structure to a prior ABM.</text>
+
+  <rect class="panel" x="30" y="302" width="360" height="190" rx="6"/>
+  <text x="50" y="332" class="h">D. Initial viral foci</text>
+  <circle class="virus" cx="105" cy="390" r="12"/><circle class="virus" cx="185" cy="430" r="12"/><circle class="virus" cx="285" cy="375" r="12"/>
+  <path class="arrow" d="M115 395 C145 405,160 418,174 425"/>
+  <path class="arrow" d="M197 426 C235 410,255 392,276 380"/>
+  <text x="58" y="465" class="s">Reported: amount and location of initial deposition drive variation in damage.</text>
+
+  <rect class="panel" x="420" y="302" width="350" height="190" rx="6"/>
+  <text x="440" y="332" class="h">E. CT validation target</text>
+  <rect x="460" y="360" width="110" height="90" fill="#f1f1f1" stroke="#aaa"/>
+  <circle class="imm" cx="520" cy="405" r="28" opacity=".75"/>
+  <polyline points="600,445 632,430 664,405 696,378 728,352" fill="none" stroke="#e85d75" stroke-width="4"/>
+  <text x="600" y="470" class="s">spatial-temporal lesion growth</text>
+
+  <rect class="panel" x="800" y="302" width="370" height="190" rx="6"/>
+  <text x="820" y="332" class="h">F. Mechanistic output</text>
+  <rect class="out" x="832" y="362" width="145" height="52" rx="6"/><text x="850" y="393" class="s">alveolar architecture</text>
+  <rect class="out" x="1005" y="362" width="132" height="52" rx="6"/><text x="1024" y="393" class="s">damage variability</text>
+  <path class="arrow" d="M977 388 L1003 388"/>
+  <text x="820" y="455" class="s">Links spatial lung structure to heterogeneous inflammatory damage.</text>
+</svg>

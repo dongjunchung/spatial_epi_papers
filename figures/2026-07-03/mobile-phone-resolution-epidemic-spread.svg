@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for mobility-data resolution in spatial epidemic spread models</title>
+  <desc id="desc">Six-panel schematic showing Senegal mobile phone trajectories, three aggregation resolutions, a visitor-resident metapopulation epidemic model, simulated pathogen transmissibility regimes, invasion-pattern validation, and privacy-preserving outputs.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f9fb}.panel{fill:#ffffff;stroke:#9aa7b2;stroke-width:1.4}.h{font:700 18px Arial,sans-serif;fill:#12313f}.t{font:14px Arial,sans-serif;fill:#21343d}.s{font:12px Arial,sans-serif;fill:#4b5d66}.eq{font:13px Consolas,monospace;fill:#173247}.arrow{stroke:#456b7f;stroke-width:2;fill:none;marker-end:url(#arrow)}.node{fill:#dceef2;stroke:#3d7c8c}.hot{fill:#f7b267;stroke:#a45721}.mid{fill:#9fd3c7;stroke:#3f7f73}.low{fill:#d5e5a3;stroke:#71823d}.bad{fill:#f4d6d2;stroke:#a65a51}.good{fill:#d7eadf;stroke:#4f8a62}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#456b7f"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="36" y="34" class="h">Original technical schematic - not a reproduced publication figure</text>
+  <text x="36" y="56" class="s">Notation is explanatory; the paper's exact symbols may differ.</text>
+
+  <rect class="panel" x="30" y="82" width="360" height="190" rx="6"/>
+  <text x="50" y="112" class="h">A. Mobility source</text>
+  <text x="50" y="138" class="t">Senegal mobile phone records</text>
+  <text x="50" y="160" class="s">9.5M users, about 80% population</text>
+  <circle class="node" cx="118" cy="218" r="24"/><text x="109" y="223" class="s">H</text>
+  <circle class="node" cx="205" cy="185" r="24"/><text x="196" y="190" class="s">W</text>
+  <circle class="node" cx="285" cy="230" r="24"/><text x="276" y="235" class="s">S</text>
+  <path class="arrow" d="M141 211 C165 198,176 192,183 189"/>
+  <path class="arrow" d="M225 196 C248 207,257 214,263 218"/>
+  <text x="50" y="252" class="s">Observed trajectories define candidate movement representations.</text>
+
+  <rect class="panel" x="420" y="82" width="350" height="190" rx="6"/>
+  <text x="440" y="112" class="h">B. Three aggregation levels</text>
+  <rect class="hot" x="445" y="138" width="82" height="38" rx="5"/><text x="462" y="163" class="t">HR</text>
+  <text x="545" y="162" class="s">all consecutive displacements</text>
+  <rect class="mid" x="445" y="188" width="82" height="38" rx="5"/><text x="462" y="213" class="t">MR</text>
+  <text x="545" y="212" class="s">time spent in all visited locations</text>
+  <rect class="low" x="445" y="238" width="82" height="24" rx="5"/><text x="462" y="256" class="t">LR</text>
+  <text x="545" y="256" class="s">most-visited location only</text>
+
+  <rect class="panel" x="800" y="82" width="370" height="190" rx="6"/>
+  <text x="820" y="112" class="h">C. Epidemic model embedding</text>
+  <text x="820" y="142" class="eq">I_i(t+1) = f(residents_i, visitors_i, returns_i)</text>
+  <text x="820" y="168" class="eq">lambda_i(t) = beta * [I_i/N_i + sum_j M_ji I_j/N_j]</text>
+  <text x="820" y="202" class="s">Metapopulation simulations compare how each mobility</text>
+  <text x="820" y="222" class="s">representation changes spatial invasion timing and routes.</text>
+  <path class="arrow" d="M850 248 L1120 248"/>
+  <text x="895" y="244" class="s">controlled to high transmissibility</text>
+
+  <rect class="panel" x="30" y="302" width="360" height="190" rx="6"/>
+  <text x="50" y="332" class="h">D. Resolution effect</text>
+  <rect class="bad" x="56" y="360" width="120" height="76" rx="6"/><text x="74" y="386" class="t">HR network</text><text x="68" y="412" class="s">long trips can fragment</text>
+  <rect class="good" x="222" y="360" width="120" height="76" rx="6"/><text x="243" y="386" class="t">MR/LR</text><text x="237" y="412" class="s">key places retained</text>
+  <path class="arrow" d="M178 398 L220 398"/>
+  <text x="58" y="466" class="s">Reported result: more detail did not necessarily improve</text>
+  <text x="58" y="482" class="s">epidemiological relevance for spatial transmission.</text>
+
+  <rect class="panel" x="420" y="302" width="350" height="190" rx="6"/>
+  <text x="440" y="332" class="h">E. Validation target</text>
+  <polyline points="452,450 492,430 532,410 572,382 612,360 652,350 710,342" fill="none" stroke="#2a6f97" stroke-width="4"/>
+  <polyline points="452,455 492,438 532,420 572,400 612,382 652,365 710,348" fill="none" stroke="#d55e00" stroke-width="3" stroke-dasharray="8 5"/>
+  <text x="452" y="364" class="s">Compare simulated vs target</text>
+  <text x="452" y="382" class="s">spatial invasion patterns</text>
+  <text x="452" y="474" class="s">Metrics: timing, connectedness, spread routes</text>
+
+  <rect class="panel" x="800" y="302" width="370" height="190" rx="6"/>
+  <text x="820" y="332" class="h">F. Practical estimand</text>
+  <text x="820" y="362" class="t">Minimum useful mobility resolution</text>
+  <text x="820" y="390" class="eq">privacy risk down, predictive signal retained</text>
+  <rect class="good" x="830" y="416" width="145" height="44" rx="6"/><text x="850" y="443" class="s">aggregate time-at-place</text>
+  <rect class="node" x="1000" y="416" width="130" height="44" rx="6"/><text x="1022" y="443" class="s">epidemic forecasts</text>
+  <path class="arrow" d="M975 438 L998 438"/>
+
+  <text x="36" y="535" class="t">Key reported takeaway: lower-resolution indicators based on where people spend time can be sufficient for predictive spatial epidemic models.</text>
+</svg>

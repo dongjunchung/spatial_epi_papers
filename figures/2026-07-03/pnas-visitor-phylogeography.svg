@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for infectious phylogeography with visitor dynamics</title>
+  <desc id="desc">Six-panel schematic showing home populations, short trips, visitor-resident transmission routes, compartment-model stationary approximation, phylogenetic likelihood, European SARS-CoV-2 application, and pull-versus-push inference.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f7fb}.panel{fill:#fff;stroke:#9b9db0;stroke-width:1.4}.h{font:700 18px Arial,sans-serif;fill:#25283d}.t{font:14px Arial,sans-serif;fill:#25283d}.s{font:12px Arial,sans-serif;fill:#55586b}.eq{font:13px Consolas,monospace;fill:#25283d}.arrow{stroke:#545c8a;stroke-width:2;fill:none;marker-end:url(#arrow)}.home{fill:#d9e8ff;stroke:#4f77aa}.visit{fill:#ffe1aa;stroke:#a56a1c}.inf{fill:#ef8a84;stroke:#9b3d38}.ok{fill:#d8ead6;stroke:#628c5b}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#545c8a"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="36" y="34" class="h">Original technical schematic - not a reproduced publication figure</text>
+  <text x="36" y="56" class="s">Visitor-dynamics notation is explanatory; the paper derives the formal approximation.</text>
+
+  <rect class="panel" x="30" y="82" width="360" height="190" rx="6"/>
+  <text x="50" y="112" class="h">A. Home populations</text>
+  <circle class="home" cx="105" cy="190" r="38"/><text x="88" y="195" class="t">A</text>
+  <circle class="home" cx="285" cy="190" r="38"/><text x="268" y="195" class="t">B</text>
+  <path class="arrow" d="M142 180 C190 145,230 145,268 180"/>
+  <path class="arrow" d="M268 204 C220 238,180 238,142 204"/>
+  <text x="64" y="250" class="s">Hosts make short trips, then return home.</text>
+
+  <rect class="panel" x="420" y="82" width="350" height="190" rx="6"/>
+  <text x="440" y="112" class="h">B. Push vs pull routes</text>
+  <rect class="visit" x="448" y="144" width="130" height="50" rx="6"/><text x="463" y="174" class="s">infected visitor abroad</text>
+  <rect class="inf" x="612" y="144" width="120" height="50" rx="6"/><text x="629" y="174" class="s">resident infected</text>
+  <path class="arrow" d="M578 169 L610 169"/>
+  <rect class="inf" x="448" y="215" width="130" height="42" rx="6"/><text x="464" y="241" class="s">resident abroad infected</text>
+  <rect class="visit" x="612" y="215" width="120" height="42" rx="6"/><text x="637" y="241" class="s">returns home</text>
+  <path class="arrow" d="M578 236 L610 236"/>
+
+  <rect class="panel" x="800" y="82" width="370" height="190" rx="6"/>
+  <text x="820" y="112" class="h">C. Approximation bridge</text>
+  <text x="820" y="145" class="eq">compartment model + visitor stationary properties</text>
+  <text x="820" y="177" class="eq">Q_ij approx h(travel_ij, duration, local epi)</text>
+  <text x="820" y="215" class="s">Goal: computationally tractable transition rates for phylogeography.</text>
+
+  <rect class="panel" x="30" y="302" width="360" height="190" rx="6"/>
+  <text x="50" y="332" class="h">D. Phylogenetic likelihood</text>
+  <path d="M105 430 L105 390 L165 360 M105 390 L60 360 M165 360 L205 336 M165 360 L205 390" stroke="#4f77aa" stroke-width="3" fill="none"/>
+  <text x="230" y="358" class="eq">Pr(tree, locations | Q)</text>
+  <text x="58" y="470" class="s">Sequences and location labels inform movement-related parameters.</text>
+
+  <rect class="panel" x="420" y="302" width="350" height="190" rx="6"/>
+  <text x="440" y="332" class="h">E. SARS-CoV-2 application</text>
+  <text x="448" y="362" class="s">Empirical infection data + travel statistics</text>
+  <rect class="home" x="465" y="392" width="95" height="45" rx="6"/><text x="486" y="421" class="s">Europe</text>
+  <rect class="visit" x="595" y="392" width="120" height="45" rx="6"/><text x="614" y="421" class="s">early pandemic</text>
+  <path class="arrow" d="M560 415 L593 415"/>
+
+  <rect class="panel" x="800" y="302" width="370" height="190" rx="6"/>
+  <text x="820" y="332" class="h">F. Reported inference</text>
+  <rect class="ok" x="830" y="365" width="140" height="55" rx="6"/><text x="846" y="398" class="s">pull into home countries</text>
+  <rect class="visit" x="1000" y="365" width="130" height="55" rx="6"/><text x="1020" y="398" class="s">push abroad</text>
+  <text x="820" y="455" class="s">Early SARS-CoV-2 spread was inferred more often as returning-traveler pull.</text>
+</svg>
