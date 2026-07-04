@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Kenya dengue genomic circulation analysis</title>
+  <desc id="desc">Six-panel schematic showing Mombasa dengue outbreak samples, whole-genome sequencing, serotype-specific phylogenies, local persistence versus regional circulation, surveillance outputs, and control implications.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7faf8}.panel{fill:#fff;stroke:#9aa8a0;stroke-width:1.4}.h{font:700 18px Arial,sans-serif;fill:#22312b}.t{font:14px Arial,sans-serif;fill:#25332d}.s{font:12px Arial,sans-serif;fill:#56645d}.eq{font:13px Consolas,monospace;fill:#25332d}.arrow{stroke:#557864;stroke-width:2;fill:none;marker-end:url(#arrow)}.a{fill:#d9ead3;stroke:#5d8b4f}.b{fill:#ffe0a6;stroke:#b27622}.c{fill:#cfe5f7;stroke:#4c7da6}.d{fill:#f4c6c6;stroke:#a45656}.line{stroke:#5a615c;stroke-width:2;fill:none}.tree{stroke:#556b8e;stroke-width:2;fill:none}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#557864"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="36" y="34" class="h">Original technical schematic - not a reproduced publication figure</text>
+  <text x="36" y="56" class="s">Reported details: Mombasa 2023 outbreak samples, 38 genomes from 2020-2025, DENV-1/2/3, phylogenetic analysis. Notation is explanatory.</text>
+
+  <rect class="panel" x="30" y="82" width="360" height="190" rx="6"/>
+  <text x="50" y="112" class="h">A. Case and sample frame</text>
+  <rect class="c" x="62" y="145" width="98" height="62" rx="6"/><text x="80" y="171" class="t">Mombasa</text><text x="82" y="191" class="s">2023 outbreak</text>
+  <circle class="d" cx="220" cy="155" r="17"/><text x="246" y="160" class="s">56 / 406 DENV+</text>
+  <circle class="a" cx="220" cy="210" r="17"/><text x="246" y="215" class="s">2020-2025 context cases</text>
+  <path class="arrow" d="M162 176 L200 165"/><path class="arrow" d="M162 184 L200 205"/>
+  <text x="58" y="248" class="s">Samples anchor outbreak genomes in recent Kenyan surveillance.</text>
+
+  <rect class="panel" x="420" y="82" width="350" height="190" rx="6"/>
+  <text x="440" y="112" class="h">B. Genomic data layer</text>
+  <rect class="a" x="450" y="142" width="95" height="42" rx="5"/><text x="473" y="168" class="t">DENV-1</text>
+  <rect class="b" x="565" y="142" width="95" height="42" rx="5"/><text x="588" y="168" class="t">DENV-2</text>
+  <rect class="d" x="680" y="142" width="70" height="42" rx="5"/><text x="692" y="168" class="t">DENV-3</text>
+  <text x="448" y="215" class="eq">WGS: genome_i -> serotype + lineage</text>
+  <text x="448" y="244" class="s">38 whole genomes place 2023 cases against earlier and regional viruses.</text>
+
+  <rect class="panel" x="800" y="82" width="370" height="190" rx="6"/>
+  <text x="820" y="112" class="h">C. Phylogenetic comparison</text>
+  <path class="tree" d="M855 230 V142 H930 M885 230 V178 H955 M930 142 H1010 M955 178 H1030 M915 230 H1085"/>
+  <circle class="b" cx="1010" cy="142" r="8"/><circle class="a" cx="1030" cy="178" r="8"/><circle class="d" cx="1085" cy="230" r="8"/>
+  <text x="840" y="252" class="s">Tree topology interpreted as local persistence or regional circulation.</text>
+
+  <rect class="panel" x="30" y="302" width="360" height="190" rx="6"/>
+  <text x="50" y="332" class="h">D. Spatial epidemiologic contrast</text>
+  <circle class="b" cx="125" cy="392" r="44"/><text x="97" y="387" class="t">DENV-2</text><text x="86" y="409" class="s">local persistence</text>
+  <circle class="a" cx="270" cy="370" r="28"/><circle class="d" cx="270" cy="435" r="28"/>
+  <path class="arrow" d="M235 370 C200 370,186 380,166 388"/><path class="arrow" d="M235 435 C200 430,184 412,166 399"/>
+  <text x="244" y="366" class="s">DENV-1</text><text x="244" y="431" class="s">DENV-3</text>
+  <text x="58" y="470" class="s">Reported: DENV-1/3 linked to wider Eastern and Western Africa outbreaks.</text>
+
+  <rect class="panel" x="420" y="302" width="350" height="190" rx="6"/>
+  <text x="440" y="332" class="h">E. Inference outputs</text>
+  <text x="448" y="365" class="eq">P(origin, persistence | tree, dates, locations)</text>
+  <rect class="c" x="452" y="395" width="120" height="48" rx="6"/><text x="472" y="424" class="s">local chains</text>
+  <rect class="b" x="606" y="395" width="120" height="48" rx="6"/><text x="620" y="424" class="s">regional links</text>
+  <path class="arrow" d="M574 419 L604 419"/>
+  <text x="448" y="470" class="s">Exact phylogeographic parameterization was not exposed in the abstract.</text>
+
+  <rect class="panel" x="800" y="302" width="370" height="190" rx="6"/>
+  <text x="820" y="332" class="h">F. Control estimands</text>
+  <rect class="a" x="830" y="365" width="130" height="52" rx="6"/><text x="848" y="395" class="s">interrupt local DENV-2</text>
+  <rect class="d" x="990" y="365" width="140" height="52" rx="6"/><text x="1010" y="395" class="s">detect importations</text>
+  <path class="arrow" d="M960 391 L988 391"/>
+  <text x="820" y="452" class="s">Genomic surveillance separates endemic persistence from introductions.</text>
+</svg>

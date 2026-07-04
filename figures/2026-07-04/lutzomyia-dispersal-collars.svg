@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Lutzomyia spatial dispersal under deltamethrin collars</title>
+  <desc id="desc">Six-panel schematic showing mark-release-recapture sand fly experiments, dog collar intervention context, trap perimeter, dispersal kernel summaries, recapture timing, and vector-control implications for visceral leishmaniasis.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfaf6}.panel{fill:#fff;stroke:#aa9f8d;stroke-width:1.4}.h{font:700 18px Arial,sans-serif;fill:#2e2a22}.t{font:14px Arial,sans-serif;fill:#332f28}.s{font:12px Arial,sans-serif;fill:#635b4d}.eq{font:13px Consolas,monospace;fill:#332f28}.arrow{stroke:#7a6841;stroke-width:2;fill:none;marker-end:url(#arrow)}.home{fill:#d5e8d4;stroke:#5f8a58}.trap{fill:#cfe2f3;stroke:#4d7fa2}.fly{fill:#f6b26b;stroke:#a65f1b}.dog{fill:#ead1dc;stroke:#9c5a78}.line{stroke:#76695a;stroke-width:2;fill:none}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#7a6841"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="36" y="34" class="h">Original technical schematic - not a reproduced publication figure</text>
+  <text x="36" y="56" class="s">Reported details: three MRR experiments in Montes Claros, Brazil, after deltamethrin dog-collar intervention; notation is explanatory.</text>
+
+  <rect class="panel" x="30" y="82" width="360" height="190" rx="6"/>
+  <text x="50" y="112" class="h">A. Intervention setting</text>
+  <rect class="home" x="60" y="152" width="90" height="64" rx="6"/><text x="78" y="188" class="t">household</text>
+  <circle class="dog" cx="232" cy="176" r="27"/><text x="213" y="181" class="t">dog</text>
+  <circle cx="232" cy="176" r="34" fill="none" stroke="#9c5a78" stroke-width="4"/><text x="190" y="230" class="s">deltamethrin collar context</text>
+  <path class="arrow" d="M152 184 L196 178"/>
+  <text x="58" y="252" class="s">Vector ecology measured after mass collaring for VL control.</text>
+
+  <rect class="panel" x="420" y="82" width="350" height="190" rx="6"/>
+  <text x="440" y="112" class="h">B. MRR experiment</text>
+  <circle class="fly" cx="480" cy="162" r="10"/><circle class="fly" cx="506" cy="162" r="10"/><circle class="fly" cx="532" cy="162" r="10"/>
+  <text x="565" y="168" class="t">752 marked and released</text>
+  <path class="arrow" d="M530 190 C585 212,640 213,705 195"/>
+  <rect class="trap" x="640" y="140" width="80" height="48" rx="5"/><text x="664" y="169" class="t">trap</text>
+  <text x="448" y="235" class="eq">recapture_rate = marked_recaptured / marked_released</text>
+
+  <rect class="panel" x="800" y="82" width="370" height="190" rx="6"/>
+  <text x="820" y="112" class="h">C. Spatial trap perimeter</text>
+  <circle cx="978" cy="180" r="80" fill="none" stroke="#b7b7b7" stroke-width="2"/>
+  <circle cx="978" cy="180" r="38" fill="none" stroke="#8faadc" stroke-width="2"/>
+  <rect class="home" x="956" y="158" width="44" height="34" rx="4"/>
+  <circle class="trap" cx="910" cy="145" r="10"/><circle class="trap" cx="1038" cy="160" r="10"/><circle class="trap" cx="1012" cy="238" r="10"/><circle class="trap" cx="915" cy="222" r="10"/>
+  <text x="850" y="252" class="s">Automatic light traps distributed up to 500 m from release point.</text>
+
+  <rect class="panel" x="30" y="302" width="360" height="190" rx="6"/>
+  <text x="50" y="332" class="h">D. Dispersal kernel summary</text>
+  <path class="line" d="M72 445 H342 M88 445 V355"/>
+  <path d="M92 368 C128 368,150 388,174 410 C205 438,255 446,338 446" fill="none" stroke="#d0802f" stroke-width="4"/>
+  <text x="102" y="366" class="s">high near release</text>
+  <text x="170" y="470" class="s">distance from release point</text>
+  <text x="58" y="392" class="eq">mean distance = 63 m</text>
+  <text x="58" y="418" class="eq">78.2% recaptured within 100 m</text>
+
+  <rect class="panel" x="420" y="302" width="350" height="190" rx="6"/>
+  <text x="440" y="332" class="h">E. Recapture timing</text>
+  <rect class="fly" x="464" y="420" width="38" height="35"/><rect class="fly" x="520" y="402" width="38" height="53"/><rect class="fly" x="576" y="365" width="38" height="90"/><rect class="fly" x="632" y="340" width="38" height="115"/>
+  <line x1="450" y1="455" x2="710" y2="455" stroke="#76695a" stroke-width="2"/>
+  <text x="468" y="476" class="s">day 1</text><text x="524" y="476" class="s">day 2</text><text x="580" y="476" class="s">day 3</text><text x="636" y="476" class="s">day 4</text>
+  <text x="448" y="372" class="s">Highest recapture percentages reported on days 3 and 4.</text>
+
+  <rect class="panel" x="800" y="302" width="370" height="190" rx="6"/>
+  <text x="820" y="332" class="h">F. VL control interpretation</text>
+  <rect class="home" x="830" y="365" width="130" height="50" rx="6"/><text x="850" y="395" class="s">local vector focus</text>
+  <rect class="dog" x="995" y="365" width="130" height="50" rx="6"/><text x="1018" y="395" class="s">collar coverage</text>
+  <path class="arrow" d="M960 390 L993 390"/>
+  <text x="820" y="452" class="s">Low dispersal suggests household-scale ecology remains central after collaring.</text>
+</svg>

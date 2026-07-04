@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Rio Grande do Sul arboviral surveillance analysis</title>
+  <desc id="desc">Six-panel schematic showing SINAN arboviral case data, CNES facility classes, regional spatial analysis, seasonal meteorological covariates, notification and hospitalization outputs, and surveillance capacity estimands.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fbfc}.panel{fill:#fff;stroke:#96a5ad;stroke-width:1.4}.h{font:700 18px Arial,sans-serif;fill:#23323a}.t{font:14px Arial,sans-serif;fill:#28363e}.s{font:12px Arial,sans-serif;fill:#576870}.eq{font:13px Consolas,monospace;fill:#28363e}.arrow{stroke:#4e7588;stroke-width:2;fill:none;marker-end:url(#arrow)}.case{fill:#f4cccc;stroke:#a64d4d}.fac{fill:#cfe2f3;stroke:#4f81a1}.met{fill:#d9ead3;stroke:#5f8f55}.out{fill:#ffe599;stroke:#aa7f25}.map{fill:#e7eef4;stroke:#7892a4}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#4e7588"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="36" y="34" class="h">Original technical schematic - not a reproduced publication figure</text>
+  <text x="36" y="56" class="s">Reported details: SINAN 2020-June 2024, CNES facility classes, intermediate geographic regions, weather seasonality; notation is explanatory.</text>
+
+  <rect class="panel" x="30" y="82" width="360" height="190" rx="6"/>
+  <text x="50" y="112" class="h">A. Surveillance event data</text>
+  <rect class="case" x="58" y="148" width="122" height="54" rx="6"/><text x="78" y="170" class="t">SINAN cases</text><text x="73" y="190" class="s">suspected / confirmed</text>
+  <rect class="out" x="218" y="148" width="120" height="54" rx="6"/><text x="242" y="170" class="t">hospital</text><text x="238" y="190" class="s">admissions</text>
+  <path class="arrow" d="M181 175 L216 175"/>
+  <text x="58" y="242" class="eq">rate = events / population or facilities</text>
+
+  <rect class="panel" x="420" y="82" width="350" height="190" rx="6"/>
+  <text x="440" y="112" class="h">B. Facility denominator</text>
+  <rect class="fac" x="450" y="145" width="112" height="40" rx="5"/><text x="466" y="170" class="s">public admin</text>
+  <rect class="fac" x="585" y="145" width="112" height="40" rx="5"/><text x="604" y="170" class="s">philanthropic</text>
+  <rect class="fac" x="450" y="205" width="112" height="40" rx="5"/><text x="474" y="230" class="s">business</text>
+  <rect class="fac" x="585" y="205" width="112" height="40" rx="5"/><text x="616" y="230" class="s">individual</text>
+  <text x="448" y="132" class="s">CNES institution categories define reporting capacity strata.</text>
+
+  <rect class="panel" x="800" y="82" width="370" height="190" rx="6"/>
+  <text x="820" y="112" class="h">C. Regional spatial layer</text>
+  <path class="map" d="M895 145 L1015 130 L1095 175 L1060 245 L930 250 L850 205 Z"/>
+  <path d="M928 143 L944 248 M996 136 L982 250 M855 205 L1090 178 M882 225 L1065 225" stroke="#7892a4" stroke-width="2"/>
+  <circle class="case" cx="965" cy="190" r="9"/><circle class="case" cx="1028" cy="215" r="9"/><circle class="case" cx="910" cy="210" r="9"/>
+  <text x="848" y="258" class="s">Intermediate geographic regions are the mapping units.</text>
+
+  <rect class="panel" x="30" y="302" width="360" height="190" rx="6"/>
+  <text x="50" y="332" class="h">D. Seasonal covariates</text>
+  <path d="M70 425 C110 350,150 350,190 425 S270 500,340 390" fill="none" stroke="#6fa65f" stroke-width="4"/>
+  <text x="72" y="362" class="s">temperature</text><text x="72" y="388" class="s">humidity</text><text x="72" y="414" class="s">precipitation</text>
+  <text x="58" y="468" class="eq">cases_t,r compared with weather_t,r</text>
+
+  <rect class="panel" x="420" y="302" width="350" height="190" rx="6"/>
+  <text x="440" y="332" class="h">E. Facility contribution outputs</text>
+  <rect class="out" x="455" y="385" width="210" height="36" rx="5"/><text x="472" y="408" class="s">public admin: 80.35% notifications</text>
+  <rect class="fac" x="455" y="435" width="170" height="36" rx="5"/><text x="472" y="458" class="s">philanthropic: high per-facility rates</text>
+  <text x="448" y="365" class="s">Reported percentages identify institutional surveillance load.</text>
+
+  <rect class="panel" x="800" y="302" width="370" height="190" rx="6"/>
+  <text x="820" y="332" class="h">F. Planning estimands</text>
+  <text x="828" y="367" class="eq">capacity_gap_r = expected cases_r - reported cases_r</text>
+  <rect class="case" x="835" y="400" width="125" height="48" rx="6"/><text x="858" y="429" class="s">regional risk</text>
+  <rect class="met" x="995" y="400" width="125" height="48" rx="6"/><text x="1015" y="429" class="s">seasonal alert</text>
+  <path class="arrow" d="M960 424 L993 424"/>
+  <text x="820" y="472" class="s">Spatial surveillance metrics indicate where reporting and care capacity matter.</text>
+</svg>
