@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for an equity-aware generative AI copilot for public health surveillance</title>
+  <desc id="desc">Six-panel schematic showing multimodal regional surveillance inputs, graph-augmented Temporal Fusion Transformer forecasting, anomaly detection, fairness regularization, retrieval-augmented explanation, and decision outputs. This is an original schematic, not a reproduced publication figure.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#355070"/></marker>
+    <style>
+      .bg{fill:#f7f8f5}.panel{fill:#fffdf8;stroke:#586f6b;stroke-width:1.6;rx:8}.head{font:700 18px Arial,sans-serif;fill:#263331}.sub{font:13px Arial,sans-serif;fill:#263331}.small{font:12px Arial,sans-serif;fill:#3f4f4c}.eq{font:13px Consolas,monospace;fill:#263331}.tag{fill:#e6f0ea;stroke:#6b9080;rx:5}.accent{fill:#f2cc8f;stroke:#b6813b}.blue{fill:#d7e7f4;stroke:#457b9d}.red{fill:#f7d6d0;stroke:#b85c4d}.green{fill:#d8ead2;stroke:#6a994e}.line{stroke:#355070;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1120" height="760"/>
+  <text x="32" y="38" class="head">Equity-aware digital surveillance copilot</text>
+  <text x="32" y="60" class="small">Original technical schematic - explanatory notation may differ from the paper</text>
+
+  <rect x="32" y="86" width="330" height="190" class="panel"/>
+  <text x="52" y="116" class="head">A. Regional data tensor</text>
+  <text x="52" y="142" class="sub">260 weekly observations across 9 regions</text>
+  <rect x="60" y="165" width="68" height="44" class="blue"/><text x="72" y="191" class="small">cases</text>
+  <rect x="142" y="165" width="68" height="44" class="green"/><text x="151" y="191" class="small">context</text>
+  <rect x="224" y="165" width="68" height="44" class="accent"/><text x="235" y="191" class="small">signals</text>
+  <text x="63" y="232" class="eq">X[r,t,k] = syndrome + demographic + environmental + digital features</text>
+  <circle cx="88" cy="252" r="8" fill="#457b9d"/><circle cx="125" cy="252" r="8" fill="#457b9d"/><circle cx="162" cy="252" r="8" fill="#457b9d"/>
+  <line x1="96" y1="252" x2="117" y2="252" stroke="#457b9d"/><line x1="133" y1="252" x2="154" y2="252" stroke="#457b9d"/>
+
+  <rect x="394" y="86" width="330" height="190" class="panel"/>
+  <text x="414" y="116" class="head">B. Graph-augmented TFT</text>
+  <text x="414" y="142" class="sub">Temporal Fusion Transformer learns trends and regional interactions</text>
+  <circle cx="472" cy="202" r="24" class="blue"/><circle cx="554" cy="178" r="24" class="blue"/><circle cx="636" cy="214" r="24" class="blue"/>
+  <line x1="495" y1="196" x2="531" y2="184" stroke="#355070" stroke-width="2"/><line x1="577" y1="187" x2="614" y2="205" stroke="#355070" stroke-width="2"/><line x1="494" y1="209" x2="612" y2="216" stroke="#355070" stroke-width="2"/>
+  <text x="454" y="207" class="small">r1</text><text x="536" y="183" class="small">r2</text><text x="618" y="219" class="small">r9</text>
+  <text x="418" y="252" class="eq">y_hat[r,t+1:t+4] = TFT(X, A_region)</text>
+
+  <rect x="756" y="86" width="330" height="190" class="panel"/>
+  <text x="776" y="116" class="head">C. Outbreak flagging</text>
+  <text x="776" y="142" class="sub">Forecast residuals feed anomaly detection</text>
+  <polyline points="790,232 825,224 860,226 895,210 930,166 965,174 1000,186 1045,150" fill="none" stroke="#b85c4d" stroke-width="3"/>
+  <line x1="790" y1="195" x2="1045" y2="195" stroke="#586f6b" stroke-dasharray="6 5"/>
+  <rect x="922" y="134" width="74" height="24" class="red"/><text x="934" y="151" class="small">alert</text>
+  <text x="785" y="252" class="eq">score[r,t] = f(y_t - y_hat_t); AUROC = 0.936</text>
+
+  <rect x="32" y="310" width="330" height="190" class="panel"/>
+  <text x="52" y="340" class="head">D. Equity constraint</text>
+  <text x="52" y="366" class="sub">Fairness term narrows subgroup recall gaps</text>
+  <rect x="70" y="397" width="70" height="52" class="blue"/><rect x="172" y="412" width="70" height="37" class="red"/><rect x="274" y="385" width="54" height="64" class="green"/>
+  <text x="75" y="468" class="small">group A</text><text x="174" y="468" class="small">group B</text><text x="266" y="468" class="small">group C</text>
+  <text x="61" y="490" class="eq">L = L_forecast + lambda * gap(TPR_g)</text>
+
+  <rect x="394" y="310" width="330" height="190" class="panel"/>
+  <text x="414" y="340" class="head">E. Grounded explanation</text>
+  <text x="414" y="366" class="sub">Retrieval-augmented LLM summarizes evidence for review</text>
+  <rect x="426" y="390" width="92" height="72" class="tag"/><text x="448" y="417" class="small">case</text><text x="443" y="436" class="small">reports</text>
+  <rect x="545" y="390" width="92" height="72" class="tag"/><text x="565" y="417" class="small">local</text><text x="558" y="436" class="small">context</text>
+  <rect x="664" y="390" width="36" height="72" class="accent"/><text x="674" y="431" class="small">R</text>
+  <path d="M518 426 H544 M637 426 H663" class="line"/>
+  <text x="424" y="488" class="eq">narrative = LLM(retrieved evidence, forecast, alert)</text>
+
+  <rect x="756" y="310" width="330" height="190" class="panel"/>
+  <text x="776" y="340" class="head">F. Surveillance outputs</text>
+  <text x="776" y="366" class="sub">Human analyst receives forecasts, alerts, fairness audit, citations</text>
+  <rect x="792" y="394" width="110" height="72" class="blue"/><text x="812" y="425" class="small">4-week</text><text x="809" y="444" class="small">forecast</text>
+  <rect x="930" y="394" width="110" height="72" class="green"/><text x="947" y="425" class="small">evidence</text><text x="958" y="444" class="small">review</text>
+  <text x="786" y="490" class="eq">reported: RMSE 0.178, MAPE 10.6%, F1 alert 0.832</text>
+
+  <path d="M362 181 H394" class="line"/><path d="M724 181 H756" class="line"/><path d="M922 276 V310" class="line"/><path d="M756 407 H724" class="line"/><path d="M394 407 H362" class="line"/>
+</svg>
