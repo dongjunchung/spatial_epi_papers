@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Hunan multi-source influenza forecasting</title>
+  <desc id="desc">Six-panel schematic showing city-week influenza surveillance, multi-source predictors, five forecasting models, rolling horizons, validation metrics, and city-specific model selection. This is an original schematic, not a reproduced publication figure.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#26384f"/></marker>
+    <style>
+      .bg{fill:#f6f5f1}.panel{fill:#fffefd;stroke:#5a6575;stroke-width:1.5;rx:8}.head{font:700 18px Arial,sans-serif;fill:#222b36}.sub{font:13px Arial,sans-serif;fill:#222b36}.small{font:12px Arial,sans-serif;fill:#44505c}.eq{font:13px Consolas,monospace;fill:#222b36}.red{fill:#d96c54;stroke:#9f392c}.gold{fill:#f0be63;stroke:#a67522}.green{fill:#8fbe9b;stroke:#4f7f5a}.blue{fill:#cfe4f6;stroke:#4b789b}.purple{fill:#d8d2ec;stroke:#7569a8}.line{stroke:#26384f;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1120" height="760"/>
+  <text x="32" y="38" class="head">Hunan influenza: multi-source short-term forecasting model stack</text>
+  <text x="32" y="60" class="small">Original technical schematic - explanatory notation may differ from the paper</text>
+
+  <rect x="32" y="86" width="330" height="190" class="panel"/>
+  <text x="52" y="116" class="head">A. City-week target</text>
+  <text x="52" y="142" class="sub">54 sentinel hospitals, 14 prefecture-level cities</text>
+  <g transform="translate(64 166)">
+    <rect width="36" height="24" class="blue"/><rect x="40" width="36" height="24" class="green"/><rect x="80" width="36" height="24" class="gold"/><rect x="120" width="36" height="24" class="red"/>
+    <rect y="30" width="36" height="24" class="green"/><rect x="40" y="30" width="36" height="24" class="gold"/><rect x="80" y="30" width="36" height="24" class="red"/><rect x="120" y="30" width="36" height="24" class="blue"/>
+  </g>
+  <text x="62" y="260" class="eq">ILI+_{c,t} = ILI proportion x test positivity</text>
+
+  <rect x="394" y="86" width="330" height="190" class="panel"/>
+  <text x="414" y="116" class="head">B. Multi-source predictors</text>
+  <text x="414" y="142" class="sub">Signals aligned to epidemiological weeks</text>
+  <rect x="424" y="170" width="92" height="44" class="blue"/><text x="440" y="197" class="small">ILI+</text>
+  <rect x="530" y="170" width="92" height="44" class="purple"/><text x="546" y="197" class="small">Baidu</text>
+  <rect x="424" y="224" width="92" height="44" class="green"/><text x="438" y="250" class="small">weather</text>
+  <rect x="530" y="224" width="92" height="44" class="gold"/><text x="548" y="250" class="small">AQI</text>
+  <text x="632" y="226" class="eq">X_{c,t,k}</text>
+
+  <rect x="756" y="86" width="330" height="190" class="panel"/>
+  <text x="776" y="116" class="head">C. Candidate forecasters</text>
+  <text x="776" y="142" class="sub">Five models compared under feature settings</text>
+  <rect x="794" y="168" width="74" height="38" class="blue"/><text x="816" y="192" class="small">LSTM</text>
+  <rect x="880" y="168" width="74" height="38" class="green"/><text x="908" y="192" class="small">GRU</text>
+  <rect x="966" y="168" width="74" height="38" class="purple"/><text x="990" y="192" class="small">SAE</text>
+  <rect x="838" y="222" width="74" height="38" class="gold"/><text x="860" y="246" class="small">RF</text>
+  <rect x="924" y="222" width="86" height="38" class="red"/><text x="940" y="246" class="small">LightGBM</text>
+
+  <rect x="32" y="310" width="330" height="190" class="panel"/>
+  <text x="52" y="340" class="head">D. Forecast horizons</text>
+  <text x="52" y="366" class="sub">One- to three-week-ahead prediction</text>
+  <polyline points="64,452 100,438 136,412 172,430 208,382 244,396 280,372" fill="none" stroke="#d96c54" stroke-width="3"/>
+  <circle cx="244" cy="396" r="4" class="red"/><circle cx="280" cy="372" r="4" class="red"/>
+  <text x="64" y="486" class="eq">predict ILI+_{t+h}, h in {1,2,3}</text>
+
+  <rect x="394" y="310" width="330" height="190" class="panel"/>
+  <text x="414" y="340" class="head">E. Validation metrics</text>
+  <text x="414" y="366" class="sub">Compared with SeasonalNaive52 baseline</text>
+  <line x1="432" y1="456" x2="696" y2="456" stroke="#222b36"/><line x1="432" y1="456" x2="432" y2="380" stroke="#222b36"/>
+  <rect x="458" y="408" width="32" height="48" class="blue"/><rect x="510" y="394" width="32" height="62" class="gold"/><rect x="562" y="374" width="32" height="82" class="red"/><rect x="614" y="426" width="32" height="30" class="green"/>
+  <text x="432" y="486" class="eq">RMSE, MAE, MAPE, SMAPE, R^2</text>
+
+  <rect x="756" y="310" width="330" height="190" class="panel"/>
+  <text x="776" y="340" class="head">F. Reported model choice</text>
+  <text x="776" y="366" class="sub">Provincial RF robust; city-level variation remains</text>
+  <rect x="790" y="392" width="126" height="66" class="gold"/><text x="812" y="418" class="small">all-features RF</text><text x="806" y="438" class="eq">RMSE 0.00882</text>
+  <rect x="948" y="392" width="108" height="66" class="green"/><text x="964" y="418" class="small">GRU best in</text><text x="968" y="438" class="small">3 cities</text>
+  <text x="790" y="486" class="small">RF ranked highest in 11 of 14 cities by summary score.</text>
+
+  <path d="M362 181 H394" class="line"/><path d="M724 181 H756" class="line"/><path d="M922 276 V310" class="line"/><path d="M756 407 H724" class="line"/><path d="M394 407 H362" class="line"/>
+</svg>

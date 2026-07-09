@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Brazil Zika spatiotemporal cluster analysis</title>
+  <desc id="desc">Six-panel schematic showing confirmed Zika cases from Brazil, Joinpoint temporal trend estimation, municipal spatial autocorrelation, spatial scan statistics, spatiotemporal scan cylinders, and surveillance outputs. This is an original schematic, not a reproduced publication figure.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#23424a"/></marker>
+    <style>
+      .bg{fill:#f5f7f4}.panel{fill:#fffdf8;stroke:#55706a;stroke-width:1.5;rx:8}.head{font:700 18px Arial,sans-serif;fill:#203431}.sub{font:13px Arial,sans-serif;fill:#203431}.small{font:12px Arial,sans-serif;fill:#40524f}.eq{font:13px Consolas,monospace;fill:#203431}.hot{fill:#d95f4a;stroke:#9a2f25}.warm{fill:#f2b36d;stroke:#a86e29}.cool{fill:#9fc6bd;stroke:#4d8178}.blue{fill:#d7e8f7;stroke:#497a9b}.line{stroke:#23424a;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1120" height="760"/>
+  <text x="32" y="38" class="head">Brazil Zika 2016-2023: temporal trend and spatial scan workflow</text>
+  <text x="32" y="60" class="small">Original technical schematic - explanatory notation may differ from the paper</text>
+
+  <rect x="32" y="86" width="330" height="190" class="panel"/>
+  <text x="52" y="116" class="head">A. National surveillance table</text>
+  <text x="52" y="142" class="sub">Confirmed Zika cases from SINAN, 2016-2023</text>
+  <rect x="62" y="166" width="60" height="76" class="hot"/><rect x="132" y="184" width="60" height="58" class="warm"/><rect x="202" y="206" width="60" height="36" class="cool"/>
+  <text x="64" y="260" class="eq">Y_{i,t}, pop_{i,t}, age, sex, race, pregnancy</text>
+
+  <rect x="394" y="86" width="330" height="190" class="panel"/>
+  <text x="414" y="116" class="head">B. Joinpoint trend model</text>
+  <text x="414" y="142" class="sub">Temporal segments estimate incidence change</text>
+  <polyline points="432,230 480,184 532,198 584,218 642,236 700,244" fill="none" stroke="#d95f4a" stroke-width="3"/>
+  <circle cx="480" cy="184" r="5" class="hot"/><circle cx="532" cy="198" r="5" class="warm"/>
+  <text x="426" y="260" class="eq">AAPC = weighted annual percent change</text>
+
+  <rect x="756" y="86" width="330" height="190" class="panel"/>
+  <text x="776" y="116" class="head">C. Municipal spatial dependence</text>
+  <text x="776" y="142" class="sub">Global Moran's I checks areal clustering</text>
+  <rect x="800" y="170" width="58" height="46" class="hot"/><rect x="858" y="170" width="58" height="46" class="warm"/><rect x="916" y="170" width="58" height="46" class="cool"/><rect x="974" y="170" width="58" height="46" class="hot"/>
+  <rect x="830" y="216" width="58" height="46" class="warm"/><rect x="888" y="216" width="58" height="46" class="hot"/><rect x="946" y="216" width="58" height="46" class="cool"/>
+  <text x="790" y="260" class="eq">I = (n/S0) sum_i sum_j w_ij z_i z_j / sum_i z_i^2</text>
+
+  <rect x="32" y="310" width="330" height="190" class="panel"/>
+  <text x="52" y="340" class="head">D. Purely spatial scan</text>
+  <text x="52" y="366" class="sub">Candidate zones compare observed and expected cases</text>
+  <circle cx="150" cy="418" r="58" fill="none" stroke="#d95f4a" stroke-width="4"/>
+  <circle cx="108" cy="408" r="8" class="hot"/><circle cx="145" cy="432" r="8" class="hot"/><circle cx="184" cy="398" r="8" class="warm"/><circle cx="260" cy="430" r="8" class="cool"/>
+  <text x="62" y="486" class="eq">LR(Z) compares inside vs outside cluster Z</text>
+
+  <rect x="394" y="310" width="330" height="190" class="panel"/>
+  <text x="414" y="340" class="head">E. Space-time scan</text>
+  <text x="414" y="366" class="sub">Cylinders add calendar time to municipal zones</text>
+  <ellipse cx="560" cy="402" rx="78" ry="22" fill="#d7e8f7" stroke="#497a9b" stroke-width="2"/>
+  <line x1="482" y1="402" x2="482" y2="464" stroke="#497a9b" stroke-width="2"/><line x1="638" y1="402" x2="638" y2="464" stroke="#497a9b" stroke-width="2"/>
+  <ellipse cx="560" cy="464" rx="78" ry="22" fill="#f2b36d" stroke="#a86e29" stroke-width="2"/>
+  <text x="426" y="488" class="eq">window = municipalities x time interval</text>
+
+  <rect x="756" y="310" width="330" height="190" class="panel"/>
+  <text x="776" y="340" class="head">F. Reported surveillance outputs</text>
+  <text x="776" y="366" class="sub">Risk estimates identify priority regions</text>
+  <rect x="790" y="392" width="125" height="58" class="hot"/><text x="804" y="416" class="small">Rio Grande do Norte</text><text x="818" y="436" class="eq">RR = 12.1</text>
+  <rect x="946" y="392" width="110" height="58" class="warm"/><text x="958" y="416" class="small">2,770 mun.</text><text x="960" y="436" class="eq">RR = 31.08</text>
+  <text x="790" y="484" class="small">National incidence decreased; clustered risk persisted.</text>
+
+  <path d="M362 181 H394" class="line"/><path d="M724 181 H756" class="line"/><path d="M922 276 V310" class="line"/><path d="M756 407 H724" class="line"/><path d="M394 407 H362" class="line"/>
+</svg>

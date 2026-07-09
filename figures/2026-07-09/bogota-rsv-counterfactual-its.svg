@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Bogota RSV hybrid immunization counterfactual analysis</title>
+  <desc id="desc">Six-panel schematic showing weekly infant lower-respiratory-tract-infection surveillance, hybrid RSV immunization timing, segmented negative-binomial interrupted time-series modeling, counterfactual estimation, public-health estimands, and reported impact outputs. This is an original schematic, not a reproduced publication figure.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#273a42"/></marker>
+    <style>
+      .bg{fill:#f5f6f3}.panel{fill:#fffefa;stroke:#64706a;stroke-width:1.5;rx:8}.head{font:700 18px Arial,sans-serif;fill:#24302d}.sub{font:13px Arial,sans-serif;fill:#24302d}.small{font:12px Arial,sans-serif;fill:#46524f}.eq{font:13px Consolas,monospace;fill:#24302d}.red{fill:#d95f4a;stroke:#9a2f25}.gold{fill:#eebd64;stroke:#9b6d20}.green{fill:#95bf9a;stroke:#4f7f55}.blue{fill:#d6e7f6;stroke:#4b789b}.line{stroke:#273a42;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1120" height="760"/>
+  <text x="32" y="38" class="head">Bogota infant LRTI: hybrid RSV immunization impact model</text>
+  <text x="32" y="60" class="small">Original technical schematic - preprint, explanatory notation may differ from the paper</text>
+
+  <rect x="32" y="86" width="330" height="190" class="panel"/>
+  <text x="52" y="116" class="head">A. Weekly outcome series</text>
+  <text x="52" y="142" class="sub">Infants under 1 year, EW 1/2023 to EW 24/2026</text>
+  <rect x="68" y="176" width="54" height="46" class="red"/><text x="76" y="204" class="small">hosp.</text>
+  <rect x="136" y="196" width="54" height="26" class="gold"/><text x="148" y="214" class="small">ICU</text>
+  <rect x="204" y="162" width="54" height="60" class="green"/><text x="212" y="194" class="small">visits</text>
+  <rect x="272" y="210" width="40" height="12" class="blue"/><text x="264" y="244" class="small">deaths</text>
+  <text x="62" y="264" class="eq">Y_t = weekly LRTI rate or count outcome</text>
+
+  <rect x="394" y="86" width="330" height="190" class="panel"/>
+  <text x="414" y="116" class="head">B. Intervention timing</text>
+  <text x="414" y="142" class="sub">Maternal RSVpreF plus nirsevimab strategy</text>
+  <line x1="426" y1="218" x2="694" y2="218" stroke="#24302d" stroke-width="2"/>
+  <line x1="538" y1="176" x2="538" y2="238" stroke="#d95f4a" stroke-width="4"/><text x="500" y="164" class="small">RSVpreF</text>
+  <line x1="612" y1="176" x2="612" y2="238" stroke="#4b789b" stroke-width="4"/><text x="576" y="164" class="small">nirsevimab</text>
+  <text x="424" y="264" class="eq">post period: EW 47/2025 to EW 24/2026</text>
+
+  <rect x="756" y="86" width="330" height="190" class="panel"/>
+  <text x="776" y="116" class="head">C. Segmented NegBin ITS</text>
+  <text x="776" y="142" class="sub">Trend, seasonality, intervention, autocorrelation</text>
+  <text x="786" y="188" class="eq">Y_t ~ NegBin(mu_t, theta)</text>
+  <text x="786" y="216" class="eq">log(mu_t)=alpha+beta t+gamma I_t</text>
+  <text x="786" y="244" class="eq">+ delta(t-t0)_+ + Fourier seasonality + AR</text>
+
+  <rect x="32" y="310" width="330" height="190" class="panel"/>
+  <text x="52" y="340" class="head">D. Counterfactual trajectory</text>
+  <text x="52" y="366" class="sub">Observed series compared with no-intervention prediction</text>
+  <polyline points="64,448 100,426 136,402 172,410 208,390 244,404 286,418" fill="none" stroke="#d95f4a" stroke-width="3"/>
+  <polyline points="64,448 100,426 136,402 172,392 208,374 244,360 286,350" fill="none" stroke="#4b789b" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="64" y="486" class="eq">averted = sum_t [Y^0_t - Y^obs_t]</text>
+
+  <rect x="394" y="310" width="330" height="190" class="panel"/>
+  <text x="414" y="340" class="head">E. Policy estimands</text>
+  <text x="414" y="366" class="sub">Rates, reductions, and uncertainty intervals</text>
+  <rect x="430" y="392" width="110" height="56" class="blue"/><text x="450" y="416" class="small">rate ratio</text><text x="460" y="436" class="eq">RR</text>
+  <rect x="562" y="392" width="110" height="56" class="green"/><text x="584" y="416" class="small">cases</text><text x="574" y="436" class="eq">averted</text>
+  <text x="428" y="486" class="eq">relative reduction = 1 - obs/counterfactual</text>
+
+  <rect x="756" y="310" width="330" height="190" class="panel"/>
+  <text x="776" y="340" class="head">F. Reported impact</text>
+  <text x="776" y="366" class="sub">Severe infant LRTI declined after implementation</text>
+  <rect x="790" y="394" width="116" height="58" class="red"/><text x="808" y="418" class="small">hospital RR</text><text x="826" y="438" class="eq">0.66</text>
+  <rect x="928" y="394" width="116" height="58" class="gold"/><text x="954" y="418" class="small">ICU RR</text><text x="964" y="438" class="eq">0.78</text>
+  <text x="790" y="486" class="small">Estimated hospitalization reduction: 47.1% over post period.</text>
+
+  <path d="M362 181 H394" class="line"/><path d="M724 181 H756" class="line"/><path d="M922 276 V310" class="line"/><path d="M756 407 H724" class="line"/><path d="M394 407 H362" class="line"/>
+</svg>
