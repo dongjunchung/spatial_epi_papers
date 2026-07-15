@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for SHIELD graph attention spatial tissue modeling</title>
+  <desc id="desc">Six-panel schematic showing multiplexed tissue imaging input, cell graph construction, weakly supervised graph attention learning, disease-relevant attention scores, validation domains in HCC, colorectal cancer, and type 1 diabetes, and interpretable interaction outputs. The schematic is original and not reproduced from the paper.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.5;rx:8}.hdr{font:700 18px Arial,sans-serif;fill:#0f172a}.txt{font:14px Arial,sans-serif;fill:#1e293b}.small{font:12px Arial,sans-serif;fill:#475569}.eq{font:15px 'Times New Roman',serif;fill:#0f172a}.note{font:12px Arial,sans-serif;fill:#64748b}.blue{fill:#dbeafe;stroke:#60a5fa}.green{fill:#dcfce7;stroke:#4ade80}.red{fill:#fee2e2;stroke:#f87171}.yellow{fill:#fef3c7;stroke:#f59e0b}.purple{fill:#ede9fe;stroke:#a78bfa}.arrow{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.edge{stroke:#64748b;stroke-width:2}.attn{stroke:#dc2626;stroke-width:5}
+    </style>
+  </defs>
+  <rect class="bg" width="1280" height="760"/>
+  <text x="36" y="38" class="hdr">Original technical schematic: SHIELD weakly supervised graph attention for spatial tissue interactions</text>
+  <text x="36" y="60" class="note">Not a reproduced publication figure. Graph equations are explanatory notation for the reported graph attention framework.</text>
+
+  <rect x="36" y="88" width="378" height="190" class="panel"/>
+  <text x="56" y="118" class="hdr">A. Multiplexed tissue imaging</text>
+  <text x="56" y="147" class="txt">Cells carry spatial coordinates and marker features</text>
+  <g transform="translate(100,165)">
+    <circle cx="25" cy="28" r="15" class="blue"/><circle cx="77" cy="18" r="14" class="green"/><circle cx="128" cy="48" r="16" class="red"/><circle cx="178" cy="26" r="14" class="yellow"/><circle cx="228" cy="52" r="15" class="purple"/>
+    <text x="5" y="92" class="small">xi = markers, coordinates</text>
+  </g>
+
+  <rect x="451" y="88" width="378" height="190" class="panel"/>
+  <text x="471" y="118" class="hdr">B. Spatial cell graph</text>
+  <text x="471" y="147" class="txt">Neighborhood edges encode local cell-cell context</text>
+  <g transform="translate(545,168)">
+    <line x1="25" y1="28" x2="78" y2="18" class="edge"/><line x1="78" y1="18" x2="130" y2="48" class="attn"/><line x1="130" y1="48" x2="180" y2="26" class="edge"/><line x1="180" y1="26" x2="230" y2="52" class="edge"/><line x1="78" y1="18" x2="180" y2="26" class="edge"/>
+    <circle cx="25" cy="28" r="15" class="blue"/><circle cx="78" cy="18" r="14" class="green"/><circle cx="130" cy="48" r="16" class="red"/><circle cx="180" cy="26" r="14" class="yellow"/><circle cx="230" cy="52" r="15" class="purple"/>
+  </g>
+  <text x="488" y="253" class="eq">G = (cells V, neighborhood edges E)</text>
+
+  <rect x="866" y="88" width="378" height="190" class="panel"/>
+  <text x="886" y="118" class="hdr">C. Weak supervision</text>
+  <text x="886" y="147" class="txt">Learn from disease or response labels</text>
+  <text x="900" y="184" class="eq">h'i = sigma( Sum_j alphaij W xj )</text>
+  <text x="900" y="217" class="eq">alphaij = attention(cell i, cell j)</text>
+  <text x="900" y="250" class="small">No ligand-receptor database required, per abstract.</text>
+
+  <rect x="36" y="318" width="378" height="190" class="panel"/>
+  <text x="56" y="348" class="hdr">D. Disease-relevant interactions</text>
+  <text x="56" y="378" class="txt">Attention scores rank local cell pair signals</text>
+  <g transform="translate(70,408)">
+    <rect width="280" height="20" fill="#fee2e2"/><rect width="230" height="20" fill="#fecaca"/><rect width="180" height="20" fill="#fca5a5"/><text x="8" y="15" class="small">high alpha: candidate interaction</text>
+    <rect y="34" width="180" height="20" fill="#dbeafe"/><text x="8" y="49" class="small">lower alpha</text>
+  </g>
+  <text x="56" y="486" class="small">Interpretable scores support data-driven mechanism discovery.</text>
+
+  <rect x="451" y="318" width="378" height="190" class="panel"/>
+  <text x="471" y="348" class="hdr">E. Reported validation domains</text>
+  <rect x="488" y="384" width="95" height="60" class="green"/><text x="520" y="418" class="small">HCC</text>
+  <rect x="608" y="384" width="95" height="60" class="blue"/><text x="640" y="418" class="small">CRC</text>
+  <rect x="728" y="384" width="70" height="60" class="yellow"/><text x="751" y="418" class="small">T1D</text>
+  <text x="471" y="476" class="small">Three multiplexed tissue imaging datasets in the abstract.</text>
+
+  <rect x="866" y="318" width="378" height="190" class="panel"/>
+  <text x="886" y="348" class="hdr">F. Reported interaction outputs</text>
+  <text x="895" y="384" class="small">HCC: rare MAIT cell-macrophage interactions</text>
+  <text x="895" y="413" class="small">CRC: suppressive CD8 T cell-macrophage interactions</text>
+  <text x="895" y="442" class="small">T1D: beta cell interactions across disease stages</text>
+  <text x="895" y="486" class="small">Outputs are spatial disease-modeling hypotheses for follow-up.</text>
+
+  <path d="M414 183 H451" class="arrow"/><path d="M829 183 H866" class="arrow"/>
+  <path d="M225 278 V318" class="arrow"/><path d="M640 278 V318" class="arrow"/><path d="M1055 278 V318" class="arrow"/>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Bayesian dPCR concentration inference in environmental surveillance</title>
+  <desc id="desc">Six-panel schematic showing reported concentration inputs, dPCR-specific likelihood, priors for missing assay parameters, Bayesian fitting, two reported case-study domains, and posterior outputs for environmental and wastewater surveillance. The schematic is original and not reproduced from the paper.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.5;rx:8}.hdr{font:700 18px Arial,sans-serif;fill:#0f172a}.txt{font:14px Arial,sans-serif;fill:#1e293b}.small{font:12px Arial,sans-serif;fill:#475569}.eq{font:15px 'Times New Roman',serif;fill:#0f172a}.note{font:12px Arial,sans-serif;fill:#64748b}.blue{fill:#dbeafe;stroke:#60a5fa}.green{fill:#dcfce7;stroke:#4ade80}.red{fill:#fee2e2;stroke:#f87171}.yellow{fill:#fef3c7;stroke:#f59e0b}.arrow{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1280" height="760"/>
+  <text x="36" y="38" class="hdr">Original technical schematic: dPCR statistical inference for environmental surveillance</text>
+  <text x="36" y="60" class="note">Not a reproduced publication figure. Likelihood notation is explanatory and abstracts the reported dPCR-specific model.</text>
+
+  <rect x="36" y="88" width="378" height="190" class="panel"/>
+  <text x="56" y="118" class="hdr">A. Common reported data</text>
+  <text x="56" y="148" class="txt">Many studies publish concentration estimates only</text>
+  <rect x="74" y="174" width="118" height="58" class="blue"/><text x="93" y="198" class="small">reported C</text><text x="94" y="215" class="small">copies / unit</text>
+  <rect x="224" y="174" width="118" height="58" class="red"/><text x="248" y="198" class="small">nondetects</text><text x="244" y="215" class="small">censoring risk</text>
+  <text x="56" y="258" class="small">Partition counts and assay details may be unavailable.</text>
+
+  <rect x="451" y="88" width="378" height="190" class="panel"/>
+  <text x="471" y="118" class="hdr">B. dPCR-aware likelihood</text>
+  <text x="471" y="148" class="txt">Model concentration-dependent noise</text>
+  <text x="484" y="183" class="eq">p(Crep | lambda, thetaassay)</text>
+  <text x="484" y="214" class="eq">instead of Normal(log C) approximation</text>
+  <path d="M500 238 C560 200,650 200,728 238" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <path d="M500 254 C560 230,650 230,728 254" stroke="#ef4444" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
+  <text x="575" y="267" class="small">noise changes with concentration</text>
+
+  <rect x="866" y="88" width="378" height="190" class="panel"/>
+  <text x="886" y="118" class="hdr">C. Priors for missing assay parameters</text>
+  <rect x="900" y="152" width="130" height="48" class="yellow"/><text x="926" y="181" class="small">partition volume</text>
+  <rect x="1058" y="152" width="130" height="48" class="yellow"/><text x="1083" y="181" class="small">dilution / LoD</text>
+  <text x="906" y="230" class="eq">thetaassay ~ interpretable priors</text>
+  <text x="906" y="256" class="small">Reported by Lison, Julian, and Stadler.</text>
+
+  <rect x="36" y="318" width="378" height="190" class="panel"/>
+  <text x="56" y="348" class="hdr">D. Bayesian regression layer</text>
+  <text x="56" y="378" class="txt">Fit surveillance or decay model jointly</text>
+  <text x="72" y="414" class="eq">lambda_i = g^{-1}(X_i beta + u_i)</text>
+  <text x="72" y="446" class="eq">p(beta, u, theta | Crep) proportional</text>
+  <text x="88" y="474" class="eq">likelihood x priors</text>
+
+  <rect x="451" y="318" width="378" height="190" class="panel"/>
+  <text x="471" y="348" class="hdr">E. Reported case-study domains</text>
+  <rect x="490" y="384" width="125" height="72" class="green"/><text x="514" y="411" class="small">free-eDNA</text><text x="516" y="429" class="small">decay in</text><text x="524" y="447" class="small">seawater</text>
+  <rect x="660" y="384" width="125" height="72" class="blue"/><text x="681" y="411" class="small">pathogen</text><text x="676" y="429" class="small">transmission</text><text x="681" y="447" class="small">wastewater</text>
+  <text x="471" y="486" class="small">Implemented in R packages dPCRfit and EpiSewer.</text>
+
+  <rect x="866" y="318" width="378" height="190" class="panel"/>
+  <text x="886" y="348" class="hdr">F. Surveillance outputs</text>
+  <text x="886" y="376" class="txt">Posterior estimates avoid approximation bias</text>
+  <rect x="904" y="402" width="90" height="58" class="blue"/><text x="927" y="428" class="small">trend</text><text x="925" y="445" class="small">lambda(t)</text>
+  <rect x="1020" y="402" width="90" height="58" class="green"/><text x="1041" y="428" class="small">decay</text><text x="1040" y="445" class="small">rate</text>
+  <rect x="1136" y="402" width="90" height="58" class="yellow"/><text x="1152" y="428" class="small">credible</text><text x="1155" y="445" class="small">intervals</text>
+  <text x="886" y="488" class="small">Useful when raw dPCR partition counts are missing.</text>
+
+  <path d="M414 183 H451" class="arrow"/><path d="M829 183 H866" class="arrow"/>
+  <path d="M225 278 V318" class="arrow"/><path d="M640 278 V318" class="arrow"/><path d="M1055 278 V318" class="arrow"/>
+</svg>
