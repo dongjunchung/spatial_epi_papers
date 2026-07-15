@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Indonesian lymphatic filariasis geospatial MDA evaluation</title>
+  <desc id="desc">Six-panel original schematic showing Belitung lymphatic filariasis cluster surveys, geospatial prediction, IDA mass drug administration rounds, prevalence changes, persistent new microfilaria-positive detections, and special-intervention-zone interpretation. This is not a reproduced publication figure.</desc>
+  <style>
+    .bg{fill:#fbfaf6}.panel{fill:#fff;stroke:#cfc3ad;stroke-width:2;rx:8}.h{font:700 25px Arial,sans-serif;fill:#342c1e}.sh{font:700 18px Arial,sans-serif;fill:#342c1e}.t{font:15px Arial,sans-serif;fill:#302a22}.s{font:13px Arial,sans-serif;fill:#6b604f}.eq{font:15px Consolas,monospace;fill:#302a22}.a{stroke:#695c46;stroke-width:3;fill:none;marker-end:url(#arrow)}.base{fill:#d88c62;stroke:#884b2e}.fup{fill:#78a890;stroke:#3f715d}.drug{fill:#7fa6c7;stroke:#3d6384}.warn{fill:#f2cf78;stroke:#9a7524}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#695c46"/></marker></defs>
+  <rect class="bg" width="1600" height="980"/>
+  <text x="42" y="48" class="h">Zoophilic Brugia malayi in Belitung: geospatially guided MDA impact evaluation</text>
+  <text x="42" y="74" class="s">Original technical schematic for Supali et al. PLOS Neglected Tropical Diseases, 2026. Notation is explanatory and may differ from the paper.</text>
+
+  <rect class="panel" x="40" y="105" width="470" height="245"/>
+  <text class="sh" x="64" y="137">A. Baseline cluster survey</text>
+  <rect x="85" y="170" width="180" height="120" fill="#edf2e9" stroke="#93a383" rx="18"/>
+  <circle cx="130" cy="210" r="10" class="base"/><circle cx="172" cy="245" r="10" class="base"/><circle cx="222" cy="205" r="10" class="base"/><circle cx="205" cy="268" r="10" class="fup"/>
+  <text class="t" x="306" y="188">5,161 adults</text><text class="t" x="306" y="218">30 clusters</text><text class="t" x="306" y="248">26 villages</text>
+  <text class="s" x="70" y="315">Reported baseline in 2022: overall Mf prevalence 1.57% across random clusters.</text>
+
+  <rect class="panel" x="565" y="105" width="470" height="245"/>
+  <text class="sh" x="589" y="137">B. Geospatial prediction to target follow-up</text>
+  <rect x="610" y="175" width="150" height="90" fill="#f6e6cf" stroke="#c5955f" rx="8"/>
+  <text class="eq" x="624" y="207">risk(s) = f(Mf,</text><text class="eq" x="624" y="230"> location)</text>
+  <path class="a" d="M760 220 L820 220"/>
+  <rect x="820" y="168" width="160" height="105" class="fup" rx="8"/><text class="t" x="850" y="203">12 villages</text><text class="s" x="840" y="228">follow-up survey</text><text class="s" x="840" y="249">1 added village</text>
+  <text class="s" x="590" y="315">Reported: follow-up villages were selected based on geospatial predictions.</text>
+
+  <rect class="panel" x="1090" y="105" width="470" height="245"/>
+  <text class="sh" x="1114" y="137">C. Intervention timeline</text>
+  <line x1="1140" y1="230" x2="1500" y2="230" stroke="#8c806e" stroke-width="3"/>
+  <circle cx="1165" cy="230" r="14" class="base"/><circle cx="1290" cy="230" r="14" class="drug"/><circle cx="1418" cy="230" r="14" class="drug"/><circle cx="1500" cy="230" r="14" class="fup"/>
+  <text class="s" x="1135" y="265">baseline</text><text class="s" x="1268" y="265">IDA 1</text><text class="s" x="1395" y="265">IDA 2</text><text class="s" x="1458" y="265">follow-up</text>
+  <text class="t" x="1135" y="190">Ivermectin + DEC + albendazole</text>
+  <text class="s" x="1120" y="315">Reported: more than 90% consumed at least one IDA treatment.</text>
+
+  <rect class="panel" x="40" y="405" width="470" height="245"/>
+  <text class="sh" x="64" y="437">D. Mf prevalence response in 11 villages</text>
+  <line x1="100" y1="585" x2="435" y2="585" stroke="#8c806e"/><line x1="100" y1="480" x2="100" y2="585" stroke="#8c806e"/>
+  <rect x="140" y="486" width="54" height="99" class="base"/><rect x="250" y="551" width="54" height="34" class="fup"/><rect x="360" y="541" width="54" height="44" class="fup"/>
+  <text class="s" x="132" y="610">2.51%</text><text class="s" x="244" y="610">0.86%</text><text class="s" x="354" y="610">1.10%</text>
+  <text class="s" x="112" y="468">microfilaria prevalence</text>
+  <text class="s" x="70" y="628">Reported: prevalence fell after one and two IDA rounds versus baseline.</text>
+
+  <rect class="panel" x="565" y="405" width="470" height="245"/>
+  <text class="sh" x="589" y="437">E. Why elimination remained difficult</text>
+  <rect x="610" y="485" width="170" height="64" class="warn" rx="8"/><text class="t" x="637" y="512">new Mf+</text><text class="s" x="623" y="533">detected at follow-up</text>
+  <rect x="825" y="485" width="170" height="64" class="base" rx="8"/><text class="t" x="852" y="512">zoophilic</text><text class="s" x="844" y="533">B. malayi setting</text>
+  <path class="a" d="M780 517 L825 517"/>
+  <text class="eq" x="606" y="600">observed positives after MDA -> residual / renewed transmission</text>
+  <text class="s" x="590" y="628">Reported: two IDA rounds were insufficient to eliminate B. malayi.</text>
+
+  <rect class="panel" x="1090" y="405" width="470" height="245"/>
+  <text class="sh" x="1114" y="437">F. Policy estimand</text>
+  <rect x="1130" y="480" width="165" height="55" class="drug" rx="8"/><text class="t" x="1152" y="512">more MDA</text>
+  <rect x="1345" y="480" width="165" height="55" class="fup" rx="8"/><text class="t" x="1368" y="512">intense surveillance</text>
+  <rect x="1235" y="565" width="165" height="55" class="warn" rx="8"/><text class="t" x="1252" y="597">special zones</text>
+  <path class="a" d="M1212 535 L1275 565"/><path class="a" d="M1428 535 L1365 565"/>
+  <text class="s" x="1120" y="628">Reported implication: WHO special intervention zones may be needed.</text>
+
+  <rect x="42" y="705" width="1518" height="210" fill="#f4efe6" stroke="#cfc3ad" rx="8"/>
+  <text class="sh" x="70" y="740">Caution on specificity</text>
+  <text class="t" x="70" y="772">The accessible abstract reports geospatial predictions but not the exact geostatistical model form.</text>
+  <text class="t" x="70" y="802">Panel B uses generic notation to show the role of location-informed risk prediction in selecting follow-up villages.</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for stochastic influenza vaccination modeling in homeless hostels</title>
+  <desc id="desc">Six-panel original schematic showing hostel residents, wider-community contacts, internal and external transmission parameters, vaccine coverage and transmission reduction, stochastic final-size simulation, and cost or policy outputs. This is not a reproduced publication figure.</desc>
+  <style>
+    .bg{fill:#f7fbfa}.panel{fill:#fff;stroke:#b6cbc8;stroke-width:2;rx:8}.h{font:700 25px Arial,sans-serif;fill:#193b3a}.sh{font:700 18px Arial,sans-serif;fill:#193b3a}.t{font:15px Arial,sans-serif;fill:#233a39}.s{font:13px Arial,sans-serif;fill:#526867}.eq{font:15px Consolas,monospace;fill:#193b3a}.a{stroke:#2e706e;stroke-width:3;fill:none;marker-end:url(#arrow)}.hostel{fill:#f2cf78;stroke:#9d7526}.comm{fill:#8ab8d8;stroke:#416c8e}.vacc{fill:#91cfa2;stroke:#438255}.inf{fill:#e58578;stroke:#9d4136}.out{fill:#d7e1ec;stroke:#8293a8}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#2e706e"/></marker></defs>
+  <rect class="bg" width="1600" height="980"/>
+  <text x="42" y="48" class="h">Influenza vaccination in homeless hostels: stochastic outbreak final-size modeling</text>
+  <text x="42" y="74" class="s">Original technical schematic for Xu et al. medRxiv, 2026. Compartment notation is explanatory and may differ from the preprint.</text>
+
+  <rect class="panel" x="40" y="105" width="470" height="245"/>
+  <text class="sh" x="64" y="137">A. Setting and population units</text>
+  <rect x="85" y="170" width="165" height="110" class="hostel" rx="8"/><text class="t" x="126" y="205">hostel</text><circle cx="120" cy="242" r="10" class="out"/><circle cx="155" cy="242" r="10" class="out"/><circle cx="190" cy="242" r="10" class="inf"/>
+  <rect x="315" y="182" width="125" height="85" class="comm" rx="8"/><text class="t" x="338" y="218">wider</text><text class="t" x="327" y="238">community</text>
+  <path class="a" d="M250 225 L315 225"/>
+  <text class="s" x="70" y="315">Reported aim: model homeless accommodation settings for influenza vaccination.</text>
+
+  <rect class="panel" x="565" y="105" width="470" height="245"/>
+  <text class="sh" x="589" y="137">B. Transmission parameters estimated</text>
+  <rect x="615" y="175" width="170" height="65" class="inf" rx="8"/><text class="t" x="640" y="205">internal beta_H</text><text class="s" x="635" y="226">within hostel</text>
+  <rect x="830" y="175" width="170" height="65" class="comm" rx="8"/><text class="t" x="852" y="205">external c_C</text><text class="s" x="848" y="226">community contact</text>
+  <text class="eq" x="612" y="292">lambda_i(t) = beta_H I_H/N_H + c_C I_C/N_C</text>
+  <text class="s" x="590" y="325">Reported: daily per-capita wider-community contact and internal transmission rate.</text>
+
+  <rect class="panel" x="1090" y="105" width="470" height="245"/>
+  <text class="sh" x="1114" y="137">C. Vaccination layer</text>
+  <rect x="1145" y="180" width="155" height="72" class="vacc" rx="8"/><text class="t" x="1172" y="210">coverage</text><text class="s" x="1185" y="232">v</text>
+  <rect x="1340" y="180" width="155" height="72" class="vacc" rx="8"/><text class="t" x="1358" y="210">reduced</text><text class="s" x="1366" y="232">transmission</text>
+  <path class="a" d="M1300 216 L1340 216"/>
+  <text class="eq" x="1130" y="300">beta_eff = beta * (1 - VE_T * v)</text>
+  <text class="s" x="1120" y="325">Reported: achieved vaccine coverage was estimated; transmission-reducing vaccine mitigated outbreaks.</text>
+
+  <rect class="panel" x="40" y="405" width="470" height="245"/>
+  <text class="sh" x="64" y="437">D. Stochastic simulation</text>
+  <circle cx="150" cy="520" r="28" class="out"/><text class="t" x="140" y="526">S</text>
+  <circle cx="265" cy="520" r="28" class="inf"/><text class="t" x="257" y="526">I</text>
+  <circle cx="380" cy="520" r="28" class="vacc"/><text class="t" x="369" y="526">R</text>
+  <path class="a" d="M178 520 L237 520"/><path class="a" d="M293 520 L352 520"/>
+  <text class="eq" x="82" y="596">S -> I with prob 1 - exp(-lambda_i dt)</text>
+  <text class="s" x="70" y="628">Reported: stochastic simulations of outbreak final size over internal and external transmission choices.</text>
+
+  <rect class="panel" x="565" y="405" width="470" height="245"/>
+  <text class="sh" x="589" y="437">E. Scenario grid</text>
+  <line x1="635" y1="585" x2="950" y2="585" stroke="#819b99"/><line x1="635" y1="485" x2="635" y2="585" stroke="#819b99"/>
+  <path d="M650 565 C710 520,760 505,825 498 S925 485,948 470" stroke="#e58578" stroke-width="4" fill="none"/>
+  <path d="M650 575 C715 550,765 540,825 530 S925 520,948 500" stroke="#438255" stroke-width="4" fill="none"/>
+  <text class="s" x="772" y="615">internal / external transmission</text>
+  <text class="s" x="655" y="474">final size</text><text class="s" x="800" y="478">no vaccine</text><text class="s" x="805" y="526">vaccine</text>
+  <text class="s" x="590" y="628">Reported conclusion: benefit improves when the household population has high vaccination coverage.</text>
+
+  <rect class="panel" x="1090" y="405" width="470" height="245"/>
+  <text class="sh" x="1114" y="437">F. Policy outputs</text>
+  <rect x="1130" y="480" width="165" height="55" class="vacc" rx="8"/><text class="t" x="1152" y="512">coverage target</text>
+  <rect x="1345" y="480" width="165" height="55" class="out" rx="8"/><text class="t" x="1374" y="512">final size</text>
+  <rect x="1235" y="565" width="165" height="55" class="hostel" rx="8"/><text class="t" x="1262" y="597">cost tradeoff</text>
+  <path class="a" d="M1212 535 L1275 565"/><path class="a" d="M1428 535 L1365 565"/>
+  <text class="s" x="1120" y="628">Reported: higher household coverage may increase costs from a health-economic perspective.</text>
+
+  <rect x="42" y="705" width="1518" height="210" fill="#eef6f5" stroke="#b6cbc8" rx="8"/>
+  <text class="sh" x="70" y="740">Caution on specificity</text>
+  <text class="t" x="70" y="772">The medRxiv abstract reports parameter targets and stochastic final-size simulation but not the exact compartment structure.</text>
+  <text class="t" x="70" y="802">Panels B-D use generic transmission notation for the reported internal, external, coverage, and final-size components.</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for spatial QSP calibration with spatial molecular data in hepatocellular carcinoma</title>
+  <desc id="desc">Six-panel original schematic showing spatial molecular tumor data, cell-neighborhood summary statistics, a spatial QSP agent-based tumor model with fibroblasts and lymphocytes, Approximate Bayesian Computation Sequential Monte Carlo calibration, post-treatment spatial-state prediction, and biomarker outputs. This is not a reproduced publication figure.</desc>
+  <style>
+    .bg{fill:#f9f8fb}.panel{fill:#fff;stroke:#c9bfd4;stroke-width:2;rx:8}.h{font:700 25px Arial,sans-serif;fill:#33243d}.sh{font:700 18px Arial,sans-serif;fill:#33243d}.t{font:15px Arial,sans-serif;fill:#302837}.s{font:13px Arial,sans-serif;fill:#62556b}.eq{font:15px Consolas,monospace;fill:#33243d}.a{stroke:#5c4f85;stroke-width:3;fill:none;marker-end:url(#arrow)}.tumor{fill:#e27c73;stroke:#944039}.tcell{fill:#79b7d9;stroke:#386e91}.fib{fill:#d3ba6d;stroke:#8b7531}.drug{fill:#a7cf94;stroke:#5d8949}.post{fill:#c6b0df;stroke:#715c8e}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#5c4f85"/></marker></defs>
+  <rect class="bg" width="1600" height="980"/>
+  <text x="42" y="48" class="h">Spatial QSP calibration: tumor architecture, fibroblasts, and HCC immunotherapy response</text>
+  <text x="42" y="74" class="s">Original technical schematic for Zhang et al. PNAS, 2026. This is a spatial disease-modeling methods item, not a population disease-map.</text>
+
+  <rect class="panel" x="40" y="105" width="470" height="245"/>
+  <text class="sh" x="64" y="137">A. Spatial molecular data</text>
+  <rect x="95" y="170" width="200" height="120" fill="#f2eef6" stroke="#aa9bbc" rx="10"/>
+  <circle cx="130" cy="205" r="10" class="tumor"/><circle cx="180" cy="220" r="10" class="fib"/><circle cx="235" cy="198" r="10" class="tcell"/><circle cx="205" cy="260" r="10" class="tumor"/><circle cx="260" cy="250" r="10" class="fib"/>
+  <text class="t" x="330" y="196">spatial omics</text><text class="s" x="330" y="221">cell types</text><text class="s" x="330" y="244">neighborhoods</text>
+  <text class="s" x="70" y="315">Reported: calibration integrates spatial molecular data from human tumors.</text>
+
+  <rect class="panel" x="565" y="105" width="470" height="245"/>
+  <text class="sh" x="589" y="137">B. spQSP simulation model</text>
+  <rect x="610" y="178" width="130" height="75" class="tumor" rx="8"/><text class="t" x="645" y="208">tumor</text><text class="s" x="638" y="230">growth</text>
+  <rect x="782" y="178" width="130" height="75" class="tcell" rx="8"/><text class="t" x="807" y="208">immune</text><text class="s" x="812" y="230">cells</text>
+  <rect x="870" y="262" width="130" height="48" class="fib" rx="8"/><text class="t" x="896" y="292">fibroblast</text>
+  <path class="a" d="M740 215 L782 215"/><path class="a" d="M845 253 L895 262"/>
+  <text class="eq" x="604" y="315">agent states + pharmacology + spatial interactions</text>
+
+  <rect class="panel" x="1090" y="105" width="470" height="245"/>
+  <text class="sh" x="1114" y="137">C. ABC-SMC calibration</text>
+  <rect x="1130" y="172" width="140" height="55" class="post" rx="8"/><text class="t" x="1158" y="205">simulate theta</text>
+  <rect x="1320" y="172" width="160" height="55" class="fib" rx="8"/><text class="t" x="1340" y="205">summary stats</text>
+  <rect x="1225" y="265" width="160" height="55" class="drug" rx="8"/><text class="t" x="1245" y="298">accept / weight</text>
+  <path class="a" d="M1270 200 L1320 200"/><path class="a" d="M1400 227 L1348 265"/><path class="a" d="M1225 292 C1165 292,1148 235,1170 225"/>
+  <text class="eq" x="1120" y="250">d(S_sim, S_data) &lt; epsilon_k</text>
+  <text class="s" x="1120" y="330">Reported: Approximate Bayesian Computation Sequential Monte Carlo calibration.</text>
+
+  <rect class="panel" x="40" y="405" width="470" height="245"/>
+  <text class="sh" x="64" y="437">D. Fitted spatial mechanism</text>
+  <rect x="92" y="490" width="140" height="75" class="fib" rx="8"/><text class="t" x="116" y="522">fibroblast</text>
+  <rect x="285" y="465" width="150" height="55" class="tcell" rx="8"/><text class="t" x="318" y="498">lymphocytes</text>
+  <rect x="285" y="545" width="150" height="55" class="tumor" rx="8"/><text class="t" x="325" y="578">tumor</text>
+  <path d="M232 528 C260 520,260 500,285 492" stroke="#9a7524" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <text class="s" x="70" y="628">Reported: calibrated model reproduced fibroblast-mediated exclusion of lymphocyte infiltration.</text>
+
+  <rect class="panel" x="565" y="405" width="470" height="245"/>
+  <text class="sh" x="589" y="437">E. Treatment-state prediction</text>
+  <rect x="610" y="480" width="150" height="60" class="drug" rx="8"/><text class="t" x="636" y="513">ICI + TKI</text>
+  <path class="a" d="M760 510 L815 510"/>
+  <rect x="815" y="470" width="165" height="80" class="post" rx="8"/><text class="t" x="842" y="502">post-treatment</text><text class="s" x="845" y="526">spatial states</text>
+  <text class="s" x="590" y="628">Reported: predictions were checked in an independent combination-therapy cohort.</text>
+
+  <rect class="panel" x="1090" y="405" width="470" height="245"/>
+  <text class="sh" x="1114" y="437">F. Biomarker outputs</text>
+  <rect x="1130" y="480" width="165" height="55" class="post" rx="8"/><text class="t" x="1150" y="512">spatial markers</text>
+  <rect x="1345" y="480" width="165" height="55" class="out" rx="8" fill="#d8dfeb" stroke="#8394ad"/><text class="t" x="1362" y="512">nonspatial markers</text>
+  <rect x="1235" y="565" width="165" height="55" class="drug" rx="8"/><text class="t" x="1252" y="597">response signal</text>
+  <path class="a" d="M1212 535 L1275 565"/><path class="a" d="M1428 535 L1365 565"/>
+  <text class="s" x="1120" y="628">Reported: pretreatment biomarkers associated with therapeutic response.</text>
+
+  <rect x="42" y="705" width="1518" height="210" fill="#f1edf5" stroke="#c9bfd4" rx="8"/>
+  <text class="sh" x="70" y="740">Caution on scope</text>
+  <text class="t" x="70" y="772">This item is included as a spatial mechanistic disease-modeling methods paper. It is not a population-level spatial epidemiology study.</text>
+  <text class="t" x="70" y="802">Panels show the reported model components from the abstract and Crossref metadata; graphical forms are original explanatory notation.</text>
+</svg>
