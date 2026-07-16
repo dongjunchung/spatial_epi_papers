@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Africa H5N1 spatiotemporal spillover modeling</title>
+  <desc id="desc">Six-panel schematic showing harmonized animal and human avian influenza records, a Bayesian BYM spatiotemporal model, incidence rate ratios, R0 estimation, surveillance delay metrics, and One Health policy outputs. This is an original schematic, not a reproduced publication figure.</desc>
+  <style>
+    .bg{fill:#f7faf7}.panel{fill:#fff;stroke:#2c3b32;stroke-width:1.4;rx:8}.head{font:700 18px Arial;fill:#17251d}.label{font:14px Arial;fill:#21382b}.small{font:12px Arial;fill:#33483b}.eq{font:15px "Times New Roman";fill:#173322}.tag{font:700 13px Arial;fill:#fff}.arrow{stroke:#536b5c;stroke-width:2.2;marker-end:url(#arrow)}.bird{fill:#2d7a5e}.human{fill:#b85c38}.hot{fill:#e06a3b}.cool{fill:#7da8c7}.warn{fill:#f2c14e}.axis{stroke:#667;stroke-width:1}
+  </style>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#536b5c"/></marker></defs>
+  <rect class="bg" width="1200" height="820"/>
+  <text x="34" y="36" class="head">Pan-continental H5N1 spillover risk in Africa: original technical schematic</text>
+  <text x="34" y="60" class="small">Reported details: 8,037 avian influenza outbreak events, 369 human cases, FAO EMPRES-i+, WHO, WOAH, 2004-2025; notation is explanatory.</text>
+  <rect class="panel" x="30" y="90" width="360" height="200"/><text x="50" y="122" class="head">A. Harmonized surveillance data</text>
+  <circle cx="75" cy="165" r="18" class="bird"/><text x="105" y="162" class="label">Animal outbreaks y<tspan baseline-shift="sub">i,t,k</tspan></text><text x="105" y="184" class="small">Subtype k, country/province i, time t</text>
+  <circle cx="75" cy="230" r="18" class="human"/><text x="105" y="226" class="label">Human cases h<tspan baseline-shift="sub">i,t</tspan></text><text x="105" y="248" class="small">Laboratory-confirmed spillover records</text>
+  <text x="48" y="275" class="small">H5N1 dominates animal records; Egypt is the reported epicentre.</text>
+  <rect class="panel" x="420" y="90" width="360" height="200"/><text x="440" y="122" class="head">B. BYM spatiotemporal risk layer</text>
+  <text x="445" y="158" class="eq">Y<tspan baseline-shift="sub">i,t,k</tspan> ~ Poisson(E<tspan baseline-shift="sub">i,t</tspan> r<tspan baseline-shift="sub">i,t,k</tspan>)</text>
+  <text x="445" y="190" class="eq">log r = α + β<tspan baseline-shift="sub">k</tspan> + u<tspan baseline-shift="sub">i</tspan> + v<tspan baseline-shift="sub">i</tspan> + τ<tspan baseline-shift="sub">t</tspan></text>
+  <rect x="455" y="220" width="46" height="38" class="cool"/><rect x="509" y="210" width="46" height="48" class="warn"/><rect x="563" y="188" width="46" height="70" class="hot"/><rect x="617" y="226" width="46" height="32" class="cool"/>
+  <text x="445" y="277" class="small">Structured + unstructured spatial effects estimate residual risk.</text>
+  <rect class="panel" x="810" y="90" width="360" height="200"/><text x="830" y="122" class="head">C. Subtype risk contrasts</text>
+  <text x="850" y="158" class="label">Reported incidence-rate ratios</text>
+  <rect x="850" y="184" width="230" height="26" fill="#2d7a5e"/><text x="1090" y="203" class="small">Animal H5N1 IRR 8.37</text>
+  <rect x="850" y="232" width="295" height="26" fill="#b85c38"/><text x="850" y="276" class="small">Human H5N1 IRR 66.78 vs other subtypes</text>
+  <text x="850" y="224" class="small">95% CI 6.65-10.53</text><text x="1085" y="276" class="small">95% CI 25.29-176.37</text>
+  <rect class="panel" x="30" y="330" width="360" height="200"/><text x="50" y="362" class="head">D. Local epidemic potential</text>
+  <text x="58" y="398" class="eq">I(t)=I<tspan baseline-shift="sub">0</tspan>e<tspan baseline-shift="super">rt</tspan>, R<tspan baseline-shift="sub">0</tspan> = 1 + rD</text>
+  <polyline points="70,485 120,470 170,445 220,410 270,382 320,375" fill="none" stroke="#b85c38" stroke-width="4"/>
+  <line x1="70" y1="490" x2="330" y2="490" class="axis"/><line x1="70" y1="490" x2="70" y2="380" class="axis"/>
+  <text x="60" y="514" class="small">Infectious duration scenarios: 7-30 days</text>
+  <text x="58" y="430" class="label">Reported R estimates: 1.05-1.23</text>
+  <rect class="panel" x="420" y="330" width="360" height="200"/><text x="440" y="362" class="head">E. Surveillance responsiveness</text>
+  <line x1="465" y1="430" x2="720" y2="430" class="axis"/><circle cx="495" cy="430" r="10" fill="#2d7a5e"/><circle cx="625" cy="430" r="10" fill="#f2c14e"/><circle cx="705" cy="430" r="10" fill="#e06a3b"/>
+  <text x="448" y="405" class="small">Clinical observation</text><text x="594" y="405" class="small">Detection</text><text x="675" y="405" class="small">Official report</text>
+  <text x="455" y="470" class="label">71% reported within 5 days</text><text x="455" y="495" class="label">12% delayed at least 15 days</text>
+  <rect class="panel" x="810" y="330" width="360" height="200"/><text x="830" y="362" class="head">F. Policy estimands</text>
+  <text x="840" y="398" class="label">Dual poultry-human hotspots</text><path d="M855 440 C900 390 965 395 990 450 C1020 508 930 520 885 495 Z" fill="#f7d1be" stroke="#b85c38"/><circle cx="930" cy="455" r="18" class="hot"/><circle cx="960" cy="480" r="11" class="human"/><circle cx="905" cy="470" r="11" class="bird"/>
+  <text x="840" y="502" class="small">Targets: biosecurity, reporting speed, One Health surveillance.</text>
+  <path class="arrow" d="M390 190 H420"/><path class="arrow" d="M780 190 H810"/><path class="arrow" d="M210 290 V330"/><path class="arrow" d="M600 290 V330"/><path class="arrow" d="M780 430 H810"/>
+</svg>

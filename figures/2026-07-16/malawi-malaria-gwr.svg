@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Malawi childhood malaria geographically weighted regression</title>
+  <desc id="desc">Six-panel schematic showing 2024 Malawi DHS child malaria data, district spatial coordinates, geographically weighted regression, local coefficient surfaces, prevalence and predictor effects, and district-targeted intervention outputs. This is an original schematic, not a reproduced publication figure.</desc>
+  <style>.bg{fill:#fbfaf5}.panel{fill:#fff;stroke:#3e3523;stroke-width:1.4;rx:8}.head{font:700 18px Arial;fill:#2b2416}.label{font:14px Arial;fill:#342c1d}.small{font:12px Arial;fill:#5a4b2d}.eq{font:15px "Times New Roman";fill:#2b2416}.arrow{stroke:#77643a;stroke-width:2.2;marker-end:url(#arrow)}.green{fill:#5b8c5a}.amber{fill:#d6a84f}.red{fill:#c9614a}.blue{fill:#6296a6}.axis{stroke:#766;stroke-width:1}</style>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#77643a"/></marker></defs>
+  <rect class="bg" width="1200" height="820"/>
+  <text x="34" y="36" class="head">Childhood malaria in Malawi: original GWR technical schematic</text>
+  <text x="34" y="60" class="small">Reported details: 2024 Malawi DHS, children under five, malaria prevalence 36.3%; model notation is explanatory.</text>
+  <rect class="panel" x="30" y="90" width="360" height="200"/><text x="50" y="122" class="head">A. Survey response and covariates</text>
+  <text x="58" y="160" class="eq">Y<tspan baseline-shift="sub">j</tspan> ∈ {malaria positive, negative}</text>
+  <text x="58" y="195" class="label">Predictors: net use, residence, wealth, maternal age, education</text>
+  <circle cx="85" cy="240" r="15" class="red"/><circle cx="135" cy="235" r="15" class="green"/><circle cx="185" cy="245" r="15" class="amber"/><circle cx="235" cy="230" r="15" class="blue"/>
+  <text x="58" y="276" class="small">Child records inherit district location s and household context.</text>
+  <rect class="panel" x="420" y="90" width="360" height="200"/><text x="440" y="122" class="head">B. District spatial support</text>
+  <path d="M505 245 L465 210 L480 160 L540 135 L610 150 L660 195 L650 250 L590 270 Z" fill="#eef2df" stroke="#6b7a4a" stroke-width="2"/>
+  <circle cx="515" cy="175" r="9" class="red"/><circle cx="560" cy="150" r="9" class="amber"/><circle cx="612" cy="185" r="9" class="green"/><circle cx="600" cy="235" r="9" class="red"/><circle cx="535" cy="235" r="9" class="blue"/>
+  <text x="445" y="276" class="small">Each district gets local estimates rather than one national effect.</text>
+  <rect class="panel" x="810" y="90" width="360" height="200"/><text x="830" y="122" class="head">C. Geographically weighted regression</text>
+  <text x="835" y="158" class="eq">g(E[Y<tspan baseline-shift="sub">j</tspan>]) = β<tspan baseline-shift="sub">0</tspan>(s<tspan baseline-shift="sub">j</tspan>) + Σ β<tspan baseline-shift="sub">p</tspan>(s<tspan baseline-shift="sub">j</tspan>)x<tspan baseline-shift="sub">jp</tspan></text>
+  <text x="835" y="198" class="eq">w<tspan baseline-shift="sub">ij</tspan> = K(d(s<tspan baseline-shift="sub">i</tspan>,s<tspan baseline-shift="sub">j</tspan>)/b)</text>
+  <circle cx="930" cy="238" r="20" fill="none" stroke="#c9614a" stroke-width="4"/><circle cx="930" cy="238" r="50" fill="none" stroke="#d6a84f" stroke-width="3"/><circle cx="930" cy="238" r="82" fill="none" stroke="#5b8c5a" stroke-width="2"/>
+  <text x="1018" y="247" class="small">Kernel bandwidth b</text>
+  <rect class="panel" x="30" y="330" width="360" height="200"/><text x="50" y="362" class="head">D. Local coefficient surfaces</text>
+  <rect x="65" y="395" width="58" height="80" class="red"/><rect x="130" y="430" width="58" height="45" class="amber"/><rect x="195" y="408" width="58" height="67" class="green"/><rect x="260" y="382" width="58" height="93" class="blue"/>
+  <line x1="55" y1="475" x2="330" y2="475" class="axis"/><line x1="55" y1="475" x2="55" y2="380" class="axis"/>
+  <text x="60" y="505" class="small">Local effects vary by district and predictor.</text>
+  <rect class="panel" x="420" y="330" width="360" height="200"/><text x="440" y="362" class="head">E. Main reported finding</text>
+  <text x="450" y="402" class="label">Global models assume β<tspan baseline-shift="sub">p</tspan> is stationary.</text>
+  <text x="450" y="438" class="label">GWR showed substantial spatial heterogeneity.</text>
+  <text x="450" y="474" class="label">Local patterns would be hidden by one Malawi-wide estimate.</text>
+  <rect x="455" y="495" width="285" height="12" fill="#c9614a"/><rect x="455" y="512" width="150" height="12" fill="#5b8c5a"/>
+  <rect class="panel" x="810" y="330" width="360" height="200"/><text x="830" y="362" class="head">F. Program outputs</text>
+  <text x="840" y="400" class="label">District-specific prevention allocation</text>
+  <text x="840" y="430" class="small">Map where net use, residence, wealth, or maternal factors have high local leverage.</text>
+  <text x="840" y="482" class="label">National Malaria Control Programme</text>
+  <text x="840" y="506" class="small">Target intervention packages to contextual risk patterns.</text>
+  <path class="arrow" d="M390 190 H420"/><path class="arrow" d="M780 190 H810"/><path class="arrow" d="M210 290 V330"/><path class="arrow" d="M600 290 V330"/><path class="arrow" d="M780 430 H810"/>
+</svg>

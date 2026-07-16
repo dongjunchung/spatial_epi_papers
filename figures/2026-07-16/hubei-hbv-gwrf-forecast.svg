@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Hubei hepatitis B spatiotemporal GWRF forecasting</title>
+  <desc id="desc">Six-panel schematic showing 631,361 hepatitis B surveillance cases, Moran spatial clustering, geographically weighted random forest with SHAP urbanization drivers, Holt-Winters forecasting, adult target cohorts, and control strategy estimands. This is an original schematic, not a reproduced publication figure.</desc>
+  <style>.bg{fill:#f7f8fb}.panel{fill:#fff;stroke:#263244;stroke-width:1.4;rx:8}.head{font:700 18px Arial;fill:#172033}.label{font:14px Arial;fill:#263244}.small{font:12px Arial;fill:#4d5a6f}.eq{font:15px "Times New Roman";fill:#172033}.arrow{stroke:#59697f;stroke-width:2.2;marker-end:url(#arrow)}.a{fill:#507dbc}.b{fill:#e78f4f}.c{fill:#72a276}.d{fill:#b45562}.axis{stroke:#697789;stroke-width:1}</style>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#59697f"/></marker></defs>
+  <rect class="bg" width="1200" height="820"/>
+  <text x="34" y="36" class="head">Hubei hepatitis B: original spatiotemporal GWRF and forecast schematic</text>
+  <text x="34" y="60" class="small">Reported details: 631,361 cases, 17 prefecture-level divisions, 2015-2024; explanatory notation may differ from the article.</text>
+  <rect class="panel" x="30" y="90" width="360" height="200"/><text x="50" y="122" class="head">A. Surveillance cube</text>
+  <text x="58" y="160" class="eq">Cases y<tspan baseline-shift="sub">i,m,a</tspan>, population N<tspan baseline-shift="sub">i,m,a</tspan></text>
+  <text x="58" y="190" class="label">i = 17 prefectures, m = month, a = age group</text>
+  <rect x="70" y="220" width="95" height="42" class="a"/><rect x="185" y="220" width="95" height="42" class="b"/><rect x="300" y="220" width="45" height="42" class="c"/>
+  <text x="58" y="278" class="small">Adults aged 30-50 years accounted for 40-50% of cases.</text>
+  <rect class="panel" x="420" y="90" width="360" height="200"/><text x="440" y="122" class="head">B. Spatial autocorrelation</text>
+  <text x="448" y="160" class="eq">I = n/W · Σ<tspan baseline-shift="sub">ij</tspan>w<tspan baseline-shift="sub">ij</tspan>(z<tspan baseline-shift="sub">i</tspan>z<tspan baseline-shift="sub">j</tspan>)/Σz<tspan baseline-shift="sub">i</tspan><tspan baseline-shift="super">2</tspan></text>
+  <circle cx="510" cy="225" r="28" class="d"/><circle cx="575" cy="212" r="24" class="d"/><circle cx="635" cy="235" r="26" class="d"/><circle cx="700" cy="220" r="22" class="a"/>
+  <text x="448" y="276" class="small">Reported Moran's I: 0.124-0.307; high-risk zone centered on Wuhan metro.</text>
+  <rect class="panel" x="810" y="90" width="360" height="200"/><text x="830" y="122" class="head">C. Geographically weighted random forest</text>
+  <text x="838" y="158" class="eq">f<tspan baseline-shift="sub">s</tspan>(X) = RF(X; weights K(d(s,s<tspan baseline-shift="sub">j</tspan>)))</text>
+  <rect x="850" y="188" width="230" height="20" class="b"/><text x="1090" y="204" class="small">urbanization SHAP ≈2.0</text>
+  <rect x="850" y="222" width="115" height="20" class="c"/><text x="975" y="238" class="small">education ≈1.0</text>
+  <rect x="850" y="256" width="92" height="20" class="a"/><text x="952" y="272" class="small">passenger traffic ≈0.8</text>
+  <rect class="panel" x="30" y="330" width="360" height="200"/><text x="50" y="362" class="head">D. Temporal trend and forecast</text>
+  <polyline points="65,420 110,407 155,432 200,455 245,425 290,395 335,378" fill="none" stroke="#507dbc" stroke-width="4"/>
+  <polyline points="335,378 360,370 385,365" fill="none" stroke="#e78f4f" stroke-width="4" stroke-dasharray="6 4"/>
+  <line x1="60" y1="470" x2="350" y2="470" class="axis"/><line x1="60" y1="470" x2="60" y2="365" class="axis"/>
+  <text x="65" y="500" class="small">Holt-Winters projected 8.98-10.41 monthly cases per 100,000 over 18 months.</text>
+  <rect class="panel" x="420" y="330" width="360" height="200"/><text x="440" y="362" class="head">E. Transmission interpretation</text>
+  <text x="450" y="402" class="label">Adult cohort born before vaccine era</text>
+  <text x="450" y="432" class="small">Horizontal transmission risk remains concentrated in susceptible adults.</text>
+  <text x="450" y="470" class="label">Urbanization and mobility covariates</text>
+  <text x="450" y="500" class="small">Spatial drivers point to mobile, metropolitan risk mechanisms.</text>
+  <rect class="panel" x="810" y="330" width="360" height="200"/><text x="830" y="362" class="head">F. Control estimands</text>
+  <text x="840" y="400" class="label">Screening and revaccination by place</text>
+  <text x="840" y="430" class="small">Prioritize adults 30-50, high-risk individuals, mobile populations, rural residents.</text>
+  <text x="840" y="484" class="label">Forecast-aware monitoring</text>
+  <text x="840" y="508" class="small">Track monthly deviations from expected incidence.</text>
+  <path class="arrow" d="M390 190 H420"/><path class="arrow" d="M780 190 H810"/><path class="arrow" d="M210 290 V330"/><path class="arrow" d="M600 290 V330"/><path class="arrow" d="M780 430 H810"/>
+</svg>
