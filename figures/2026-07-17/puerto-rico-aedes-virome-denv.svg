@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Puerto Rico Aedes microspatial virome and dengue risk</title>
+  <desc id="desc">Six-panel schematic showing rural and urban Aedes aegypti sampling, F0 metatranscriptomic RNA sequencing, insect-specific virus profiles, urban laboratory colony persistence of HTV and PCLV, DENV-1 infection and saliva results, and cautious interpretation of transmission risk.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#334155"/></marker>
+    <style>
+      .panel{fill:#f8fafc;stroke:#334155;stroke-width:1.5;rx:6}.head{font:700 18px Arial,sans-serif;fill:#0f172a}.label{font:14px Arial,sans-serif;fill:#1f2937}.small{font:12px Arial,sans-serif;fill:#475569}.eq{font:13px Consolas,monospace;fill:#111827}.link{stroke:#334155;stroke-width:1.6;marker-end:url(#arrow);fill:none}.urban{fill:#fde68a;stroke:#d97706}.rural{fill:#dcfce7;stroke:#16a34a}.virus{fill:#dbeafe;stroke:#2563eb}.denv{fill:#fee2e2;stroke:#dc2626}
+    </style>
+  </defs>
+  <rect width="1120" height="760" fill="#fff"/>
+  <text x="32" y="34" class="head">Original technical schematic - not a reproduced publication figure</text>
+  <text x="32" y="56" class="small">Reported details from bioRxiv API abstract; graph and risk notation is explanatory and may differ from the preprint.</text>
+  <rect x="30" y="86" width="330" height="185" class="panel"/>
+  <text x="48" y="116" class="head">A. Microspatial sampling</text>
+  <rect x="58" y="145" width="112" height="82" class="rural"/><text x="83" y="190" class="label">rural</text>
+  <rect x="210" y="145" width="112" height="82" class="urban"/><text x="238" y="190" class="label">urban</text>
+  <text x="52" y="249" class="small">Local environmental variation in Puerto Rico</text>
+  <rect x="395" y="86" width="330" height="185" class="panel"/>
+  <text x="413" y="116" class="head">B. F0 mosquito sequencing</text>
+  <text x="417" y="148" class="label">Aedes aegypti F0 mosquitoes</text>
+  <text x="417" y="173" class="label">Metatranscriptomic RNA sequencing</text>
+  <path d="M590 145 q35 30 0 60 q-35 -30 0 -60" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <path d="M625 145 q-35 30 0 60 q35 -30 0 -60" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="417" y="225" class="eq">sample x gene/virus count matrix</text>
+  <rect x="760" y="86" width="330" height="185" class="panel"/>
+  <text x="778" y="116" class="head">C. ISV composition</text>
+  <text x="782" y="147" class="label">13 insect-specific viruses detected</text>
+  <text x="782" y="172" class="label">Habitat-specific virome composition</text>
+  <text x="782" y="197" class="label">Dominant family: Partitiviridae</text>
+  <circle cx="980" cy="160" r="20" class="virus"/><circle cx="1020" cy="195" r="15" class="virus"/><circle cx="950" cy="215" r="12" class="virus"/>
+  <rect x="30" y="315" width="330" height="185" class="panel"/>
+  <text x="48" y="345" class="head">D. Persistent urban ISVs</text>
+  <text x="52" y="377" class="label">Urban laboratory colonies:</text>
+  <text x="52" y="403" class="label">HTV and PCLV had high abundance,</text>
+  <text x="52" y="429" class="label">persistence, and prevalence</text>
+  <rect x="252" y="364" width="40" height="90" class="virus"/><rect x="302" y="340" width="40" height="114" class="virus"/>
+  <text x="250" y="474" class="small">HTV</text><text x="300" y="474" class="small">PCLV</text>
+  <rect x="395" y="315" width="330" height="185" class="panel"/>
+  <text x="413" y="345" class="head">E. DENV-1 competence signal</text>
+  <text x="420" y="377" class="label">Urban Aedes: higher DENV-1 infection rates</text>
+  <text x="420" y="403" class="label">Saliva positivity low and not significantly different</text>
+  <text x="420" y="439" class="eq">infection != transmission certainty</text>
+  <circle cx="650" cy="390" r="28" class="denv"/><text x="632" y="394" class="small">DENV</text>
+  <rect x="760" y="315" width="330" height="185" class="panel"/>
+  <text x="778" y="345" class="head">F. Risk interpretation</text>
+  <text x="782" y="379" class="label">Microspatial ecology shapes vector virome</text>
+  <text x="782" y="405" class="label">HTV/PCLV association with DENV-1</text>
+  <text x="782" y="431" class="label">is likely multifactorial and nuanced</text>
+  <text x="782" y="457" class="label">Useful for targeted arbovirus surveillance design</text>
+  <path d="M360 178 L395 178" class="link"/><path d="M725 178 L760 178" class="link"/><path d="M925 271 L925 315" class="link"/><path d="M760 407 L725 407" class="link"/><path d="M395 407 L360 407" class="link"/>
+</svg>

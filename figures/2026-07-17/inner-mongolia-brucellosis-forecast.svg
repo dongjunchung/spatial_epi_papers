@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Inner Mongolia brucellosis forecasting</title>
+  <desc id="desc">Six-panel schematic showing human brucellosis surveillance inputs, joinpoint trend phases, seasonality, SARIMA and bootstrap-enhanced SARIMA forecast comparison, interval calibration, and control decisions.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#334155"/></marker>
+    <style>
+      .panel{fill:#f8fafc;stroke:#334155;stroke-width:1.5;rx:6}.head{font:700 18px Arial,sans-serif;fill:#0f172a}.label{font:14px Arial,sans-serif;fill:#1f2937}.small{font:12px Arial,sans-serif;fill:#475569}.eq{font:13px Consolas,monospace;fill:#111827}.link{stroke:#334155;stroke-width:1.6;marker-end:url(#arrow);fill:none}.blue{stroke:#2563eb;fill:none}.red{stroke:#dc2626;fill:none}.shade{fill:#dbeafe;stroke:#2563eb}
+    </style>
+  </defs>
+  <rect width="1120" height="760" fill="#fff"/>
+  <text x="32" y="34" class="head">Original technical schematic - not a reproduced publication figure</text>
+  <text x="32" y="56" class="small">Reported details from PubMed abstract; SARIMA equations are explanatory notation and may differ from the paper.</text>
+  <rect x="30" y="86" width="330" height="185" class="panel"/>
+  <text x="48" y="116" class="head">A. Surveillance series</text>
+  <text x="52" y="146" class="label">Human brucellosis reports</text>
+  <text x="52" y="171" class="label">Inner Mongolia, 2004-2024</text>
+  <text x="52" y="196" class="label">Demographic signal: farmers/herdsmen</text>
+  <text x="52" y="221" class="label">30-60 years predominant</text>
+  <polyline points="224,232 240,210 256,218 272,168 288,182 304,126 322,146" class="red" stroke-width="3"/>
+  <line x1="220" y1="235" x2="330" y2="235" stroke="#64748b"/>
+  <line x1="220" y1="125" x2="220" y2="235" stroke="#64748b"/>
+  <rect x="395" y="86" width="330" height="185" class="panel"/>
+  <text x="413" y="116" class="head">B. Joinpoint trend layer</text>
+  <polyline points="430,218 505,135 585,217 665,120 700,172" class="blue" stroke-width="4"/>
+  <circle cx="505" cy="135" r="6" fill="#f59e0b"/><circle cx="585" cy="217" r="6" fill="#f59e0b"/><circle cx="665" cy="120" r="6" fill="#f59e0b"/>
+  <text x="430" y="151" class="small">2004-2010 APC 22.43%</text>
+  <text x="430" y="238" class="small">2010-2016 APC -17.17%</text>
+  <text x="548" y="151" class="small">2016-2021 APC 29.83%</text>
+  <text x="590" y="238" class="small">2021-2024 decline phase</text>
+  <rect x="760" y="86" width="330" height="185" class="panel"/>
+  <text x="778" y="116" class="head">C. Seasonality</text>
+  <text x="782" y="148" class="label">Strong annual cycle</text>
+  <text x="782" y="173" class="label">Peak months: June-August</text>
+  <rect x="822" y="205" width="20" height="30" fill="#bfdbfe"/><rect x="850" y="188" width="20" height="47" fill="#f59e0b"/><rect x="878" y="178" width="20" height="57" fill="#ef4444"/><rect x="906" y="188" width="20" height="47" fill="#f59e0b"/><rect x="934" y="210" width="20" height="25" fill="#bfdbfe"/>
+  <text x="846" y="251" class="small">Jun Jul Aug</text>
+  <rect x="30" y="315" width="330" height="185" class="panel"/>
+  <text x="48" y="345" class="head">D. Forecast comparison</text>
+  <text x="52" y="376" class="eq">SARIMA(p,d,q)(P,D,Q)[12]</text>
+  <text x="52" y="402" class="eq">Bootstrap ensemble: resample residuals</text>
+  <text x="52" y="428" class="label">Validation: 24-month ahead, 2023-2024</text>
+  <polyline points="220,455 238,438 256,444 274,405 292,418 310,382 328,398" class="blue" stroke-width="3"/>
+  <polyline points="220,460 238,445 256,448 274,390 292,412 310,360 328,386" class="red" stroke-width="2"/>
+  <rect x="395" y="315" width="330" height="185" class="panel"/>
+  <text x="413" y="345" class="head">E. Accuracy versus calibration</text>
+  <text x="420" y="379" class="label">Bootstrap improved point forecasts</text>
+  <text x="440" y="405" class="small">MAE down 39.95%</text>
+  <text x="440" y="426" class="small">MdAPE down 33.55%</text>
+  <text x="420" y="456" class="label">But intervals were overconfident</text>
+  <text x="440" y="480" class="small">Coverage: 33.33% vs SARIMA 91.67%</text>
+  <rect x="760" y="315" width="330" height="185" class="panel"/>
+  <text x="778" y="345" class="head">F. Control interpretation</text>
+  <text x="782" y="379" class="label">Baseline: SARIMA for reliable intervals</text>
+  <text x="782" y="405" class="label">Bootstrap: stronger point warnings</text>
+  <text x="782" y="431" class="label">Hybrid target: accuracy + coverage</text>
+  <text x="782" y="457" class="label">Seasonal livestock-human prevention</text>
+  <path d="M360 178 L395 178" class="link"/><path d="M725 178 L760 178" class="link"/><path d="M925 271 L925 315" class="link"/><path d="M760 407 L725 407" class="link"/><path d="M395 407 L360 407" class="link"/>
+</svg>
