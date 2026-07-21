@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for mobility-informed city-tier respiratory transmission modeling</title>
+  <desc id="desc">Four-panel SVG. Panel A shows mainland China cities indexed by city tier and connected by intercity mobility weights. Panel B shows an explanatory agent-based branching process with pathogen-specific transmissibility and mobility-weighted destination probabilities. Panel C shows validation against first-arrival times from Shanghai Omicron, Nanjing Delta, and northwestern China Delta outbreaks, with reported correlations r equals 0.68 and 0.76 and comparison to distance-only prediction. Panel D shows tier-specific importation risk and contrasting diffusion patterns for Influenza A and Omicron.</desc>
+  <style>
+    .bg{fill:#f6f8fb}.panel{fill:#fff;stroke:#2e3448;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#1d2536}.label{font:700 15px Arial,sans-serif;fill:#263048}.txt{font:13px Arial,sans-serif;fill:#28324a}.small{font:12px Arial,sans-serif;fill:#536070}.eq{font:14px "Courier New",monospace;fill:#202638}.box{fill:#eef3ff;stroke:#6379bd;stroke-width:1.1;rx:6}.box2{fill:#eef9f1;stroke:#4b9964;stroke-width:1.1;rx:6}.box3{fill:#fff2df;stroke:#bd7932;stroke-width:1.1;rx:6}.note{font:12px Arial,sans-serif;fill:#704d00}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.line{stroke:#607087;stroke-width:2}.dash{stroke:#7d8799;stroke-width:1.5;stroke-dasharray:5 4;fill:none}.tier0{fill:#b5414b}.tier1{fill:#e28743}.tier2{fill:#4c8fbc}.tier3{fill:#65a86a}.risk{fill:#f9d7d4;stroke:#b5414b;stroke-width:1}
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker>
+  </defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: intercity mobility, city hierarchy tiers, agent-based branching process, COVID-19 outbreak first-arrival validation, Omicron vs Influenza A risk comparison.</text>
+
+  <rect class="panel" x="28" y="90" width="360" height="292"/>
+  <text x="50" y="122" class="label">A. Cities, tiers, mobility graph</text>
+  <g transform="translate(72 170)">
+    <line class="line" x1="100" y1="45" x2="220" y2="28"/><line class="line" x1="100" y1="45" x2="170" y2="120"/><line class="line" x1="220" y1="28" x2="278" y2="118"/><line class="line" x1="170" y1="120" x2="278" y2="118"/><line class="line" x1="100" y1="45" x2="54" y2="138"/>
+    <circle class="tier0" cx="100" cy="45" r="19"/><circle class="tier1" cx="220" cy="28" r="16"/><circle class="tier2" cx="170" cy="120" r="13"/><circle class="tier3" cx="278" cy="118" r="11"/><circle class="tier3" cx="54" cy="138" r="10"/>
+    <text x="82" y="86" class="small">super-tier</text><text x="202" y="63" class="small">tier 1</text><text x="148" y="152" class="small">lower tiers</text>
+  </g>
+  <rect x="68" y="310" width="286" height="42" class="box"/>
+  <text x="86" y="337" class="txt">M_ij = mobility flow from city i to j</text>
+
+  <rect class="panel" x="410" y="90" width="360" height="292"/>
+  <text x="432" y="122" class="label">B. Branching diffusion engine</text>
+  <rect x="448" y="148" width="272" height="72" class="box2"/>
+  <text x="466" y="175" class="eq">offspring_i(t) ~ Branching(R_pathogen)</text>
+  <text x="466" y="198" class="eq">P(seed j | i) propto M_ij</text>
+  <path class="arrow" d="M584 230 V265"/>
+  <rect x="448" y="270" width="272" height="70" class="box3"/>
+  <text x="466" y="296" class="txt">simulate city first arrivals</text>
+  <text x="466" y="318" class="txt">repeat by pathogen and seed city</text>
+  <text x="432" y="362" class="small">Notation is explanatory; exact paper notation may differ.</text>
+
+  <rect class="panel" x="792" y="90" width="360" height="292"/>
+  <text x="814" y="122" class="label">C. Validation against outbreaks</text>
+  <rect x="830" y="150" width="282" height="70" class="box"/>
+  <text x="848" y="176" class="txt">Shanghai Omicron</text>
+  <text x="848" y="198" class="txt">Nanjing Delta; NW China Delta</text>
+  <g transform="translate(854 258)">
+    <line x1="0" y1="86" x2="210" y2="86" stroke="#30364c"/><line x1="0" y1="86" x2="0" y2="0" stroke="#30364c"/>
+    <circle cx="24" cy="70" r="4" fill="#4c8fbc"/><circle cx="60" cy="56" r="4" fill="#4c8fbc"/><circle cx="96" cy="45" r="4" fill="#4c8fbc"/><circle cx="138" cy="28" r="4" fill="#4c8fbc"/><circle cx="180" cy="18" r="4" fill="#4c8fbc"/>
+    <path d="M18 75 L188 14" stroke="#b5414b" stroke-width="2" fill="none"/>
+    <text x="18" y="-8" class="small">predicted vs observed arrival</text>
+    <text x="112" y="80" class="small">r = 0.68, 0.76</text>
+  </g>
+  <text x="830" y="238" class="small">Mobility model also compared with distance-only origin prediction.</text>
+
+  <rect class="panel" x="28" y="412" width="1124" height="302"/>
+  <text x="50" y="444" class="label">D. Outputs and policy estimands</text>
+  <g transform="translate(70 482)">
+    <rect x="0" y="0" width="244" height="152" class="box"/>
+    <text x="18" y="28" class="txt">Tier-specific importation risk</text>
+    <rect class="risk" x="28" y="48" width="42" height="76"/><rect class="risk" x="82" y="66" width="42" height="58"/><rect class="risk" x="136" y="92" width="42" height="32"/><rect class="risk" x="190" y="104" width="42" height="20"/>
+    <text x="22" y="142" class="small">super</text><text x="83" y="142" class="small">tier1</text><text x="140" y="142" class="small">tier2</text><text x="194" y="142" class="small">lower</text>
+  </g>
+  <g transform="translate(368 482)">
+    <rect x="0" y="0" width="302" height="152" class="box2"/>
+    <text x="18" y="28" class="txt">Influenza A: stratified spread</text>
+    <path d="M42 82 C90 58 132 62 176 84" class="dash"/><path d="M178 84 C214 100 240 103 270 94" class="dash"/>
+    <circle class="tier1" cx="42" cy="82" r="10"/><circle class="tier1" cx="102" cy="64" r="10"/><circle class="tier2" cx="176" cy="84" r="10"/><circle class="tier2" cx="244" cy="96" r="10"/>
+    <text x="18" y="132" class="small">mainly same or adjacent city tiers</text>
+  </g>
+  <g transform="translate(724 482)">
+    <rect x="0" y="0" width="342" height="152" class="box3"/>
+    <text x="18" y="28" class="txt">Omicron: downward hierarchical spread</text>
+    <path class="arrow" d="M56 60 C112 46 132 58 168 78"/><path class="arrow" d="M168 78 C220 94 246 86 292 112"/>
+    <circle class="tier0" cx="56" cy="60" r="13"/><circle class="tier1" cx="168" cy="78" r="12"/><circle class="tier3" cx="292" cy="112" r="11"/>
+    <text x="18" y="132" class="small">high transmissibility attenuates tier differences</text>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Bayesian INLA foot-and-mouth disease mapping in Uganda</title>
+  <desc id="desc">Five-panel SVG. Panel A shows Ugandan district outbreak counts from 2014 to 2019 with expected counts or population at risk. Panel B lists reported covariates: cattle density, Enhanced Vegetation Index, deprivation, human density, and vaccination coverage. Panel C shows an explanatory Bayesian Poisson spatial mixed model fitted with INLA. Panel D shows posterior district relative risks and exceedance probabilities, with the cattle corridor highlighted as higher risk. Panel E shows interpretation: covariates explain only part of the spatial pattern and residual structure motivates better surveillance and additional drivers.</desc>
+  <style>
+    .bg{fill:#f6f8fb}.panel{fill:#fff;stroke:#30364c;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#20263c}.label{font:700 15px Arial,sans-serif;fill:#29304a}.txt{font:13px Arial,sans-serif;fill:#273047}.small{font:12px Arial,sans-serif;fill:#4f5b70}.eq{font:14px "Courier New",monospace;fill:#20263c}.note{font:12px Arial,sans-serif;fill:#684600}.box{fill:#edf2ff;stroke:#6076b8;stroke-width:1.1;rx:6}.box2{fill:#edf8ef;stroke:#4d9a63;stroke-width:1.1;rx:6}.box3{fill:#fff1e2;stroke:#c17b28;stroke-width:1.1;rx:6}.box4{fill:#f7eefd;stroke:#8a60a9;stroke-width:1.1;rx:6}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.district{stroke:#fff;stroke-width:2}.hi{fill:#d65f5f}.med{fill:#efc46a}.lo{fill:#6aa5c8}.corridor{stroke:#2d7042;stroke-width:7;stroke-linecap:round;fill:none;opacity:.75}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker></defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: Uganda FMD outbreaks 2014-2019, Bayesian Poisson mixed-effects spatial regression, INLA, district risks, exceedance probabilities, cattle corridor signal.</text>
+
+  <rect class="panel" x="28" y="88" width="326" height="288"/>
+  <text x="50" y="120" class="label">A. District outbreak support</text>
+  <g transform="translate(72 152)">
+    <rect class="lo district" x="0" y="0" width="62" height="54"/><rect class="med district" x="64" y="0" width="62" height="54"/><rect class="hi district" x="128" y="0" width="62" height="54"/>
+    <rect class="lo district" x="0" y="56" width="62" height="54"/><rect class="hi district" x="64" y="56" width="62" height="54"/><rect class="med district" x="128" y="56" width="62" height="54"/>
+    <rect class="lo district" x="0" y="112" width="62" height="54"/><rect class="med district" x="64" y="112" width="62" height="54"/><rect class="hi district" x="128" y="112" width="62" height="54"/>
+    <path class="corridor" d="M18 146 C62 122 82 82 140 54"/>
+  </g>
+  <text x="60" y="344" class="small">Y_i = FMD outbreak count, 2014-2019</text>
+
+  <rect class="panel" x="380" y="88" width="374" height="288"/>
+  <text x="402" y="120" class="label">B. Reported candidate drivers</text>
+  <rect x="424" y="148" width="132" height="44" class="box"/><text x="438" y="176" class="txt">cattle density</text>
+  <rect x="586" y="148" width="132" height="44" class="box2"/><text x="612" y="176" class="txt">EVI</text>
+  <rect x="424" y="216" width="132" height="44" class="box3"/><text x="448" y="244" class="txt">deprivation</text>
+  <rect x="586" y="216" width="132" height="44" class="box4"/><text x="606" y="244" class="txt">human density</text>
+  <rect x="480" y="292" width="180" height="44" class="box"/><text x="502" y="320" class="txt">vaccination coverage</text>
+
+  <rect class="panel" x="780" y="88" width="372" height="288"/>
+  <text x="802" y="120" class="label">C. Bayesian Poisson INLA model</text>
+  <rect x="816" y="150" width="298" height="116" class="box"/>
+  <text x="834" y="178" class="eq">Y_i ~ Pois(E_i * RR_i)</text>
+  <text x="834" y="204" class="eq">log(RR_i) = a + x_i'b + u_i + v_i</text>
+  <text x="834" y="230" class="small">generic spatial mixed-effect notation;</text>
+  <text x="834" y="250" class="small">exact random-effect form may differ</text>
+  <path class="arrow" d="M966 276 V306"/>
+  <rect x="870" y="312" width="192" height="42" class="box2"/>
+  <text x="914" y="339" class="txt">INLA fitting</text>
+
+  <rect class="panel" x="28" y="412" width="540" height="302"/>
+  <text x="50" y="444" class="label">D. Posterior risk and exceedance maps</text>
+  <g transform="translate(72 486)">
+    <rect class="lo district" x="0" y="0" width="70" height="54"/><rect class="med district" x="72" y="0" width="70" height="54"/><rect class="hi district" x="144" y="0" width="70" height="54"/>
+    <rect class="lo district" x="0" y="56" width="70" height="54"/><rect class="hi district" x="72" y="56" width="70" height="54"/><rect class="hi district" x="144" y="56" width="70" height="54"/>
+    <rect class="lo district" x="0" y="112" width="70" height="54"/><rect class="med district" x="72" y="112" width="70" height="54"/><rect class="hi district" x="144" y="112" width="70" height="54"/>
+    <path class="corridor" d="M18 148 C74 120 104 74 182 34"/>
+  </g>
+  <rect x="342" y="498" width="160" height="120" class="box3"/>
+  <text x="360" y="526" class="txt">EP_i = Pr(RR_i &gt; c)</text>
+  <text x="360" y="554" class="small">district exceedance</text>
+  <text x="360" y="576" class="small">probabilities</text>
+  <text x="360" y="604" class="small">support risk-based</text>
+  <text x="360" y="624" class="small">surveillance</text>
+  <text x="72" y="678" class="small">Cattle corridor districts reported as greater-risk areas.</text>
+
+  <rect class="panel" x="596" y="412" width="556" height="302"/>
+  <text x="618" y="444" class="label">E. Interpretation for control planning</text>
+  <rect x="636" y="488" width="220" height="72" class="box2"/>
+  <text x="654" y="516" class="txt">Covariates associated</text>
+  <text x="654" y="538" class="small">but did not explain most</text>
+  <text x="654" y="558" class="small">spatial distribution</text>
+  <path class="arrow" d="M864 524 H930"/>
+  <rect x="940" y="488" width="174" height="72" class="box3"/>
+  <text x="958" y="516" class="txt">Residual risk</text>
+  <text x="958" y="538" class="small">movement, reporting,</text>
+  <text x="958" y="558" class="small">wildlife/local systems?</text>
+  <rect x="726" y="604" width="272" height="54" class="box4"/>
+  <text x="744" y="636" class="txt">Targeted surveillance and vaccination planning</text>
+</svg>

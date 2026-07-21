@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for BSTZINB disease mapping</title>
+  <desc id="desc">Four-panel SVG. Panel A shows area-time disease counts, population offsets, and socio-environmental covariates including air pollution. Panel B shows an explanatory zero-inflated negative-binomial mixture likelihood with structural-zero probability and count mean. Panel C shows latent spatial, temporal, and space-time random effects sampled by MCMC. Panel D shows posterior outputs including risk maps, covariate associations, zero-inflation diagnostics, uncertainty intervals, and model-comparison summaries.</desc>
+  <style>
+    .bg{fill:#f7f8fb}.panel{fill:#fff;stroke:#30364c;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#20263c}.label{font:700 15px Arial,sans-serif;fill:#29304a}.txt{font:13px Arial,sans-serif;fill:#273047}.small{font:12px Arial,sans-serif;fill:#4f5b70}.eq{font:14px "Courier New",monospace;fill:#20263c}.note{font:12px Arial,sans-serif;fill:#684600}.box{fill:#edf2ff;stroke:#6076b8;stroke-width:1.1;rx:6}.box2{fill:#edf8ef;stroke:#4d9a63;stroke-width:1.1;rx:6}.box3{fill:#fff1e2;stroke:#c17b28;stroke-width:1.1;rx:6}.box4{fill:#f7eefd;stroke:#8a60a9;stroke-width:1.1;rx:6}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.grid{stroke:#8a93a6;stroke-width:1}.hot{fill:#d95f5f}.mid{fill:#f0c46a}.low{fill:#6aa5c8}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker></defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: zero-inflated negative-binomial regression, over-dispersed disease counts, spatiotemporal random effects, MCMC, socio-environmental covariates, COVID-19/air-pollution motivation.</text>
+
+  <rect class="panel" x="28" y="90" width="360" height="292"/>
+  <text x="50" y="122" class="label">A. Disease-mapping inputs</text>
+  <rect x="62" y="150" width="110" height="92" class="box"/>
+  <text x="78" y="178" class="txt">Y_it</text><text x="78" y="200" class="small">area-time counts</text><text x="78" y="222" class="small">many zeros</text>
+  <rect x="210" y="150" width="126" height="92" class="box2"/>
+  <text x="228" y="178" class="txt">E_it, x_it</text><text x="228" y="200" class="small">population offset</text><text x="228" y="222" class="small">risk factors</text>
+  <path class="arrow" d="M118 254 C150 286 238 286 274 254"/>
+  <rect x="84" y="292" width="228" height="52" class="box3"/>
+  <text x="102" y="314" class="small">Examples named in abstract:</text>
+  <text x="102" y="334" class="small">COVID-19 deaths, ambient air pollution</text>
+
+  <rect class="panel" x="410" y="90" width="360" height="292"/>
+  <text x="432" y="122" class="label">B. ZINB observation model</text>
+  <rect x="444" y="150" width="286" height="128" class="box"/>
+  <text x="462" y="178" class="eq">Y_it ~ 0 with prob pi_it</text>
+  <text x="462" y="204" class="eq">Y_it ~ NB(mu_it, k)</text>
+  <text x="462" y="230" class="eq">      with prob 1 - pi_it</text>
+  <text x="462" y="256" class="eq">log(mu_it) = log(E_it) + eta_it</text>
+  <rect x="470" y="304" width="234" height="42" class="box2"/>
+  <text x="488" y="331" class="small">Separate excess-zero and count processes</text>
+
+  <rect class="panel" x="792" y="90" width="360" height="292"/>
+  <text x="814" y="122" class="label">C. Latent effects and MCMC</text>
+  <rect x="826" y="150" width="292" height="88" class="box4"/>
+  <text x="844" y="178" class="eq">eta_it = a + x_it'b + S_i + T_t + ST_it</text>
+  <text x="844" y="204" class="small">generic notation; exact paper parameterization</text>
+  <text x="844" y="224" class="small">is not exposed in accessible abstract</text>
+  <path class="arrow" d="M972 248 V282"/>
+  <rect x="866" y="288" width="210" height="48" class="box3"/>
+  <text x="884" y="316" class="txt">MCMC posterior samples</text>
+
+  <rect class="panel" x="28" y="412" width="1124" height="302"/>
+  <text x="50" y="444" class="label">D. Software outputs for applied epidemiology</text>
+  <g transform="translate(72 486)">
+    <rect x="0" y="0" width="236" height="154" class="box"/>
+    <text x="18" y="28" class="txt">Posterior risk maps</text>
+    <g transform="translate(34 50)">
+      <rect class="low" x="0" y="0" width="38" height="38"/><rect class="mid" x="42" y="0" width="38" height="38"/><rect class="hot" x="84" y="0" width="38" height="38"/><rect class="mid" x="0" y="42" width="38" height="38"/><rect class="low" x="42" y="42" width="38" height="38"/><rect class="hot" x="84" y="42" width="38" height="38"/>
+      <line class="grid" x1="40" y1="0" x2="40" y2="80"/><line class="grid" x1="82" y1="0" x2="82" y2="80"/><line class="grid" x1="0" y1="40" x2="122" y2="40"/>
+    </g>
+    <text x="18" y="138" class="small">area and time-specific uncertainty</text>
+  </g>
+  <g transform="translate(348 486)">
+    <rect x="0" y="0" width="236" height="154" class="box2"/>
+    <text x="18" y="28" class="txt">Covariate associations</text>
+    <line x1="44" y1="78" x2="186" y2="78" stroke="#30364c"/><circle cx="78" cy="78" r="5" fill="#4d9a63"/><line x1="56" y1="78" x2="104" y2="78" stroke="#4d9a63" stroke-width="3"/><circle cx="138" cy="78" r="5" fill="#c17b28"/><line x1="116" y1="78" x2="160" y2="78" stroke="#c17b28" stroke-width="3"/>
+    <text x="18" y="122" class="small">posterior intervals for b</text>
+  </g>
+  <g transform="translate(624 486)">
+    <rect x="0" y="0" width="236" height="154" class="box3"/>
+    <text x="18" y="28" class="txt">Zero-inflation diagnostics</text>
+    <text x="34" y="70" class="eq">Pr(structural zero)</text>
+    <text x="34" y="100" class="eq">NB over-dispersion k</text>
+    <text x="18" y="132" class="small">checks sparse outbreak/count settings</text>
+  </g>
+  <g transform="translate(900 486)">
+    <rect x="0" y="0" width="196" height="154" class="box4"/>
+    <text x="18" y="28" class="txt">Model comparison</text>
+    <text x="30" y="68" class="eq">ZINB vs NB</text>
+    <text x="30" y="96" class="eq">ST vs non-ST</text>
+    <text x="18" y="132" class="small">maps and summaries from software</text>
+  </g>
+</svg>

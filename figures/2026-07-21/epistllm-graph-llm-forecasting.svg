@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for EpiSTLLM multi-regional infectious disease forecasting</title>
+  <desc id="desc">Four-panel SVG. Panel A shows state-level influenza-like illness and influenza hospitalization time series plus a regional adjacency graph. Panel B shows graph-structure injection into a Transformer or large language model representation layer. Panel C shows temporal-gated cross-attention producing horizon-specific latent transmission and recovery parameters, feeding a latent-space SIR-inspired propagation step and a residual correction branch. Panel D shows 4, 8, and 12 week forecasts, baseline comparisons, and the reported MAE and RMSE improvements for FluView and NHSN.</desc>
+  <style>
+    .bg{fill:#f6f8fb}.panel{fill:#fff;stroke:#30364c;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#20263c}.label{font:700 15px Arial,sans-serif;fill:#29304a}.txt{font:13px Arial,sans-serif;fill:#273047}.small{font:12px Arial,sans-serif;fill:#4f5b70}.eq{font:14px "Courier New",monospace;fill:#20263c}.note{font:12px Arial,sans-serif;fill:#684600}.box{fill:#edf2ff;stroke:#6076b8;stroke-width:1.1;rx:6}.box2{fill:#edf8ef;stroke:#4d9a63;stroke-width:1.1;rx:6}.box3{fill:#fff1e2;stroke:#c17b28;stroke-width:1.1;rx:6}.box4{fill:#f7eefd;stroke:#8a60a9;stroke-width:1.1;rx:6}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.line{stroke:#607087;stroke-width:2;fill:none}.node{fill:#6076b8}.pred{stroke:#d65f5f;stroke-width:3;fill:none}.obs{stroke:#4d9a63;stroke-width:3;fill:none}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker></defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: EpiSTLLM, adjacency injection into Transformer learning, temporal-gated cross-attention, latent SIR-inspired propagation, residual correction, FluView/NHSN forecasting.</text>
+
+  <rect class="panel" x="28" y="88" width="360" height="292"/>
+  <text x="50" y="120" class="label">A. Regional surveillance inputs</text>
+  <rect x="64" y="150" width="132" height="74" class="box"/>
+  <text x="82" y="178" class="txt">FluView ILI</text>
+  <text x="82" y="202" class="small">state-level weekly series</text>
+  <rect x="222" y="150" width="122" height="74" class="box2"/>
+  <text x="240" y="178" class="txt">NHSN flu</text>
+  <text x="240" y="202" class="small">hospitalizations</text>
+  <g transform="translate(110 270)">
+    <line class="line" x1="0" y1="42" x2="58" y2="8"/><line class="line" x1="58" y1="8" x2="130" y2="34"/><line class="line" x1="58" y1="8" x2="84" y2="74"/><line class="line" x1="84" y1="74" x2="130" y2="34"/>
+    <circle class="node" cx="0" cy="42" r="8"/><circle class="node" cx="58" cy="8" r="8"/><circle class="node" cx="130" cy="34" r="8"/><circle class="node" cx="84" cy="74" r="8"/>
+    <text x="154" y="42" class="small">regional adjacency A</text>
+  </g>
+
+  <rect class="panel" x="410" y="88" width="360" height="292"/>
+  <text x="432" y="120" class="label">B. Graph-structure-enhanced LLM</text>
+  <rect x="458" y="150" width="260" height="58" class="box"/>
+  <text x="476" y="184" class="txt">sequence tokens: region x week</text>
+  <path class="arrow" d="M588 218 V250"/>
+  <rect x="458" y="258" width="260" height="76" class="box4"/>
+  <text x="476" y="286" class="txt">Transformer representation</text>
+  <text x="476" y="310" class="small">with adjacency injected into learning</text>
+  <text x="432" y="358" class="small">This abstracts the article's reported graph-structure enhancement.</text>
+
+  <rect class="panel" x="792" y="88" width="360" height="292"/>
+  <text x="814" y="120" class="label">C. Hybrid propagation head</text>
+  <rect x="828" y="146" width="288" height="62" class="box2"/>
+  <text x="846" y="174" class="txt">temporal-gated cross-attention</text>
+  <text x="846" y="196" class="small">horizon-specific latent parameters</text>
+  <path class="arrow" d="M972 218 V242"/>
+  <rect x="828" y="248" width="288" height="58" class="box3"/>
+  <text x="846" y="282" class="eq">latent SIR-like: beta_h, gamma_h</text>
+  <path class="arrow" d="M972 314 V334"/>
+  <rect x="858" y="338" width="228" height="30" class="box4"/>
+  <text x="876" y="359" class="txt">residual correction branch</text>
+
+  <rect class="panel" x="28" y="412" width="1124" height="302"/>
+  <text x="50" y="444" class="label">D. Multi-horizon forecast evaluation</text>
+  <g transform="translate(72 494)">
+    <rect x="0" y="0" width="318" height="150" class="box"/>
+    <text x="18" y="28" class="txt">Forecast horizons</text>
+    <text x="36" y="64" class="eq">H = 4 weeks</text>
+    <text x="36" y="92" class="eq">H = 8 weeks</text>
+    <text x="36" y="120" class="eq">H = 12 weeks</text>
+    <path class="obs" d="M168 112 C190 82 218 90 244 52"/>
+    <path class="pred" d="M168 118 C194 88 216 86 250 62"/>
+  </g>
+  <g transform="translate(434 494)">
+    <rect x="0" y="0" width="318" height="150" class="box2"/>
+    <text x="18" y="28" class="txt">Baselines in abstract</text>
+    <text x="36" y="62" class="small">statistical</text>
+    <text x="36" y="88" class="small">deep learning</text>
+    <text x="36" y="114" class="small">graph-based</text>
+    <text x="170" y="88" class="small">mechanism-guided</text>
+  </g>
+  <g transform="translate(796 494)">
+    <rect x="0" y="0" width="300" height="150" class="box3"/>
+    <text x="18" y="28" class="txt">Reported example gains</text>
+    <text x="34" y="64" class="small">FluView H=4: MAE -9.5%, RMSE -6.2%</text>
+    <text x="34" y="96" class="small">NHSN H=8: MAE -12.0%, RMSE -13.1%</text>
+    <text x="34" y="124" class="small">best or highly competitive in most settings</text>
+  </g>
+</svg>
