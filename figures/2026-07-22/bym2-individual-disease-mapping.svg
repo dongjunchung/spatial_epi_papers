@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for individual-level BYM2 disease mapping</title>
+  <desc id="desc">Five-panel SVG. Panel A contrasts individual animal binary outcomes nested in areas with aggregated areal counts. Panel B shows a logistic regression likelihood with a BYM2 areal random effect. Panel C decomposes the BYM2 effect into scaled structured and unstructured area effects. Panel D lists the practical workflow reported by the paper: priors, scaling, estimation, diagnostics, posterior predictive checks, model comparison, sensitivity analysis, and interpretation. Panel E shows posterior outputs for individual covariate associations, areal residual risk, uncertainty, and estimand preservation.</desc>
+  <style>
+    .bg{fill:#f7f8fb}.panel{fill:#fff;stroke:#273449;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#1d2638}.label{font:700 15px Arial,sans-serif;fill:#263044}.txt{font:13px Arial,sans-serif;fill:#263044}.small{font:12px Arial,sans-serif;fill:#536073}.eq{font:14px "Courier New",monospace;fill:#1f2937}.note{font:12px Arial,sans-serif;fill:#6b4b00}.box{fill:#eef4ff;stroke:#5875b8;stroke-width:1.1;rx:6}.box2{fill:#edf8ef;stroke:#4d9a63;stroke-width:1.1;rx:6}.box3{fill:#fff2df;stroke:#c4822e;stroke-width:1.1;rx:6}.box4{fill:#f6effb;stroke:#8a60a9;stroke-width:1.1;rx:6}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.unit{fill:#e8eef7;stroke:#607089;stroke-width:1}.area{fill:#f1f5fb;stroke:#475569;stroke-width:1.6}.animal{fill:#2f7ebc}.pos{fill:#cb4b4b}.risk1{fill:#6aa5c8}.risk2{fill:#efc46a}.risk3{fill:#d65f5f}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker></defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: individual-level binary outcomes, logistic regression, embedded BYM2 areal effect, practical guide to priors, scaling, estimation, diagnostics, model comparison, and sensitivity analysis.</text>
+
+  <rect class="panel" x="28" y="88" width="360" height="292"/>
+  <text x="50" y="120" class="label">A. Preserve the individual estimand</text>
+  <g transform="translate(62 150)">
+    <rect class="area" x="0" y="0" width="106" height="76"/><rect class="area" x="116" y="0" width="106" height="76"/><rect class="area" x="232" y="0" width="70" height="76"/>
+    <rect class="area" x="0" y="86" width="144" height="76"/><rect class="area" x="154" y="86" width="148" height="76"/>
+    <circle class="animal" cx="24" cy="22" r="5"/><circle class="animal" cx="52" cy="36" r="5"/><circle class="pos" cx="84" cy="54" r="5"/>
+    <circle class="animal" cx="142" cy="24" r="5"/><circle class="pos" cx="184" cy="38" r="5"/><circle class="animal" cx="204" cy="58" r="5"/>
+    <circle class="animal" cx="252" cy="28" r="5"/><circle class="animal" cx="278" cy="52" r="5"/>
+    <circle class="pos" cx="34" cy="118" r="5"/><circle class="animal" cx="72" cy="132" r="5"/><circle class="animal" cx="116" cy="104" r="5"/>
+    <circle class="animal" cx="184" cy="110" r="5"/><circle class="pos" cx="222" cy="132" r="5"/><circle class="animal" cx="266" cy="122" r="5"/>
+  </g>
+  <text x="64" y="344" class="small">y_ij: animal-level binary outcome in area i</text>
+  <text x="64" y="362" class="small">Aggregation may change the estimand.</text>
+
+  <rect class="panel" x="416" y="88" width="328" height="292"/>
+  <text x="438" y="120" class="label">B. Individual logistic likelihood</text>
+  <rect x="452" y="150" width="256" height="108" class="box"/>
+  <text x="470" y="180" class="eq">y_ij ~ Bernoulli(p_ij)</text>
+  <text x="470" y="206" class="eq">logit(p_ij)=a+x_ij'b+b_i</text>
+  <text x="470" y="232" class="small">Generic notation for the reported</text>
+  <text x="470" y="252" class="small">individual-level BYM2 extension.</text>
+  <path class="arrow" d="M580 270 V310"/>
+  <rect x="486" y="318" width="188" height="42" class="box2"/>
+  <text x="512" y="345" class="txt">animal-level inference</text>
+
+  <rect class="panel" x="772" y="88" width="380" height="292"/>
+  <text x="794" y="120" class="label">C. BYM2 areal residual structure</text>
+  <rect x="806" y="148" width="310" height="106" class="box3"/>
+  <text x="826" y="178" class="eq">b_i = sigma [sqrt(phi) u_i*</text>
+  <text x="826" y="204" class="eq">      + sqrt(1-phi) v_i]</text>
+  <text x="826" y="230" class="small">u_i*: scaled structured spatial effect</text>
+  <text x="826" y="248" class="small">v_i: unstructured areal heterogeneity</text>
+  <g transform="translate(832 286)">
+    <rect class="risk1 area" x="0" y="0" width="58" height="42"/><rect class="risk2 area" x="60" y="0" width="58" height="42"/><rect class="risk3 area" x="120" y="0" width="58" height="42"/><rect class="risk2 area" x="180" y="0" width="58" height="42"/>
+    <text x="6" y="66" class="small">posterior area effects</text>
+  </g>
+
+  <rect class="panel" x="28" y="416" width="536" height="294"/>
+  <text x="50" y="448" class="label">D. Reported practical modeling guide</text>
+  <g transform="translate(68 486)">
+    <rect class="box" x="0" y="0" width="136" height="44"/><text x="24" y="28" class="txt">likelihood</text>
+    <path class="arrow" d="M140 22 H176"/><rect class="box2" x="184" y="0" width="136" height="44"/><text x="232" y="28" class="txt">priors</text>
+    <path class="arrow" d="M324 22 H360"/><rect class="box3" x="368" y="0" width="116" height="44"/><text x="392" y="28" class="txt">scaling</text>
+    <rect class="box4" x="0" y="76" width="136" height="44"/><text x="22" y="104" class="txt">estimation</text>
+    <path class="arrow" d="M140 98 H176"/><rect class="box" x="184" y="76" width="136" height="44"/><text x="220" y="104" class="txt">diagnostics</text>
+    <path class="arrow" d="M324 98 H360"/><rect class="box2" x="368" y="76" width="116" height="44"/><text x="386" y="104" class="txt">PPCs</text>
+    <rect class="box3" x="74" y="152" width="166" height="44"/><text x="98" y="180" class="txt">model comparison</text>
+    <path class="arrow" d="M244 174 H288"/><rect class="box4" x="298" y="152" width="166" height="44"/><text x="330" y="180" class="txt">sensitivity</text>
+  </g>
+
+  <rect class="panel" x="592" y="416" width="560" height="294"/>
+  <text x="614" y="448" class="label">E. Outputs for veterinary epidemiology</text>
+  <rect x="632" y="490" width="188" height="72" class="box2"/><text x="650" y="518" class="txt">fixed effects</text><text x="650" y="540" class="small">individual covariate</text><text x="650" y="558" class="small">association estimates</text>
+  <rect x="850" y="490" width="238" height="72" class="box3"/><text x="868" y="518" class="txt">areal residual maps</text><text x="868" y="540" class="small">structured + unstructured</text><text x="868" y="558" class="small">geographic heterogeneity</text>
+  <rect x="632" y="602" width="188" height="62" class="box4"/><text x="650" y="630" class="txt">uncertainty</text><text x="650" y="650" class="small">credible intervals, PPCs</text>
+  <rect x="850" y="602" width="238" height="62" class="box"/><text x="868" y="630" class="txt">interpretation</text><text x="868" y="650" class="small">animal-level estimand retained</text>
+</svg>

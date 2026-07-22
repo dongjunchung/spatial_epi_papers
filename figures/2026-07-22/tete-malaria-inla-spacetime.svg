@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Bayesian spatio-temporal malaria modeling in Tete, Mozambique</title>
+  <desc id="desc">Five-panel SVG. Panel A shows district malaria incidence in Tete Province from 2016 to 2022. Panel B lists reported surveillance, climate, literacy, and mosquito-net inputs. Panel C shows a generic INLA hierarchical count model with reparameterized Besag spatial structure, AR1 temporal effect, Type IV interaction, and Fourier seasonality. Panel D highlights reported risk outputs for Macanga, Chiuta, Moatize, and Tete City. Panel E summarizes reported covariate effects for precipitation and illiteracy plus seasonal rainy-season timing.</desc>
+  <style>
+    .bg{fill:#f7f8fb}.panel{fill:#fff;stroke:#273449;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#1d2638}.label{font:700 15px Arial,sans-serif;fill:#263044}.txt{font:13px Arial,sans-serif;fill:#263044}.small{font:12px Arial,sans-serif;fill:#536073}.eq{font:14px "Courier New",monospace;fill:#1f2937}.note{font:12px Arial,sans-serif;fill:#6b4b00}.box{fill:#eef4ff;stroke:#5875b8;stroke-width:1.1;rx:6}.box2{fill:#edf8ef;stroke:#4d9a63;stroke-width:1.1;rx:6}.box3{fill:#fff2df;stroke:#c4822e;stroke-width:1.1;rx:6}.box4{fill:#f6effb;stroke:#8a60a9;stroke-width:1.1;rx:6}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.dist{stroke:#fff;stroke-width:2}.low{fill:#73a9c2}.mid{fill:#f0c96d}.high{fill:#d95f5f}.city{fill:#5b8d68}.line{stroke:#2f6f9f;stroke-width:3;fill:none}.rain{stroke:#4d9a63;stroke-width:3;fill:none}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker></defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: Tete Province, 2016-2022 malaria incidence, INLA, reparameterized Besag spatial effect, AR1 time, Type IV interaction, Fourier seasonality.</text>
+
+  <rect class="panel" x="28" y="88" width="344" height="300"/>
+  <text x="50" y="120" class="label">A. District-time malaria counts</text>
+  <g transform="translate(74 154)">
+    <polygon class="high dist" points="70,0 132,28 122,92 54,86 30,36"/>
+    <polygon class="mid dist" points="132,28 204,18 230,76 184,122 122,92"/>
+    <polygon class="high dist" points="54,86 122,92 112,164 34,158 12,116"/>
+    <polygon class="low dist" points="122,92 184,122 168,194 112,164"/>
+    <polygon class="high dist" points="184,122 246,130 230,204 168,194"/>
+    <polygon class="city dist" points="112,164 168,194 142,232 78,210"/>
+  </g>
+  <text x="72" y="348" class="small">Higher reported risk: Macanga, Chiuta, Moatize</text>
+  <text x="72" y="366" class="small">Lower incidence reported for Tete City.</text>
+
+  <rect class="panel" x="400" y="88" width="344" height="300"/>
+  <text x="422" y="120" class="label">B. Data layers</text>
+  <rect x="442" y="154" width="120" height="48" class="box"/><text x="466" y="183" class="txt">SISMA cases</text>
+  <rect x="586" y="154" width="120" height="48" class="box2"/><text x="606" y="183" class="txt">climate</text>
+  <rect x="442" y="230" width="120" height="48" class="box3"/><text x="462" y="259" class="txt">literacy</text>
+  <rect x="586" y="230" width="120" height="48" class="box4"/><text x="604" y="259" class="txt">mosquito nets</text>
+  <text x="462" y="326" class="small">Climate sources reported: national meteorology</text>
+  <text x="462" y="344" class="small">institute and NASA products.</text>
+
+  <rect class="panel" x="772" y="88" width="380" height="300"/>
+  <text x="794" y="120" class="label">C. INLA spatio-temporal model</text>
+  <rect x="806" y="150" width="312" height="138" class="box"/>
+  <text x="824" y="178" class="eq">Y_it ~ NB/Poisson(mu_it)</text>
+  <text x="824" y="204" class="eq">log(mu_it)=offset + X_it b</text>
+  <text x="824" y="230" class="eq"> + Besag_i + AR1_t + gamma_it</text>
+  <text x="824" y="256" class="eq"> + Fourier_1,2(month_t)</text>
+  <text x="824" y="278" class="small">Likelihood notation is explanatory.</text>
+  <path class="arrow" d="M962 298 V330"/><rect x="888" y="336" width="148" height="36" class="box2"/><text x="924" y="360" class="txt">INLA</text>
+
+  <rect class="panel" x="28" y="424" width="548" height="286"/>
+  <text x="50" y="456" class="label">D. Posterior risk surfaces</text>
+  <g transform="translate(76 500)">
+    <rect class="low dist" x="0" y="0" width="58" height="46"/><rect class="mid dist" x="60" y="0" width="58" height="46"/><rect class="high dist" x="120" y="0" width="58" height="46"/><rect class="mid dist" x="180" y="0" width="58" height="46"/>
+    <rect class="mid dist" x="0" y="48" width="58" height="46"/><rect class="high dist" x="60" y="48" width="58" height="46"/><rect class="high dist" x="120" y="48" width="58" height="46"/><rect class="low dist" x="180" y="48" width="58" height="46"/>
+    <rect class="low dist" x="0" y="96" width="58" height="46"/><rect class="mid dist" x="60" y="96" width="58" height="46"/><rect class="city dist" x="120" y="96" width="58" height="46"/><rect class="mid dist" x="180" y="96" width="58" height="46"/>
+  </g>
+  <rect x="370" y="500" width="142" height="114" class="box3"/>
+  <text x="388" y="528" class="txt">RR_it, Pr(RR&gt;c)</text>
+  <text x="388" y="552" class="small">district maps</text>
+  <text x="388" y="572" class="small">space-time</text>
+  <text x="388" y="592" class="small">interaction signals</text>
+  <text x="78" y="666" class="small">Maps are schematic; no publication map is reproduced.</text>
+
+  <rect class="panel" x="604" y="424" width="548" height="286"/>
+  <text x="626" y="456" class="label">E. Reported drivers and seasonality</text>
+  <rect x="642" y="492" width="188" height="72" class="box2"/><text x="660" y="520" class="txt">precipitation</text><text x="660" y="542" class="small">reported +6.7% incidence</text>
+  <rect x="860" y="492" width="188" height="72" class="box3"/><text x="878" y="520" class="txt">illiteracy rate</text><text x="878" y="542" class="small">reported +1.6% incidence</text>
+  <g transform="translate(672 610)">
+    <path class="rain" d="M0 58 C42 10 82 8 124 54 C160 92 202 92 240 42"/>
+    <path class="line" d="M0 82 C44 76 82 28 124 26 C166 34 206 82 240 88"/>
+    <text x="0" y="116" class="small">rainy season onset precedes higher incidence; winter decline reported</text>
+  </g>
+</svg>

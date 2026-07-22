@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for East African Community NCD shared-component spatio-temporal modeling</title>
+  <desc id="desc">Five-panel SVG. Panel A shows seven East African Community countries, four NCD groups, and 2000 to 2019 country-disease-year observations. Panel B shows WHO mortality data plus socioeconomic and environmental covariates. Panel C shows a generic multivariate Bayesian spatio-temporal shared-component model fitted in INLA. Panel D shows disease-specific and shared spatial effects, with reported high-risk clustering centered on Rwanda, Uganda, and Tanzania. Panel E shows reported covariate associations and planning outputs.</desc>
+  <style>
+    .bg{fill:#f7f8fb}.panel{fill:#fff;stroke:#273449;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#1d2638}.label{font:700 15px Arial,sans-serif;fill:#263044}.txt{font:13px Arial,sans-serif;fill:#263044}.small{font:12px Arial,sans-serif;fill:#536073}.eq{font:14px "Courier New",monospace;fill:#1f2937}.note{font:12px Arial,sans-serif;fill:#6b4b00}.box{fill:#eef4ff;stroke:#5875b8;stroke-width:1.1;rx:6}.box2{fill:#edf8ef;stroke:#4d9a63;stroke-width:1.1;rx:6}.box3{fill:#fff2df;stroke:#c4822e;stroke-width:1.1;rx:6}.box4{fill:#f6effb;stroke:#8a60a9;stroke-width:1.1;rx:6}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.cty{stroke:#fff;stroke-width:2}.low{fill:#73a9c2}.mid{fill:#f0c96d}.high{fill:#d95f5f}.line{stroke:#536074;stroke-width:2;fill:none}.barp{fill:#4d9a63}.barn{fill:#d65f5f}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker></defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: WHO Global Health Observatory estimates, seven EAC countries, four NCD groups, 2000-2019, 560 country-disease-year observations, INLA shared-component model.</text>
+
+  <rect class="panel" x="28" y="88" width="348" height="300"/>
+  <text x="50" y="120" class="label">A. Multivariate country panel</text>
+  <g transform="translate(78 154)">
+    <rect class="cty mid" x="68" y="0" width="58" height="44"/><rect class="cty high" x="128" y="24" width="58" height="44"/><rect class="cty high" x="78" y="54" width="58" height="44"/>
+    <rect class="cty high" x="138" y="76" width="58" height="44"/><rect class="cty mid" x="74" y="108" width="58" height="44"/><rect class="cty low" x="144" y="132" width="58" height="44"/><rect class="cty mid" x="100" y="168" width="58" height="44"/>
+  </g>
+  <text x="72" y="338" class="small">Disease groups: cardiovascular, cancers, chronic respiratory, diabetes</text>
+  <text x="72" y="356" class="small">Index: country c, disease d, year t</text>
+
+  <rect class="panel" x="404" y="88" width="340" height="300"/>
+  <text x="426" y="120" class="label">B. Covariate design</text>
+  <rect x="444" y="150" width="124" height="48" class="box"/><text x="464" y="179" class="txt">WHO mortality</text>
+  <rect x="586" y="150" width="124" height="48" class="box2"/><text x="604" y="179" class="txt">GDP</text>
+  <rect x="444" y="226" width="124" height="48" class="box3"/><text x="458" y="255" class="txt">health spending</text>
+  <rect x="586" y="226" width="124" height="48" class="box4"/><text x="598" y="255" class="txt">urbanization</text>
+  <rect x="510" y="304" width="142" height="44" class="box"/><text x="528" y="332" class="txt">environmental vars</text>
+
+  <rect class="panel" x="772" y="88" width="380" height="300"/>
+  <text x="794" y="120" class="label">C. Shared-component model</text>
+  <rect x="812" y="150" width="296" height="126" class="box"/>
+  <text x="830" y="178" class="eq">log(R_cdt)=X_ct b_d</text>
+  <text x="830" y="204" class="eq"> + lambda_d S_c + U_cd</text>
+  <text x="830" y="230" class="eq"> + T_dt + epsilon_cdt</text>
+  <text x="830" y="254" class="small">Generic notation for reported multivariate</text>
+  <text x="830" y="272" class="small">Bayesian spatio-temporal shared component.</text>
+  <path class="arrow" d="M960 288 V326"/><rect x="886" y="332" width="148" height="38" class="box2"/><text x="924" y="357" class="txt">INLA</text>
+
+  <rect class="panel" x="28" y="424" width="548" height="286"/>
+  <text x="50" y="456" class="label">D. Shared and disease-specific spatial effects</text>
+  <g transform="translate(74 500)">
+    <rect class="cty mid" x="0" y="0" width="54" height="42"/><rect class="cty high" x="56" y="0" width="54" height="42"/><rect class="cty high" x="112" y="0" width="54" height="42"/><rect class="cty mid" x="168" y="0" width="54" height="42"/>
+    <rect class="cty low" x="0" y="44" width="54" height="42"/><rect class="cty high" x="56" y="44" width="54" height="42"/><rect class="cty high" x="112" y="44" width="54" height="42"/><rect class="cty mid" x="168" y="44" width="54" height="42"/>
+  </g>
+  <rect x="348" y="500" width="176" height="90" class="box3"/>
+  <text x="366" y="528" class="txt">shared S_c</text>
+  <text x="366" y="550" class="small">persistent multi-disease</text>
+  <text x="366" y="568" class="small">high-risk clustering</text>
+  <text x="72" y="650" class="small">Reported center: Rwanda, Uganda, and Tanzania.</text>
+
+  <rect class="panel" x="604" y="424" width="548" height="286"/>
+  <text x="626" y="456" class="label">E. Reported associations and use</text>
+  <g transform="translate(660 504)">
+    <rect class="barp" x="0" y="20" width="116" height="18"/><text x="128" y="34" class="small">GDP per capita positive</text>
+    <rect class="barn" x="0" y="62" width="92" height="18"/><text x="104" y="76" class="small">health expenditure inverse</text>
+    <rect class="barn" x="0" y="104" width="72" height="18"/><text x="84" y="118" class="small">urbanization / density inverse</text>
+  </g>
+  <rect x="834" y="624" width="236" height="48" class="box4"/><text x="852" y="654" class="txt">spatially targeted NCD planning</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for dengue climate synchrony and fragmented spatial risk in subtropical Brazil</title>
+  <desc id="desc">Five-panel SVG. Panel A shows ten Santa Catarina municipalities with weekly dengue incidence from 2014 to 2024 and NASA climate inputs. Panel B shows negative-binomial generalized additive models with municipality-specific seasonal smooths and a population offset. Panel C shows pairwise Spearman synchrony, distance-decay testing by MRM, and weak or negative spatial synchrony. Panel D shows lagged climate-dengue correlations and wavelet coherence, emphasizing temperature-related seasonal timing. Panel E summarizes the policy estimand: climate synchronizes epidemic windows but not local spatial risk.</desc>
+  <style>
+    .bg{fill:#f7f8fb}.panel{fill:#fff;stroke:#273449;stroke-width:1.4;rx:8}.head{font:700 20px Arial,sans-serif;fill:#1d2638}.label{font:700 15px Arial,sans-serif;fill:#263044}.txt{font:13px Arial,sans-serif;fill:#263044}.small{font:12px Arial,sans-serif;fill:#536073}.eq{font:14px "Courier New",monospace;fill:#1f2937}.note{font:12px Arial,sans-serif;fill:#6b4b00}.box{fill:#eef4ff;stroke:#5875b8;stroke-width:1.1;rx:6}.box2{fill:#edf8ef;stroke:#4d9a63;stroke-width:1.1;rx:6}.box3{fill:#fff2df;stroke:#c4822e;stroke-width:1.1;rx:6}.box4{fill:#f6effb;stroke:#8a60a9;stroke-width:1.1;rx:6}.arrow{stroke:#536074;stroke-width:2;fill:none;marker-end:url(#arrow)}.muni{fill:#6aa5c8;stroke:#fff;stroke-width:1.5}.hot{fill:#d65f5f}.cold{fill:#6aa5c8}.mid{fill:#efc46a}.line1{stroke:#d65f5f;stroke-width:3;fill:none}.line2{stroke:#2f7ebc;stroke-width:3;fill:none}.line3{stroke:#4d9a63;stroke-width:3;fill:none}.grid{stroke:#e5e7eb;stroke-width:1}.cell1{fill:#42306b}.cell2{fill:#6aa5c8}.cell3{fill:#efc46a}.cell4{fill:#d65f5f}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#536074"/></marker></defs>
+  <rect class="bg" width="1180" height="760"/>
+  <text x="34" y="38" class="head">Original technical schematic, not a reproduced publication figure</text>
+  <text x="34" y="60" class="note">Reported details: ten Santa Catarina municipalities, 2014-2024 weekly dengue surveillance, NASA climate variables, GAMs, synchrony metrics, MRM distance-decay, lagged correlations, wavelet coherence.</text>
+
+  <rect class="panel" x="28" y="88" width="354" height="300"/>
+  <text x="50" y="120" class="label">A. Municipal dengue + climate panel</text>
+  <g transform="translate(78 154)">
+    <circle class="muni hot" cx="70" cy="22" r="12"/><circle class="muni mid" cx="120" cy="46" r="12"/><circle class="muni hot" cx="168" cy="28" r="12"/>
+    <circle class="muni cold" cx="52" cy="90" r="12"/><circle class="muni mid" cx="112" cy="108" r="12"/><circle class="muni hot" cx="190" cy="94" r="12"/>
+    <circle class="muni mid" cx="76" cy="158" r="12"/><circle class="muni cold" cx="142" cy="168" r="12"/><circle class="muni hot" cx="220" cy="152" r="12"/><circle class="muni mid" cx="250" cy="88" r="12"/>
+    <path class="line2" d="M34 210 H258"/>
+  </g>
+  <text x="64" y="338" class="small">Ten major municipalities; approx. 70% of reported state cases.</text>
+  <text x="64" y="356" class="small">Weekly incidence plus temperature, precipitation, humidity, wind, radiation.</text>
+
+  <rect class="panel" x="410" y="88" width="332" height="300"/>
+  <text x="432" y="120" class="label">B. Nonlinear seasonal envelope</text>
+  <rect x="448" y="150" width="256" height="86" class="box"/>
+  <text x="466" y="178" class="eq">Y_mt ~ NegBin(mu_mt)</text>
+  <text x="466" y="204" class="eq">log(mu_mt)=offset(pop_m)</text>
+  <text x="466" y="226" class="eq"> + s_month,m + year</text>
+  <g transform="translate(464 272)">
+    <path class="line1" d="M0 54 C34 18 70 12 106 48 C142 82 178 72 220 24"/>
+    <path class="line2" d="M0 70 C38 62 76 38 116 42 C156 46 188 78 220 82"/>
+    <text x="0" y="106" class="small">municipality-specific seasonal smooths</text>
+  </g>
+
+  <rect class="panel" x="770" y="88" width="382" height="300"/>
+  <text x="792" y="120" class="label">C. Spatial synchrony, not simple proximity</text>
+  <g transform="translate(820 154)">
+    <rect class="cell4" x="0" y="0" width="34" height="34"/><rect class="cell3" x="36" y="0" width="34" height="34"/><rect class="cell1" x="72" y="0" width="34" height="34"/><rect class="cell2" x="108" y="0" width="34" height="34"/>
+    <rect class="cell3" x="0" y="36" width="34" height="34"/><rect class="cell4" x="36" y="36" width="34" height="34"/><rect class="cell2" x="72" y="36" width="34" height="34"/><rect class="cell1" x="108" y="36" width="34" height="34"/>
+    <rect class="cell1" x="0" y="72" width="34" height="34"/><rect class="cell2" x="36" y="72" width="34" height="34"/><rect class="cell4" x="72" y="72" width="34" height="34"/><rect class="cell3" x="108" y="72" width="34" height="34"/>
+    <rect class="cell2" x="0" y="108" width="34" height="34"/><rect class="cell1" x="36" y="108" width="34" height="34"/><rect class="cell3" x="72" y="108" width="34" height="34"/><rect class="cell4" x="108" y="108" width="34" height="34"/>
+  </g>
+  <rect x="994" y="154" width="118" height="84" class="box3"/>
+  <text x="1010" y="182" class="eq">rho_ij</text><text x="1010" y="204" class="small">detrended weekly</text><text x="1010" y="222" class="small">Spearman synchrony</text>
+  <rect x="842" y="284" width="236" height="56" class="box4"/><text x="860" y="314" class="txt">MRM: distance matrix -> synchrony</text><text x="860" y="334" class="small">no distance-dependent decay reported</text>
+
+  <rect class="panel" x="28" y="424" width="548" height="286"/>
+  <text x="50" y="456" class="label">D. Lagged climate coupling</text>
+  <g transform="translate(76 498)">
+    <rect class="cell2" x="0" y="0" width="36" height="28"/><rect class="cell3" x="38" y="0" width="36" height="28"/><rect class="cell4" x="76" y="0" width="36" height="28"/><rect class="cell4" x="114" y="0" width="36" height="28"/><rect class="cell3" x="152" y="0" width="36" height="28"/><rect class="cell2" x="190" y="0" width="36" height="28"/>
+    <rect class="cell1" x="0" y="30" width="36" height="28"/><rect class="cell2" x="38" y="30" width="36" height="28"/><rect class="cell3" x="76" y="30" width="36" height="28"/><rect class="cell3" x="114" y="30" width="36" height="28"/><rect class="cell2" x="152" y="30" width="36" height="28"/><rect class="cell1" x="190" y="30" width="36" height="28"/>
+    <rect class="cell2" x="0" y="60" width="36" height="28"/><rect class="cell2" x="38" y="60" width="36" height="28"/><rect class="cell1" x="76" y="60" width="36" height="28"/><rect class="cell2" x="114" y="60" width="36" height="28"/><rect class="cell3" x="152" y="60" width="36" height="28"/><rect class="cell2" x="190" y="60" width="36" height="28"/>
+    <text x="0" y="118" class="small">1-6 week lagged climate correlations</text>
+  </g>
+  <g transform="translate(360 498)">
+    <path class="line3" d="M0 80 C36 8 78 10 118 80 C158 150 196 148 236 78"/>
+    <path class="line1" d="M0 120 C38 96 74 54 118 48 C160 44 196 86 236 118"/>
+    <text x="0" y="158" class="small">annual-scale coherence with temperature-related metrics</text>
+  </g>
+
+  <rect class="panel" x="604" y="424" width="548" height="286"/>
+  <text x="626" y="456" class="label">E. Policy estimand</text>
+  <rect x="650" y="504" width="188" height="76" class="box2"/><text x="668" y="532" class="txt">When?</text><text x="668" y="554" class="small">seasonal climate constrains</text><text x="668" y="572" class="small">epidemic window</text>
+  <path class="arrow" d="M846 542 H910"/>
+  <rect x="920" y="504" width="188" height="76" class="box3"/><text x="938" y="532" class="txt">Where?</text><text x="938" y="554" class="small">local risk is fragmented</text><text x="938" y="572" class="small">and municipality-specific</text>
+  <rect x="742" y="622" width="272" height="46" class="box4"/><text x="760" y="651" class="txt">locally calibrated surveillance triggers</text>
+</svg>
