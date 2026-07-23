@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Zhejiang human brucellosis Bayesian spatiotemporal modeling</title>
+  <desc id="desc">Five-panel schematic showing municipal human brucellosis cases in Zhejiang from 2018 to 2023, livestock trade, slaughter, socioeconomic and climate covariates, Bayesian spatiotemporal risk modeling with generic count-model notation, autocorrelation and collinearity checks, posterior relative risk outputs, and targeted prevention estimands. The notation is explanatory and may differ from the paper.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:8}.head{font:700 22px Arial,sans-serif;fill:#0f172a}.sub{font:700 15px Arial,sans-serif;fill:#1e293b}.txt{font:14px Arial,sans-serif;fill:#334155}.tiny{font:12px Arial,sans-serif;fill:#475569}.eq{font:15px Consolas,monospace;fill:#0f172a}.tag{fill:#e0f2fe;stroke:#0284c7}.riskHi{fill:#fb7185}.riskMed{fill:#fbbf24}.riskLo{fill:#86efac}.muted{fill:#e2e8f0}.line{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke:#64748b;stroke-width:2;stroke-dasharray:6 5;fill:none}.legend{font:12px Arial,sans-serif;fill:#334155}
+    </style>
+  </defs>
+  <rect class="bg" width="1280" height="860"/>
+  <text x="640" y="42" text-anchor="middle" class="head">Zhejiang brucellosis: Bayesian spatiotemporal risk quantification</text>
+  <text x="640" y="68" text-anchor="middle" class="tiny">Original technical schematic, not a reproduced publication figure</text>
+
+  <rect class="panel" x="34" y="96" width="366" height="250"/>
+  <text x="58" y="128" class="sub">A. Spatial-temporal support</text>
+  <text x="58" y="154" class="txt">11 municipal divisions, Zhejiang Province</text>
+  <text x="58" y="176" class="txt">Human brucellosis case data, 2018-2023</text>
+  <g transform="translate(62 198)">
+    <rect x="0" y="0" width="54" height="54" class="riskLo"/><rect x="58" y="0" width="54" height="54" class="riskHi"/><rect x="116" y="0" width="54" height="54" class="riskMed"/>
+    <rect x="174" y="0" width="54" height="54" class="riskLo"/><rect x="232" y="0" width="54" height="54" class="riskHi"/>
+    <rect x="29" y="58" width="54" height="54" class="riskMed"/><rect x="87" y="58" width="54" height="54" class="riskHi"/><rect x="145" y="58" width="54" height="54" class="riskLo"/>
+    <rect x="203" y="58" width="54" height="54" class="riskLo"/><rect x="261" y="58" width="54" height="54" class="riskHi"/><rect x="319" y="58" width="30" height="54" class="riskLo"/>
+    <text x="4" y="134" class="legend">High-risk reported: Huzhou, Jiaxing, Quzhou, Lishui</text>
+    <text x="4" y="154" class="legend">Lower-risk reported: Zhoushan, Ningbo, Taizhou, Wenzhou, Hangzhou</text>
+  </g>
+
+  <rect class="panel" x="457" y="96" width="366" height="250"/>
+  <text x="481" y="128" class="sub">B. Covariate streams</text>
+  <g transform="translate(488 158)">
+    <rect x="0" y="0" width="300" height="30" class="tag"/><text x="14" y="20" class="txt">Live sheep imports</text>
+    <rect x="0" y="42" width="300" height="30" class="tag"/><text x="14" y="62" class="txt">Sheep/cattle production and slaughter</text>
+    <rect x="0" y="84" width="300" height="30" class="tag"/><text x="14" y="104" class="txt">Socioeconomic metrics</text>
+    <rect x="0" y="126" width="300" height="30" class="tag"/><text x="14" y="146" class="txt">Climatic variables</text>
+    <text x="0" y="188" class="tiny">Reported screening: VIF and Spearman correlation</text>
+  </g>
+
+  <rect class="panel" x="880" y="96" width="366" height="250"/>
+  <text x="904" y="128" class="sub">C. Bayesian spatiotemporal layer</text>
+  <text x="904" y="162" class="eq">y_it ~ Poisson(E_it * RR_it)</text>
+  <text x="904" y="190" class="eq">log(RR_it) = alpha + X_it beta</text>
+  <text x="904" y="218" class="eq">             + s_i + tau_t + gamma_it</text>
+  <text x="904" y="252" class="tiny">Generic notation; exact paper notation may differ.</text>
+  <path class="dash" d="M917 280 C974 245,1048 245,1111 280"/>
+  <circle cx="917" cy="280" r="8" fill="#0ea5e9"/><circle cx="1014" cy="246" r="8" fill="#0ea5e9"/><circle cx="1111" cy="280" r="8" fill="#0ea5e9"/>
+  <text x="904" y="312" class="tiny">Latent area, time, and interaction effects</text>
+
+  <rect class="panel" x="160" y="398" width="430" height="330"/>
+  <text x="184" y="430" class="sub">D. Inference and spatial diagnostics</text>
+  <g transform="translate(205 466)">
+    <rect x="0" y="0" width="130" height="44" fill="#f1f5f9" stroke="#cbd5e1"/><text x="18" y="27" class="txt">Bayesian fit</text>
+    <path class="line" d="M135 22 L205 22"/>
+    <rect x="210" y="0" width="150" height="44" fill="#f1f5f9" stroke="#cbd5e1"/><text x="226" y="27" class="txt">Posterior RR</text>
+    <path class="line" d="M285 49 L285 99"/>
+    <rect x="205" y="104" width="160" height="44" fill="#f1f5f9" stroke="#cbd5e1"/><text x="220" y="131" class="txt">High-risk map</text>
+    <path class="line" d="M200 126 L132 126"/>
+    <rect x="0" y="104" width="130" height="44" fill="#f1f5f9" stroke="#cbd5e1"/><text x="17" y="131" class="txt">Global I</text>
+    <path class="line" d="M65 153 L65 205"/>
+    <rect x="0" y="210" width="195" height="44" fill="#f1f5f9" stroke="#cbd5e1"/><text x="13" y="237" class="txt">Factor ranking/checks</text>
+  </g>
+  <text x="184" y="704" class="tiny">Reported companion analyses: global autocorrelation, VIF, Spearman correlation.</text>
+
+  <rect class="panel" x="650" y="398" width="430" height="330"/>
+  <text x="674" y="430" class="sub">E. Reported findings and estimands</text>
+  <g transform="translate(690 464)">
+    <rect x="0" y="0" width="150" height="90" class="riskHi" opacity="0.85"/><text x="16" y="34" class="txt">Import RR</text><text x="16" y="60" class="eq">1.1816</text><text x="16" y="80" class="tiny">95% CI 1.0096-1.3880</text>
+    <rect x="188" y="0" width="150" height="90" class="riskHi" opacity="0.85"/><text x="204" y="34" class="txt">Slaughter RR</text><text x="204" y="60" class="eq">1.6175</text><text x="204" y="80" class="tiny">95% CI 1.1883-2.3546</text>
+    <path class="line" d="M75 104 L75 160"/><path class="line" d="M263 104 L263 160"/>
+    <rect x="38" y="166" width="300" height="64" fill="#dcfce7" stroke="#16a34a"/><text x="56" y="192" class="txt">Target live-sheep transport</text><text x="56" y="214" class="txt">and slaughter oversight in hotspots</text>
+  </g>
+
+  <path class="line" d="M400 222 L457 222"/>
+  <path class="line" d="M823 222 L880 222"/>
+  <path class="line" d="M1063 346 L1063 392 L590 392 L590 542"/>
+</svg>

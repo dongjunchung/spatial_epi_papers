@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for chronic wasting disease spread from host movement data</title>
+  <desc id="desc">Five-panel schematic showing North American CWD spread observations from 2005 to 2022, mule deer and white-tailed deer movement metrics, three generic movement-informed spread models, comparison of predicted and observed spread speeds, and interpretation of underprediction and possible anthropogenic movement. The notation is explanatory and may differ from the paper.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#334155"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:8}.head{font:700 22px Arial,sans-serif;fill:#0f172a}.sub{font:700 15px Arial,sans-serif;fill:#1e293b}.txt{font:14px Arial,sans-serif;fill:#334155}.tiny{font:12px Arial,sans-serif;fill:#475569}.eq{font:15px Consolas,monospace;fill:#0f172a}.line{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.path{stroke:#0ea5e9;stroke-width:4;fill:none}.obs{stroke:#ef4444;stroke-width:4;fill:none}.pred{stroke:#0ea5e9;stroke-width:4;fill:none;stroke-dasharray:8 5}.cell{fill:#f1f5f9;stroke:#94a3b8}.hot{fill:#fecaca;stroke:#dc2626}.node{fill:#fde68a;stroke:#d97706}.green{fill:#dcfce7;stroke:#16a34a}
+    </style>
+  </defs>
+  <rect class="bg" width="1280" height="860"/>
+  <text x="640" y="42" text-anchor="middle" class="head">CWD spread: host movement data versus observed invasion speed</text>
+  <text x="640" y="68" text-anchor="middle" class="tiny">Original technical schematic, not a reproduced publication figure</text>
+
+  <rect class="panel" x="34" y="96" width="370" height="260"/>
+  <text x="58" y="128" class="sub">A. Observed CWD spread</text>
+  <text x="58" y="154" class="txt">North American epicentres, 2005-2022</text>
+  <g transform="translate(76 188)">
+    <rect x="0" y="0" width="52" height="52" class="cell"/><rect x="54" y="0" width="52" height="52" class="cell"/><rect x="108" y="0" width="52" height="52" class="hot"/><rect x="162" y="0" width="52" height="52" class="hot"/>
+    <rect x="0" y="54" width="52" height="52" class="cell"/><rect x="54" y="54" width="52" height="52" class="hot"/><rect x="108" y="54" width="52" height="52" class="hot"/><rect x="162" y="54" width="52" height="52" class="cell"/>
+    <rect x="0" y="108" width="52" height="52" class="cell"/><rect x="54" y="108" width="52" height="52" class="cell"/><rect x="108" y="108" width="52" height="52" class="cell"/><rect x="162" y="108" width="52" height="52" class="cell"/>
+    <path class="obs" d="M35 138 C90 95,128 70,188 28"/>
+    <text x="0" y="190" class="tiny">Observed front compared with predicted front</text>
+  </g>
+
+  <rect class="panel" x="455" y="96" width="370" height="260"/>
+  <text x="479" y="128" class="sub">B. Movement features</text>
+  <text x="479" y="154" class="txt">High-resolution movement data from cervids</text>
+  <g transform="translate(490 190)">
+    <circle cx="40" cy="40" r="16" class="node"/><circle cx="166" cy="42" r="16" class="node"/><circle cx="292" cy="78" r="16" class="node"/>
+    <path class="path" d="M55 38 C88 4,126 4,151 36"/><path class="path" d="M181 46 C218 72,241 85,276 80"/>
+    <text x="6" y="96" class="tiny">migration distance</text><text x="122" y="112" class="tiny">juvenile dispersal</text><text x="228" y="136" class="tiny">riverine corridors</text>
+    <rect x="0" y="162" width="312" height="42" fill="#eff6ff" stroke="#0284c7"/><text x="14" y="188" class="txt">Species: mule deer and white-tailed deer</text>
+  </g>
+
+  <rect class="panel" x="876" y="96" width="370" height="260"/>
+  <text x="900" y="128" class="sub">C. Spread model comparison</text>
+  <text x="900" y="164" class="eq">speed_m = f(M_m, D_m, species, region)</text>
+  <text x="900" y="194" class="eq">front_t+1 = front_t + speed_m * dt</text>
+  <text x="900" y="226" class="tiny">Generic notation for movement-informed prediction.</text>
+  <g transform="translate(916 254)">
+    <rect x="0" y="0" width="95" height="42" fill="#f1f5f9" stroke="#94a3b8"/><text x="16" y="26" class="txt">Model 1</text>
+    <rect x="108" y="0" width="95" height="42" fill="#f1f5f9" stroke="#94a3b8"/><text x="124" y="26" class="txt">Model 2</text>
+    <rect x="216" y="0" width="95" height="42" fill="#f1f5f9" stroke="#94a3b8"/><text x="232" y="26" class="txt">Model 3</text>
+  </g>
+
+  <rect class="panel" x="148" y="410" width="460" height="320"/>
+  <text x="172" y="442" class="sub">D. Validation against observed speed</text>
+  <g transform="translate(196 486)">
+    <line x1="0" y1="180" x2="330" y2="180" stroke="#64748b"/><line x1="0" y1="180" x2="0" y2="0" stroke="#64748b"/>
+    <text x="-8" y="202" class="tiny">0</text><text x="285" y="202" class="tiny">regions</text><text x="-56" y="18" class="tiny">km/year</text>
+    <path class="obs" d="M18 123 L105 76 L196 45 L286 61"/>
+    <path class="pred" d="M18 158 L105 132 L196 118 L286 137"/>
+    <rect x="205" y="8" width="16" height="6" fill="#ef4444"/><text x="228" y="15" class="tiny">observed</text>
+    <line x1="205" y1="34" x2="221" y2="34" class="pred"/><text x="228" y="38" class="tiny">predicted</text>
+    <text x="18" y="224" class="txt">Reported: western epicentres 14-18 km/year</text>
+    <text x="18" y="248" class="txt">White-tailed-only epicentres 5-7 km/year</text>
+  </g>
+
+  <rect class="panel" x="675" y="410" width="460" height="320"/>
+  <text x="699" y="442" class="sub">E. Interpretation for surveillance</text>
+  <g transform="translate(718 484)">
+    <rect x="0" y="0" width="360" height="54" class="green"/><text x="18" y="23" class="txt">Movement metrics did not fully explain</text><text x="18" y="43" class="txt">observed broad-scale spread rates</text>
+    <path class="line" d="M180 60 L180 104"/>
+    <rect x="0" y="110" width="360" height="54" fill="#fee2e2" stroke="#dc2626"/><text x="18" y="133" class="txt">Possible missing process:</text><text x="18" y="153" class="txt">human-mediated long-distance movement</text>
+    <path class="line" d="M180 170 L180 214"/>
+    <rect x="0" y="220" width="360" height="54" fill="#eff6ff" stroke="#0284c7"/><text x="18" y="243" class="txt">Need validation before using movement data</text><text x="18" y="263" class="txt">for proactive CWD invasion forecasts</text>
+  </g>
+
+  <path class="line" d="M404 224 L455 224"/>
+  <path class="line" d="M825 224 L876 224"/>
+  <path class="line" d="M1060 356 L1060 392 L378 392 L378 410"/>
+</svg>

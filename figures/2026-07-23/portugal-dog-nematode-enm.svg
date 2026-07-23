@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" role="img" aria-labelledby="title desc">
+  <title id="title">Original technical schematic for Portugal shelter-dog gastrointestinal nematode ecological niche modeling</title>
+  <desc id="desc">Five-panel schematic showing samples from 19 mainland Portugal shelters, mini-FLOTAC and PCR diagnostics, boosted regression tree, random forest and ecological niche models, parasite-specific environmental and management drivers, spatial suitability surfaces for Toxocara canis, Trichuris vulpis and Ancylostoma caninum, and One Health prevention outputs. The notation is explanatory and may differ from the paper.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#334155"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:8}.head{font:700 22px Arial,sans-serif;fill:#0f172a}.sub{font:700 15px Arial,sans-serif;fill:#1e293b}.txt{font:14px Arial,sans-serif;fill:#334155}.tiny{font:12px Arial,sans-serif;fill:#475569}.eq{font:15px Consolas,monospace;fill:#0f172a}.line{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}.pill{fill:#e0f2fe;stroke:#0284c7}.warn{fill:#fee2e2;stroke:#dc2626}.ok{fill:#dcfce7;stroke:#16a34a}.map{fill:#ecfeff;stroke:#0891b2;stroke-width:2}.hotA{fill:#fb7185}.hotT{fill:#fbbf24}.hotC{fill:#a78bfa}
+    </style>
+  </defs>
+  <rect class="bg" width="1280" height="860"/>
+  <text x="640" y="42" text-anchor="middle" class="head">Portugal shelter-dog GIN: machine-learning ecological niche model</text>
+  <text x="640" y="68" text-anchor="middle" class="tiny">Original technical schematic, not a reproduced publication figure</text>
+
+  <rect class="panel" x="34" y="96" width="370" height="260"/>
+  <text x="58" y="128" class="sub">A. Study design and diagnostics</text>
+  <text x="58" y="156" class="txt">19 shelters; n = 189 fecal samples</text>
+  <text x="58" y="178" class="txt">November 2021 to October 2022</text>
+  <g transform="translate(66 210)">
+    <rect x="0" y="0" width="130" height="44" class="pill"/><text x="20" y="28" class="txt">mini-FLOTAC</text>
+    <rect x="174" y="0" width="130" height="44" class="pill"/><text x="216" y="28" class="txt">PCR</text>
+    <path class="line" d="M65 52 L65 95"/><path class="line" d="M239 52 L239 95"/>
+    <rect x="18" y="102" width="270" height="44" fill="#f1f5f9" stroke="#94a3b8"/><text x="45" y="130" class="txt">Parasite detection matrix</text>
+  </g>
+
+  <rect class="panel" x="455" y="96" width="370" height="260"/>
+  <text x="479" y="128" class="sub">B. Feature set</text>
+  <g transform="translate(490 160)">
+    <rect x="0" y="0" width="142" height="42" class="pill"/><text x="18" y="27" class="txt">Climate</text>
+    <rect x="172" y="0" width="142" height="42" class="pill"/><text x="194" y="27" class="txt">Land use</text>
+    <rect x="0" y="64" width="142" height="42" class="pill"/><text x="20" y="91" class="txt">Soils</text>
+    <rect x="172" y="64" width="142" height="42" class="pill"/><text x="189" y="91" class="txt">Shelter mgmt</text>
+    <rect x="0" y="128" width="314" height="42" class="pill"/><text x="18" y="155" class="txt">Host age, density, deworming program</text>
+  </g>
+
+  <rect class="panel" x="876" y="96" width="370" height="260"/>
+  <text x="900" y="128" class="sub">C. Modeling ensemble</text>
+  <text x="900" y="162" class="eq">p_k(s) = g_k(X_s, shelter_s, host_s)</text>
+  <text x="900" y="190" class="eq">k in {T. canis, T. vulpis, A. caninum}</text>
+  <text x="900" y="220" class="tiny">Reported tools: BRT, random forest, ENM.</text>
+  <g transform="translate(912 252)">
+    <rect x="0" y="0" width="90" height="42" fill="#f1f5f9" stroke="#94a3b8"/><text x="26" y="27" class="txt">BRT</text>
+    <rect x="112" y="0" width="90" height="42" fill="#f1f5f9" stroke="#94a3b8"/><text x="142" y="27" class="txt">RF</text>
+    <rect x="224" y="0" width="90" height="42" fill="#f1f5f9" stroke="#94a3b8"/><text x="252" y="27" class="txt">ENM</text>
+  </g>
+
+  <rect class="panel" x="108" y="410" width="500" height="330"/>
+  <text x="132" y="442" class="sub">D. Parasite-specific ecological drivers</text>
+  <g transform="translate(148 478)">
+    <rect x="0" y="0" width="420" height="58" class="warn"/><text x="18" y="24" class="txt">A. caninum: agroforestry cover, temperature, precipitation</text><text x="18" y="44" class="tiny">High suitability reported mainly in southern Portugal</text>
+    <rect x="0" y="78" width="420" height="58" fill="#fef3c7" stroke="#d97706"/><text x="18" y="102" class="txt">T. canis: solar radiation, soil fractions, temperature</text><text x="18" y="122" class="tiny">High suitability reported near Lisbon, Porto, coast/suburban belt, Tagus basin</text>
+    <rect x="0" y="156" width="420" height="58" fill="#ede9fe" stroke="#7c3aed"/><text x="18" y="180" class="txt">T. vulpis: agroforestry, solar radiation, natural land cover</text><text x="18" y="200" class="tiny">Higher risk reported in northern inland and Spanish-border areas</text>
+    <text x="0" y="252" class="txt">Shared management drivers: dog density per pen, age group, deworming scheme</text>
+  </g>
+
+  <rect class="panel" x="675" y="410" width="500" height="330"/>
+  <text x="699" y="442" class="sub">E. Suitability maps to One Health action</text>
+  <g transform="translate(720 472)">
+    <path class="map" d="M93 8 C130 34,121 82,150 116 C174 145,144 198,108 242 C72 211,74 174,48 137 C20 97,43 48,93 8 Z"/>
+    <circle cx="98" cy="72" r="16" class="hotT" opacity="0.9"/><circle cx="124" cy="180" r="18" class="hotA" opacity="0.9"/><circle cx="78" cy="138" r="16" class="hotC" opacity="0.9"/>
+    <rect x="205" y="10" width="220" height="40" class="hotA" opacity="0.85"/><text x="225" y="35" class="txt">A. caninum south</text>
+    <rect x="205" y="64" width="220" height="40" class="hotT" opacity="0.85"/><text x="225" y="89" class="txt">T. canis broad urban/coastal</text>
+    <rect x="205" y="118" width="220" height="40" class="hotC" opacity="0.85"/><text x="225" y="143" class="txt">T. vulpis north/inland</text>
+    <path class="line" d="M310 168 L310 214"/>
+    <rect x="205" y="220" width="220" height="58" class="ok"/><text x="220" y="244" class="txt">Target surveillance, hygiene,</text><text x="220" y="264" class="txt">density and deworming controls</text>
+  </g>
+
+  <path class="line" d="M404 226 L455 226"/><path class="line" d="M825 226 L876 226"/>
+  <path class="line" d="M1060 356 L1060 386 L358 386 L358 410"/>
+</svg>
